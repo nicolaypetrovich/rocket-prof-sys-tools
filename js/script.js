@@ -90,6 +90,12 @@ function openPopapPage3(argument) {
      document.getElementById('popap1').style.display = "none";
     },1000)
 }
+function openPopapPage4(argument) {
+	document.getElementById('popap-form').style.display = "block";
+	setTimeout(function(){
+     document.getElementById('popap-form').style.display = "none";
+    },1000)
+}
 // конец
 
 if ($('.catalogCommodity-slider').length > 0) {
@@ -546,6 +552,22 @@ window.onresize = function(){
 	      zoom: 8
 	  });
 	}
-
-
 /* Карта на странице контактов конец*/
+
+/* попап для сабмит*/
+
+$('form').submit(function(e) {
+  var empty = $(this).parent().find("input").filter(function() {
+    return this.value === "";
+  });
+  if (!empty.length) {
+    //Если все графы заполнены, то показываем popup
+    $('.popap-form-out').show();
+    setTimeout(function() { $(".popap-form-out").hide('slow'); }, 2000);
+    //очищаем все данные текстовых полей, кроме кнопок
+    $('form input').not(':button, :submit').val('');
+  }
+  e.preventDefault();
+});
+
+/* конец попап для сабмит*/

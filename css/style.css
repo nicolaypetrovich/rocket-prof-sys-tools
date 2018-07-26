@@ -4735,10 +4735,10 @@ height: 100%;
 }
 
 @media only screen and (max-width:1210px){
-.wrap-in{
-	max-width: 96%;
-	margin: 0 auto 50px;
-}
+	.wrap-in{
+		max-width: 96%;
+		margin: 0 auto 50px;
+	}
 }
 .main-navigation {
 }
@@ -4758,7 +4758,7 @@ height: 100%;
 	-o-flex-wrap: wrap;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin-bottom: 100px;
+	margin-bottom: 0;
 }
 .contacts{
 	width: 40%;
@@ -4807,6 +4807,27 @@ height: 100%;
 	background-color: #333;
 }
 
+@media only screen and (max-width:1210px){
+	.contacts {
+    width: 45%;
+	}
+	.wrap-map {
+    width: 52%;
+    height: auto;
+	}
+}
+@media only screen and (max-width:590px){
+	.wrap-in{
+		max-width: 94%;
+	}
+	.contacts {
+    width: 100%;
+	}
+	.wrap-map {
+    width: 100%;
+    height: 350px;
+	}
+}
 	/* форма отправить сообщение*/
 
 .wrap-form-bg-things .name-container_brown {
@@ -4836,6 +4857,7 @@ height: 100%;
 
 .wrap-form{
 	padding-bottom: 100px;
+	position: relative;
 }
 .form-send-messege {
 	text-align: center;
@@ -4935,9 +4957,71 @@ height: 100%;
 	color: #eac176;
 }
 
+.popap-form-out{
+	position: absolute;
+	width: 100px;
+	height: 50px;
+	top: 430px;
+	background-color: #fff;
+	display: none;
+}
+
 	/* Конец форма отправить сообщение*/
 
 
+@media only screen and (max-width:1035px){
+	.wrap-form-in .wrap-input{
+		width: 45%;
+	}
+	.wrap-form-in textarea{
+		width: 45%;
+	}
+}
+@media only screen and (max-width:680px){
+	.wrap-form-in .wrap-input{
+		width: 43%;
+	}
+	.wrap-form-in textarea{
+		width: 43%;
+	}
+}
+@media only screen and (max-width:480px){
+	.wrap-form-in{
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.wrap-form-in .wrap-input{
+		width: 100%;
+	}
+	.wrap-form-in .form-input-item{
+		width: 94%;
+	}
+	.wrap-form-in textarea{
+		width: 100%;
+		min-height: 140px;
+		padding-left: 20px;
+	}
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 0;
+  -webkit-text-fill-color: #ссс;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);  
+}
 
 /* End Contacts*/
 
