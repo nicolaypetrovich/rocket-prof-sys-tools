@@ -182,11 +182,21 @@
 							</div>
 							<div class="wrap-form">
 								<form action="#" class="form-send-messege">
-									
+									<div class="wrap-form-in">
+										<div class="wrap-input">
+											<input class="form-input-item" type="text" name="username" placeholder="Ваше имя" required>
+											<input class="form-input-item" type="tel" name="phone" placeholder="Номер телефона" pattern="[0-9]{11}" required />
+											<input class="form-input-item" type="email" placeholder="Ваш e-mail" required>
+										</div>
+										<textarea placeholder="Сообщение" required></textarea>
+								  </div>
+								  <span>Заполняя форму, Вы даете согласие на обработку своих <a href="#">персональных данных</a></span><br>
+									<input type="submit" class="btn-form" value="Отправить" />	
 								</form>
-								<!-- /.form-send-messege -->
+								<!-- /.form-send-messege -->								
 							</div>
 							<!-- /.wrap-form -->
+							
 						</div>
 					</div>
 				</div>

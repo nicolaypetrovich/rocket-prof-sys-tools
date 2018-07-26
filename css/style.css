@@ -4809,6 +4809,9 @@ height: 100%;
 
 	/* форма отправить сообщение*/
 
+.wrap-form-bg-things .name-container_brown {
+	margin-bottom: 45px;
+}
 .name-container_brown h4{
 	color: #ffe9c7;
 	text-transform: uppercase;
@@ -4832,8 +4835,104 @@ height: 100%;
 }
 
 .wrap-form{
-	width: 300px;
-	height: 450px;
+	padding-bottom: 100px;
+}
+.form-send-messege {
+	text-align: center;
+}
+.form-send-messege .wrap-form-in{	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+.form-send-messege .wrap-input{
+	width: 47%;
+}
+.form-send-messege .form-input-item{	
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #eac176;
+	width: 100%;
+	background-color: rgba(42, 17, 11, 0.85);
+	border: 1px solid #aa897b;
+	border-radius: 7px;
+	box-shadow: inset 2.5px 4.3px 0 rgba(39, 16, 8, 0.5);
+	padding: 15px 10px;
+	margin-bottom: 30px;
+	outline: none;
+}
+.form-send-messege input::placeholder{	
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #eac176;
+}
+.form-send-messege textarea{	
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #eac176;
+ 	width: 47%;
+	background-color: rgba(42, 17, 11, 0.85);
+	border: 1px solid #aa897b;
+	border-radius: 7px;
+	box-shadow: inset 2.5px 4.3px 0 rgba(39, 16, 8, 0.5);
+	resize: none;
+	padding: 15px 10px;
+	margin-bottom: 30px;
+	outline: none;
+}
+.form-send-messege textarea::placeholder{	
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #eac176;
+}
+.form-send-messege .btn-form {
+	border-radius: 10px 0px 10px 0px;
+	-moz-border-radius: 10px 0px 10px 0px;
+	-webkit-border-radius: 10px 0px 10px 0px;
+	border: none;
+	border-bottom: 4px solid #cc6f00;
+	padding: 10px 25px;
+	margin-top: 35px;
+	text-shadow: 0 1px 0 rgba(0, 2, 1, 0.2);
+	color: white;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 21px;
+	font-weight: 700;
+	text-transform: uppercase;
+	background: rgba(255,187,0,1);
+  background: -moz-linear-gradient(top, rgba(255,187,0,1) 0%, rgba(255,140,0,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,187,0,1)), color-stop(100%, rgba(255,140,0,1)));
+  background: -webkit-linear-gradient(top, rgba(255,187,0,1) 0%, rgba(255,140,0,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,187,0,1) 0%, rgba(255,140,0,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,187,0,1) 0%, rgba(255,140,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,187,0,1) 0%, rgba(255,140,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbb00', endColorstr='#ff8c00', GradientType=0 );
+}
+.form-send-messege .btn-form:hover{
+	background: rgba(247,194,49,1);
+  background: -moz-linear-gradient(top, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,194,49,1)), color-stop(100%, rgba(255,171,76,1)));
+  background: -webkit-linear-gradient(top, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
+  background: -o-linear-gradient(top, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
+  background: -ms-linear-gradient(top, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
+  background: linear-gradient(to bottom, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7c231', endColorstr='#ffab4c', GradientType=0 );
+}
+
+.form-send-messege span{
+	display: inline-block;	
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #fff;
+}
+.form-send-messege span a{
+	display: inline-block;	
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #eac176;
 }
 
 	/* Конец форма отправить сообщение*/
