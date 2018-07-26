@@ -4807,4 +4807,39 @@ height: 100%;
 	background-color: #333;
 }
 
+	/* форма отправить сообщение*/
+
+.name-container_brown h4{
+	color: #ffe9c7;
+	text-transform: uppercase;
+}
+.wrap-form-bg-boards {	
+	background: url(../img/bg-block-form.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.wrap-form-bg-things {
+	width: 100%;
+	background: url(../img/wrap-form-bg-things.png);
+  background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.wrap-form-bg-things .wrap-in {	
+	padding-top: 40px;
+	margin-bottom: 0;
+}
+
+.wrap-form{
+	width: 300px;
+	height: 450px;
+}
+
+	/* Конец форма отправить сообщение*/
+
+
+
 /* End Contacts*/
+
+
