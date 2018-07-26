@@ -109,59 +109,6 @@
 				</div>
 				<!-- конец блок-банер наши акции и наши бренды мобверсия -->
 
-				<!-- начало блок-банер наши акции и наши бренды -->
-				<div class="shares-and-brands-banner">
-					<div class="wrapper">
-						<div class="shares-and-brands-banner-wrapper">
-							<div class="shares-banner">
-								<div class="button2" onclick="openSharesBrands(this)"></div>
-								<div class="body-shares-banner-wrapper" id="body-shares-banner-wrapper">
-									<div class="body-shares-banner">
-										<div class="div"><a href="#"><span>Бормашина Профиль М-03 с 6 мм цангой </span><img src="img/img25.jpg" alt="img"></a></div>
-										<div class="div"><a href="#"><span>Бормашина Профиль Б-06, исполнение Торнадо с БП-6Т</span><img src="img/img26.jpg" alt="img"></a></div>
-										<div class="div"><a href="#"><span>Сменный шпиндель с цангой 6 мм</span><img src="img/img27.jpg" alt="img"></a></div>
-									</div>
-
-									<div class="body-shares-banner body-shares-banner-slider">
-										<div class="owl-carousel owl-theme body-shares-bannerSlider">
-											<div class="div"><a href="#"><span>Бормашина Профиль М-03 с 6 мм цангой </span><img src="img/img25.jpg" alt="img"></a></div>
-											<div class="div"><a href="#"><span>Бормашина Профиль Б-06, исполнение Торнадо с БП-6Т</span><img src="img/img26.jpg" alt="img"></a></div>
-											<div class="div"><a href="#"><span>Сменный шпиндель с цангой 6 мм</span><img src="img/img27.jpg" alt="img"></a></div>
-										</div>
-									</div>
-								</div>
-								<div class="button1"></div>
-							</div>
-							<div class="clear"></div>
-							<div class="brands-banner">
-								<div class="button2" onclick="openSharesBrands(this)"></div>
-								<div class="body-brands-banner-wrapper" id="body-brands-banner-wrapper">
-									<div class="body-brands-banner">
-										<div class="ourBrend-slider-banner-wrapper">
-											<div class="owl-carousel owl-theme ourBrend-slider-banner">
-											    <div class="item">
-											    	<img src="img/img39.png" alt="img" style="width: 39%;">
-											    </div>
-											     <div class="item">
-											    	<img src="img/img40.png" alt="img" style="width: 45%;">
-											    </div>
-											    <div class="item">
-											    	<img src="img/img41.jpg" alt="img" style="width: 88%;">
-											    </div>
-											    <div class="item">
-											    	<img src="img/img42.png" alt="img" style="width: 64%;">
-											    </div>
-											</div>
-										</div>		
-									</div>
-								</div>
-								<div class="button1"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- конец блок-банер наши акции и наши бренды -->
-
 				<!-- блок навигация -->
 				<div class="wrapper">
 					<div class="main-navigation wrap-in">					
@@ -217,10 +164,12 @@
 
 							</div>
 							<!-- /.contacts -->
-							<div class="map">
+							<div class="wrap-map">
+								<div id="map">
 								
+								</div>							
 							</div>
-							<!-- /.map -->
+							<!-- /."wrap-map -->
 							
 
 
@@ -315,6 +264,7 @@
 		<!-- конец  -->
 
 	</div>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
