@@ -4713,7 +4713,7 @@ height: 100%;
 	    width: 140px;
 	}
 
-
+}
 
 @media only screen and (max-width:320px){
 	.header{
@@ -4723,17 +4723,63 @@ height: 100%;
 }
 
 
-/* Основные для остальных страиц*/
+/* Основные для остальных страниц*/
 
-.body-page .wrapper .name-container{
+.page .name-container {
 	margin-left: 0;
+	margin-bottom: 30px;
 }
-
+.wrap-in{
+	max-width: 1170px;
+	margin: 0 auto 50px;
+}
+.main-navigation {
+}
+/*Конец Основные для остальных страниц*/
 
 /* Start Contacts*/
 
+.wrap-contacts {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	margin-bottom: 100px;
+}
+.contacts{
+	width: 45%;
+}
+.contacts-item h5{
+	margin: 0;
+}
+.contacts-item img{
+	float: left;
+}
+.contacts-item {
+	margin-bottom: 40px;
+}
 
-
+.contacts-item .contact-info{
+	margin-left: 56px;
+}
+.contacts-item .contact-info h5{
+	line-height: 1;
+  display: inline-block;
+  font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #7ba00c;
+  margin-bottom: 5px;
+}
+.contacts-item .contact-info span{
+	line-height: 1;
+  display: inline-block;
+  font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #381d18;
+}
 
 
 /* End Contacts*/
