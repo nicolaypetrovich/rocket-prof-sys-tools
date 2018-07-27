@@ -5108,6 +5108,7 @@ height: 100%;
 	-ms-align-items: center;
 	align-items: center;
 	padding: 20px;
+	padding-right: 60px;
 	-webkit-flex-wrap: wrap;
 	-moz-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
@@ -5131,10 +5132,9 @@ height: 100%;
 	width: 206px;
 	height: 201px;
 }
-
 .cart-item-box .cart-item-box_descr{
 	width: 45%;
-	padding: 25px 0;
+	padding: 0;
 }
 .cart-item-box .cart-item-box_descr a{
 	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
@@ -5150,8 +5150,6 @@ height: 100%;
   font-size: 14px;
   color: #333;
 }
-
-
 .cart-item-box .cart-item-box_switch{
 	margin: 0 20px 0 30px;
 }
@@ -5163,7 +5161,6 @@ height: 100%;
 	text-align: center;
 	padding: 5px;
 }
-
 .cart-item-box .cart-item-box_switch span{
 	cursor: pointer;
 	display: inline-block;
@@ -5190,10 +5187,6 @@ height: 100%;
   background: linear-gradient(to bottom, rgba(255,187,0,1) 0%, rgba(255,140,0,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbb00', endColorstr='#ff8c00', GradientType=0 );
 }
-
-
-
-
 .cart-item-box .cart-item-box_price {	
 	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -5232,10 +5225,13 @@ height: 100%;
 .cart-footer .btn-continue-shopping{
 	text-decoration: none;
 	position: relative;
+	float: left;
+	margin-left: 15px;
 	padding: 15px;
 	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 24px;
+	font-size: 16px;
 	color: #7ba00c;
+	text-transform: uppercase;
 	background-image: url(../img/arrow-cont-shoping-border.png);
 	background-position: center top;
 	-webkit-background-size: cover;
@@ -5278,7 +5274,7 @@ height: 100%;
 	-webkit-border-radius: 10px 0px 10px 0px;
 	border: none;
 	border-bottom: 4px solid #cc6f00;
-	padding: 10px 25px;
+	padding: 10px 30px;
 	text-shadow: 0 1px 0 rgba(0, 2, 1, 0.2);
 	color: white;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
@@ -5303,6 +5299,45 @@ height: 100%;
   background: -ms-linear-gradient(top, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
   background: linear-gradient(to bottom, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7c231', endColorstr='#ffab4c', GradientType=0 );
+}
+
+@media only screen and (min-width:501px){	
+	.cart-footer .cart-footer_links br {
+		display: none;
+	}
+	.wrap-in-margin-bottom {
+    margin-bottom: 170px;
+	}
+}
+@media only screen and (max-width:720px){	
+	.wrap-in-margin-bottom {
+  	margin-bottom: 100px;
+	}
+}
+
+@media only screen and (max-width:500px){	
+	.cart-footer .cart-footer_total{
+		float: none;
+		text-align: center;
+	}
+
+	.cart-footer .cart-footer_links {
+		text-align: center;
+	}
+
+	.cart-footer .cart-footer_links .btn-issue {
+		float: none;
+		margin-bottom: 30px;
+	}
+
+	.cart-footer .cart-footer_links .btn-continue-shopping {
+		float: none;
+		margin-left: 0;
+	}
+	.wrap-in-margin-bottom {
+    margin-bottom: 50px;
+	}
+
 }
 /* End Cart*/
 
