@@ -1244,7 +1244,6 @@ height: 100%;
 	top: 7px;
 	left: 10px;
 }
-
 .popap{
 	position: absolute;
 	left: 0;
@@ -4729,15 +4728,54 @@ height: 100%;
 	margin-left: 0;
 	margin-bottom: 30px;
 }
+.page .banner-our-production-content{
+	display: none;
+}
+@media only screen and (max-width:950px){
+	.page .banner-our-production-content{
+		display: block;
+	}	
+	.wrap-in .el1{
+		display: none;
+	}
+}
 .wrap-in{
 	max-width: 1170px;
 	margin: 0 auto 50px;
+	position: relative;
+}
+.wrap-in-margin-top {
+	margin-top: -20px;
+}
+.wrap-in .el1{
+	position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+.wrap-in .el1 div{
+  display: inline-block;
+  width: 158px;
+  height: 98px;
+  position: relative;
+  z-index: 2;
+  left: 95px;
+  top: -120px;
+  background: url(../img/img3.png);
+  background-size: cover;
+  background-position: center;
 }
 
 @media only screen and (max-width:1210px){
 	.wrap-in{
 		max-width: 96%;
-		margin: 0 auto 50px;
+		margin: 30px auto 30px;
+	}
+}
+@media only screen and (max-width:950px){
+.wrap-in .el1 div{
+  z-index: 10;
 	}
 }
 .main-navigation {
@@ -4816,12 +4854,15 @@ height: 100%;
     height: auto;
 	}
 }
-@media only screen and (max-width:590px){
+@media only screen and (max-width:630px){
 	.wrap-in{
 		max-width: 94%;
 	}
 	.contacts {
     width: 100%;
+	}
+	.main-navigation {
+    display: none;
 	}
 	.wrap-map {
     width: 100%;
@@ -4840,14 +4881,14 @@ height: 100%;
 .wrap-form-bg-boards {	
 	background: url(../img/bg-block-form.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
 }
 .wrap-form-bg-things {
 	width: 100%;
 	background: url(../img/wrap-form-bg-things.png);
   background-size: cover;  
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
 }
 .wrap-form-bg-things .wrap-in {	
@@ -4891,6 +4932,11 @@ height: 100%;
 	font-size: 13px;
 	color: #eac176;
 }
+.form-send-messege input::-ms-input-placeholder {	
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #eac176;
+}/*это плейсхолдер для edge*/
 .form-send-messege textarea{	
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 13px;
@@ -4910,6 +4956,11 @@ height: 100%;
 	font-size: 13px;
 	color: #eac176;
 }
+.form-send-messege textarea::-ms-input-placeholder {	
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #eac176;
+}/*это плейсхолдер для edge*/
 .form-send-messege .btn-form {
 	border-radius: 10px 0px 10px 0px;
 	-moz-border-radius: 10px 0px 10px 0px;
@@ -4917,7 +4968,8 @@ height: 100%;
 	border: none;
 	border-bottom: 4px solid #cc6f00;
 	padding: 10px 25px;
-	margin-top: 35px;
+	margin-top: 30px;
+	margin-bottom: 10px;
 	text-shadow: 0 1px 0 rgba(0, 2, 1, 0.2);
 	color: white;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
@@ -4943,6 +4995,9 @@ height: 100%;
   background: linear-gradient(to bottom, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7c231', endColorstr='#ffab4c', GradientType=0 );
 }
+.form-send-messege .btn-form:focus{
+	outline: none;
+}
 
 .form-send-messege span{
 	display: inline-block;	
@@ -4959,11 +5014,21 @@ height: 100%;
 
 .popap-form-out{
 	position: absolute;
-	width: 100px;
-	height: 50px;
-	top: 430px;
-	background-color: #fff;
+	padding: 10px;
+	top: 185px;
 	display: none;
+	font-family:PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #d78319;
+	width: 210px;
+	text-align: center;
+	background: #fff;
+	box-shadow: 0 0 10px  #d78319;
+	border: 1px solid #d78319;
+	border-radius: 5px;
+	right: 50%;
+	margin-right: 70px;
 }
 
 	/* Конец форма отправить сообщение*/
@@ -5004,23 +5069,6 @@ height: 100%;
 		min-height: 140px;
 		padding-left: 20px;
 	}
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus
-input:-webkit-autofill, 
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border: 0;
-  -webkit-text-fill-color: #ссс;
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-  transition: background-color 5000s ease-in-out 0s;
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);  
 }
 
 /* End Contacts*/

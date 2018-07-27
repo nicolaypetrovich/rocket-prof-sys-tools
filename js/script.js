@@ -562,10 +562,10 @@ $('form').submit(function(e) {
   });
   if (!empty.length) {
     //Если все графы заполнены, то показываем popup
-    $('.popap-form-out').show();
+    $('.popap-form-out').show('slow');
     setTimeout(function() { $(".popap-form-out").hide('slow'); }, 2000);
     //очищаем все данные текстовых полей, кроме кнопок
-    $('form input').not(':button, :submit').val('');
+    $('form input, form textarea').not(':button, :submit').val('');
   }
   e.preventDefault();
 });
