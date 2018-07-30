@@ -5109,12 +5109,12 @@ height: 100%;
 	align-items: center;
 	padding: 20px;
 	padding-right: 60px;
+	margin-bottom: 50px;
 	-webkit-flex-wrap: wrap;
 	-moz-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	-o-flex-wrap: wrap;
 	flex-wrap: wrap;
-	margin-bottom: 50px;
 }
 .cart-item-box button{
 	display: block;
@@ -5133,8 +5133,7 @@ height: 100%;
 	height: 201px;
 }
 .cart-item-box .cart-item-box_descr{
-	width: 45%;
-	padding: 0;
+	width: 41%;
 }
 .cart-item-box .cart-item-box_descr a{
 	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
@@ -5170,12 +5169,12 @@ height: 100%;
 	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
-	border: none;
 	border-bottom: 2px solid #cc6f00;
 	text-shadow: 0 1px 0 rgba(0, 2, 1, 0.2);
 	color: white;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 16px;
+	font-size: 20px;
+	line-height: 25px;
 	font-weight: 700;
 	margin: 0 5px;
 	background: rgba(255,187,0,1);
@@ -5309,12 +5308,54 @@ height: 100%;
     margin-bottom: 170px;
 	}
 }
+
+
+
+@media only screen and (max-width:902px){
+	.cart-item-box .cart-item-box_descr{
+		width: 30%;
+	}
+}
+@media only screen and (max-width:775px){
+	.cart-item-box .cart-item-box_descr{
+		width: 50%;
+	}
+}
+
+	
+
 @media only screen and (max-width:720px){	
 	.wrap-in-margin-bottom {
   	margin-bottom: 100px;
 	}
 }
 
+@media only screen and (max-width:555px){
+	.cart-item-box{
+		display: block;
+		text-align: center;
+		padding: 0;
+		padding: 20px 20px 50px 20px;
+		position: relative;
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.cart-item-box .cart-item-box_descr{
+		width: 100%;
+	}
+	.cart-item-box button{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+
+	}
+	.cart-item-box .cart-item-box_switch{
+		margin: 40px 0 30px;
+	}
+}
 @media only screen and (max-width:500px){	
 	.cart-footer .cart-footer_total{
 		float: none;
@@ -5337,7 +5378,6 @@ height: 100%;
 	.wrap-in-margin-bottom {
     margin-bottom: 50px;
 	}
-
 }
 /* End Cart*/
 
