@@ -4727,6 +4727,10 @@ height: 100%;
 .page .name-container {
 	margin-left: 0;
 	margin-bottom: 30px;
+	text-transform: none;
+}
+.page .name-container h4 {
+	text-transform: none;
 }
 .page .banner-our-production-content{
 	display: none;
@@ -5383,7 +5387,44 @@ height: 100%;
 
 
 
-/* Start Cart*/
-/* End Cart*/
+/* Start Check*/
+
+
+
+.wrap-in-column{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.box-pay-details{
+	width: 47%;
+}
+
+.box-pay-details input {
+	display: block;
+}
+.box-pay-details input[type="radio"]{
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+.box-your-order{
+	width: 47%;
+}
+
+
+
+/* End Check*/
 
 
