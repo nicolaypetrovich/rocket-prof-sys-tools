@@ -5508,6 +5508,29 @@ height: 100%;
 }
 
 
+@media only screen and (max-width:580px){
+	.wrap-in-column{
+		justify-content: space-around;
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+	}
+.box-pay-details{
+		width: 100%;
+	}
+	.box-pay-details .form-input-detailsa-pay {
+    width: 93%;
+  }
+	.box-your-order{
+		width: 100%;
+	}
+	.box-your-order table{
+		margin-bottom: 30px;
+	}
+}
 
 /* End Check*/
 
