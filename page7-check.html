@@ -204,58 +204,46 @@
 								<h4>Детали оплаты</h4>
 							</div>
 							<form action="#" class="form-pay-details">
-								<input class="form-input-item" type="text" name="username" placeholder="Ваше имя" pattern="[a-zа-я]{1,15}" required>
-								<input class="form-input-item" type="tel" name="phone" placeholder="Номер телефона" pattern="[0-9]{6,11}" required />
-								<input class="form-input-item" type="email" placeholder="Ваш e-mail" required>
+								<input class="form-input-detailsa-pay" type="text" name="username" placeholder="Ваше имя" pattern="[a-zа-я]{1,15}" required>
+								<input class="form-input-detailsa-pay" type="tel" name="phone" placeholder="Номер телефона" pattern="[0-9]{6,11}" required />
+								<input class="form-input-detailsa-pay" type="email" placeholder="Ваш e-mail" required>
 								
 								<input type="radio" id="radio-from" name="radio-delivery">
 								<label for="radio-from">
-									Самовывоз со склада (МО, Ленинский район)
-									Стоимость самовывоза: Бесплатно.
+									<b>Самовывоз со склада (МО, Ленинский район)</b><br>
+									Стоимость самовывоза: <span>Бесплатно.</span>
 								</label>
 								<input type="radio" id="radio-within" name="radio-delivery">
 								<label for="radio-within">
-									Доставка в пределах МКАД (до 5 кг)
-									Стоимость доставки: 350 руб.
-									Заказы от 10000 руб доставляются бесплатно
+									<b>Доставка в пределах МКАД (до 5 кг)</b><br>
+									Стоимость доставки: <span>350 руб.</span><br>
+									Заказы от 10000 руб доставляются <span>бесплатно</span>
 								</label>
 								<input type="radio" id="radio-beyond" name="radio-delivery">
 								<label for="radio-beyond">
-									Доставка за пределы МКАД (до 20 км)
-									Стоимость доставки: 600 руб.
+									<b>Доставка за пределы МКАД (до 20 км)</b><br>
+									Стоимость доставки: <span>600 руб.</span>
 								</label>
 								<input type="radio" id="radio-to-company" name="radio-delivery">
 								<label for="radio-to-company">
-									Доставка до транспортной компании
-									Стоимость доставки до т/к: 200 руб
-									Заказы от 10000 руб доставляются до т/к бесплатно
-									(доставка осуществляется только после 100% оплаты заказа)
+									<b>Доставка до транспортной компании</b><br>
+									Стоимость доставки до т/к: <span>200 руб</span><br>
+									Заказы от 10000 руб доставляются до т/к <span>бесплатно</span>
+									(доставка осуществляется только после 100% оплаты заказа)<br>
 									Для подробного расчета стоимости доставки транспортной компании Вы можете воспользоваться калькулятором на сайте выбранной компании
 								</label>
-
-
-								<input class="form-input-item" type="text" name="username" placeholder="Ваше имя" pattern="[a-zа-я]{1,15}" required>
-								<textarea placeholder="Сообщение" required></textarea>
-
-
-
+								<input class="form-input-detailsa-pay" type="text" name="username" placeholder="Адрес доставки" pattern="[a-zа-я]{1,15}" required>
+								<textarea class="form-input-detailsa-pay" placeholder="Кометарии к заказу" required></textarea>
 								<input type="radio" id="radio-cash" name="radio-pay">
 								<label for="radio-cash">
 									Оплата наличными при доставке
 								</label>
-								<br>
-								<br>
 								<input type="radio" id="radio-yandex-pay" name="radio-pay">
 								<label for="radio-yandex-pay">
 									Яндекс касса (банковские карты, электронные деньги и др.)
 								</label>
-
-								<input type="submit" class="btn-form" value="Отправить" />
-
+								<input type="submit" class="btn-form" value="Подтвердить заказ" />
 								<p>Заполняя форму, Вы даете согласие на обработку своих <a href="#">персональных данных</a></p>
-
-
-
 							</form>
 						</div>
 						<!-- /.box-pay-details -->
@@ -264,8 +252,37 @@
 							<div class="name-container">
 								<h4>Ваш заказ</h4>
 							</div>
+
+
+
+							<table>
+								<tr>
+									<th>Товар</th>
+									<th>Итого</th>
+								</tr>
+								<tr>
+									<td>Бормашина Профиль М-03 с 6 мм цангой</td>
+									<td>6 800 руб</td>
+								</tr>    
+								<tr>
+									<td>Подытог:</td>
+									<td>6 800 руб  </td>
+								</tr>    
+								<tr>
+									<td>Доставка:</td>
+									<td>0 руб   </td>
+								</tr>    
+								<tr>
+									<td>Итого:</td>
+									<td>6 800 руб</td>
+								</tr>
+							</table>
 						</div>
 						<!-- /.box-your-order -->
+
+
+                 
+                  
 
 
 

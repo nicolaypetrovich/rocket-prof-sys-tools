@@ -4966,7 +4966,8 @@ height: 100%;
 	font-size: 13px;
 	color: #eac176;
 }/*это плейсхолдер для edge*/
-.form-send-messege .btn-form {
+
+.btn-form {
 	border-radius: 10px 0px 10px 0px;
 	-moz-border-radius: 10px 0px 10px 0px;
 	-webkit-border-radius: 10px 0px 10px 0px;
@@ -4977,6 +4978,7 @@ height: 100%;
 	margin-bottom: 10px;
 	text-shadow: 0 1px 0 rgba(0, 2, 1, 0.2);
 	color: white;
+	cursor: pointer;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 21px;
 	font-weight: 700;
@@ -4990,7 +4992,7 @@ height: 100%;
   background: linear-gradient(to bottom, rgba(255,187,0,1) 0%, rgba(255,140,0,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbb00', endColorstr='#ff8c00', GradientType=0 );
 }
-.form-send-messege .btn-form:hover{
+.btn-form:hover{
 	background: rgba(247,194,49,1);
   background: -moz-linear-gradient(top, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,194,49,1)), color-stop(100%, rgba(255,171,76,1)));
@@ -5000,7 +5002,7 @@ height: 100%;
   background: linear-gradient(to bottom, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7c231', endColorstr='#ffab4c', GradientType=0 );
 }
-.form-send-messege .btn-form:focus{
+.btn-form:focus{
 	outline: none;
 }
 
@@ -5313,8 +5315,6 @@ height: 100%;
 	}
 }
 
-
-
 @media only screen and (max-width:902px){
 	.cart-item-box .cart-item-box_descr{
 		width: 30%;
@@ -5325,8 +5325,6 @@ height: 100%;
 		width: 50%;
 	}
 }
-
-	
 
 @media only screen and (max-width:720px){	
 	.wrap-in-margin-bottom {
@@ -5389,8 +5387,6 @@ height: 100%;
 
 /* Start Check*/
 
-
-
 .wrap-in-column{
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -5402,25 +5398,98 @@ height: 100%;
 
 .box-pay-details{
 	width: 47%;
+	color: #381d18;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+.box-pay-details p{
+	color: #381d18;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+.box-pay-details p a{
+	color: #381d18;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+.box-pay-details p a:hover{
+	text-decoration: none;
 }
 
 .box-pay-details input {
 	display: block;
 }
+.box-pay-details .form-input-detailsa-pay {
+	width: 100%;
+	padding: 12px 10px;
+	background-color: white;
+	border: 1px solid #cfaf81;
+	border-radius: 7px;
+	box-shadow: inset 2.5px 4.3px 0 #f7efdd;	
+	margin-bottom: 30px;
+}
+.box-pay-details .form-input-detailsa-pay::placeholder {	
+	color: #381d18;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
 .box-pay-details input[type="radio"]{
 	display: none;
 }
 
+.box-pay-details label {
+	display: block;
+	margin-bottom: 30px;
+	padding-left: 25px;
+	position: relative;
+}
+.box-pay-details label span{
+	color: #7ba00c;
+	font-weight: 700;
+}
+.box-pay-details label::before{
+	content: '';
+  display: block;
+  position: absolute;
+  width: 15px;
+	height: 15px;
+	left: 0;
+	top: 3px;
+  border-radius: 50%;
+  background-image: url(../img/radio-bg.png);
+}
+.box-pay-details input[type="radio"]:checked + label::before {
+	content: '';
+	background-image: url(../img/radio-bg-checked.png);
+}
+.box-pay-details input[type="submit"] {
+	margin-bottom: 30px;
+}
 
-
-
-
-
-
+.box-pay-details textarea{
+	resize: none;
+	min-height: 150px;
+}
 
 
 .box-your-order{
 	width: 47%;
+}
+.box-your-order table{
+	text-align: left;
+	width: 100%;
+}
+
+.box-your-order table th {
+	font-size: 19px;
+}
+.box-your-order table td{
+	padding: 5px;	
+	color: #381d18;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
 }
 
 
