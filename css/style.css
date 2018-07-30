@@ -5530,6 +5530,9 @@ height: 100%;
 	.box-your-order table{
 		margin-bottom: 30px;
 	}
+	.box-your-order table td:first-child{
+		padding-right: 50px;
+	}
 }
 
 /* End Check*/
