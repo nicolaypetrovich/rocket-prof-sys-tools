@@ -5419,6 +5419,7 @@ height: 100%;
 
 .box-pay-details input {
 	display: block;
+	outline: none;
 }
 .box-pay-details .form-input-detailsa-pay {
 	width: 100%;
@@ -5433,6 +5434,7 @@ height: 100%;
 	color: #381d18;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 16px;
+	font-weight: 400;
 }
 
 .box-pay-details input[type="radio"]{
@@ -5471,6 +5473,7 @@ height: 100%;
 .box-pay-details textarea{
 	resize: none;
 	min-height: 150px;
+	outline: none;
 }
 
 
@@ -5480,16 +5483,28 @@ height: 100%;
 .box-your-order table{
 	text-align: left;
 	width: 100%;
+	color: #381d18;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	border-collapse: collapse;
 }
 
 .box-your-order table th {
 	font-size: 19px;
+	padding: 10px;
+	padding-top: 0;
+}
+.box-your-order table tr {
+	margin-bottom: 10px;
 }
 .box-your-order table td{
-	padding: 5px;	
-	color: #381d18;
-	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 16px;
+	padding: 10px;
+}
+.box-your-order table tr:last-child{
+	font-weight: bold;
+}
+.box-your-order table tr:nth-child(even){
+	background-color: rgba(255, 137, 0, 0.1);
 }
 
 
