@@ -5534,7 +5534,55 @@ height: 100%;
 		padding-right: 50px;
 	}
 }
-
 /* End Check*/
+
+
+
+
+/* Start Profile*/
+.page-8 .el1 div{
+	top: -110px;
+}
+
+
+.privat-cab-nav-box{
+	width: 270px;
+	background-image: url(../img/img14.png);
+	background-position: bottom left;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: -200px;
+	padding: 100px 0;
+	float: left;
+}
+.privat-cab-nav-box h3{
+	padding: 0 30px 20px;
+	text-shadow: 0.5px 0.9px 0 #e3b58c;
+	color: white;
+	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	position: relative;
+}
+.privat-cab-nav-box h3:after{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background-image: url(../img/profile-box-nav-br.png);
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+
+
+
+/* End Profile*/
 
 
