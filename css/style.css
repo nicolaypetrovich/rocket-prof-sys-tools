@@ -5629,7 +5629,7 @@ height: 100%;
 }
 
 .my-profile{
-	margin: 0 270px 0 290px;
+	margin: 0 270px 0 295px;
 	color: #381d18;
   font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -5693,5 +5693,70 @@ height: 100%;
 }
 
 /* End Profile*/
+
+/* Start Orders*/
+
+.my-orders{
+	margin: 0 0 0 295px;
+  color: #381d18;
+  font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.my-orders .my-orders-table-wrap table{
+	width: 90%;
+	text-align: left;
+	border-collapse: collapse;
+	box-shadow: 0 1px 5px rgba(0, 2, 1, 0.3), inset 0 1px 0 #7ba00c;
+}
+.my-orders .my-orders-table-wrap table tr:nth-child(odd){
+	background-color: #fbf3e6;
+}
+.my-orders .my-orders-table-wrap table tr:nth-child(even){
+	background-color: #fff;
+}
+.my-orders .my-orders-table-wrap table th{
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	padding: 10px 20px;
+	color: #fff;
+	background-color: #7ba00c;
+}
+.my-orders .my-orders-table-wrap table td{
+	padding: 10px 20px;
+}
+.my-orders .my-orders-table-wrap table td:last-child{
+	text-align: center;
+}
+.my-orders .my-orders-table-wrap table td .btn-form{
+	margin: 0;
+	font-size: 12px;
+	padding: 5px 25px;
+}
+
+@media only screen and (max-width:950px){
+	.my-orders {
+		margin: 0;
+	}
+	.my-orders .my-orders-table-wrap{
+		width: 100%;
+		margin: 0 auto;
+		}
+	.my-orders .my-orders-table-wrap{
+		width: 100%;
+		margin: 0;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: center;
+		}
+}
+
+@media only screen and (max-width:555px){
+	
+}
+@media only screen and (max-width:430px){
+}
+/* End Orders*/
 
 
