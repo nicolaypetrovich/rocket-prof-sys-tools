@@ -199,11 +199,26 @@
 							<h3>Личный кабинет</h3>							
 							<nav class="privat-cab-nav">
 								<ul>
-									<li><a href="#">Профиль</a></li>
+									<li class="prof-link-active"><a href="#">Профиль</a></li>
 									<li><a href="#">Мои заказы</a></li>
 									<li><a href="#">Мои желания</a></li>
 								</ul>
 							</nav>
+						</div>
+
+						<div class="my-profile">
+							<div class="name-container">
+								<h4>Мой профиль</h4>
+							</div>
+							<form action="#">
+								<input class="input-my-profile" type="text" name="username" placeholder="Имя" pattern="[a-zа-я]{1,15}" required />
+								<input class="input-my-profile" type="email" placeholder="E-mail" required />
+								<p>Смена пароля</p>
+								<input class="input-my-profile" type="password" placeholder="Действующий пароль" required />
+								<input class="input-my-profile" type="password" placeholder="Новый пароль" required />
+								<input class="input-my-profile" type="password" placeholder="Подтвердите новый пароль" required />
+								<input type="submit" class="btn-form" value="Сохранить изменения" />
+							</form>
 						</div>
 						
 					<div class="clear"></div>

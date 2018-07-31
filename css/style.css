@@ -5430,7 +5430,28 @@ height: 100%;
 	box-shadow: inset 2.5px 4.3px 0 #f7efdd;	
 	margin-bottom: 30px;
 }
-.box-pay-details .form-input-detailsa-pay::placeholder {	
+.box-pay-details .form-input-detailsa-pay::-webkit-input-placeholder {	
+	color: #381d18;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.box-pay-details .form-input-detailsa-pay::-moz-placeholder {	
+	color: #381d18;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.box-pay-details .form-input-detailsa-pay:-ms-input-placeholder {	
+	color: #381d18;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.box-pay-details .form-input-detailsa-pay:-moz-placeholder {	
 	color: #381d18;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 16px;
@@ -5541,7 +5562,8 @@ height: 100%;
 
 /* Start Profile*/
 .page-8 .el1 div{
-	top: -110px;
+	top: -120px;
+	left: 465px;
 }
 
 
@@ -5580,8 +5602,83 @@ height: 100%;
 	background-size: cover;
 }
 
+.privat-cab-nav{
 
+}
+.privat-cab-nav ul{
+	width: 100%;
+	list-style: none;
+	padding: 0;
+}
+.privat-cab-nav ul li{
+	border-top: 1px dashed rgba(0,0,0,0);
+	border-bottom: 1px dashed #fb9633;
+	overflow: hidden;
+	-webkit-transition: all ease .3s;
+	-o-transition: all ease .3s;
+	transition: all ease .3s;
+}
+.privat-cab-nav ul li:hover {
+	background-color: #ffa300;		
+	border-top: 1px dashed #fff;
+	border-bottom: 1px dashed #fff
+}
+.privat-cab-nav ul .prof-link-active {
+	background-color: #ffa300;	
+	border-top: 1px dashed #fff;
+	border-bottom: 1px dashed #fff;
+}
+.privat-cab-nav ul li a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	color: #381d18;
+	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin:  0;
+	padding: 10px 30px;
+}
 
+.my-profile{
+	margin: 0 295px;
+	color: #381d18;
+  font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.my-profile form .input-my-profile{
+	width: 100%;
+  padding: 12px 10px;
+  background-color: white;
+  border: 1px solid #cfaf81;
+  border-radius: 7px;
+  box-shadow: inset 2.5px 4.3px 0 #f7efdd;
+  margin-bottom: 30px;
+  color: #381d18;
+  font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  outline: none;
+}
+.my-profile .btn-form{
+  margin-top: 10px;
+}
+
+.my-profile form .input-my-profile::-webkit-input-placeholder,
+.my-profile form .input-my-profile::-moz-placeholder, 
+.my-profile form .input-my-profile:-ms-input-placeholder,
+.my-profile form .input-my-profile:-moz-placeholder {	
+	color: #381d18;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+.my-profile form p{
+	color: #7ba00c;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
 
 /* End Profile*/
 
