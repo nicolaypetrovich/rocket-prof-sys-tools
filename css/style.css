@@ -4745,7 +4745,7 @@ height: 100%;
 }
 .wrap-in{
 	max-width: 1170px;
-	margin: 0 auto 50px;
+	margin: 30px auto 50px;
 	position: relative;
 }
 .wrap-in-margin-top {
@@ -4775,7 +4775,7 @@ height: 100%;
 @media only screen and (max-width:1210px){
 	.wrap-in{
 		max-width: 96%;
-		margin: 30px auto 30px;
+		margin: 50px auto 30px;
 	}
 }
 @media only screen and (max-width:950px){
@@ -5542,9 +5542,12 @@ height: 100%;
 
 
 /* Start Profile*/
-.page-8 .el1 div{
+.privat-cab .el1 div{
 	top: -120px;
 	left: 465px;
+}
+.privat-cab .name-container h4{
+	text-transform: uppercase;
 }
 
 
@@ -5598,6 +5601,9 @@ height: 100%;
 	-webkit-transition: all ease .3s;
 	-o-transition: all ease .3s;
 	transition: all ease .3s;
+}
+.privat-cab-nav ul li:first-child{
+	border-top: 1px dashed #fb9633;
 }
 .privat-cab-nav ul li:hover {
 	background-color: #ffa300;		
