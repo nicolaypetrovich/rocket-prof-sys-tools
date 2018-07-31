@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>Page7-check</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="body body-page" id="body">
+		<!-- начало бллок главное меню мобверсия -->
+		<div class="main-menu-320" id="main-menu-320">
+			<img src="img/img89.png" alt="img" class="close320" onclick="closeMainMenu320()">
+			<ul>
+				<li><a href="#"> ГЛАВНАЯ</a></li>
+				<li><a href="#">КАТАЛОГ</a></li>
+				<li><a href="#">ДОСТАВКА И ОПЛАТА </a></li>
+				<li><a href="#">НОВОСТИ</a></li>
+				<li><a href="#"> КОНТАКТЫ</a></li>
+			</ul>
+		</div>
+
+		<!-- конец блок главное меню мобверсия -->
+
+		<!-- начало блок хедер -->
+		<div class="header">
+			<div class="border-top-main"></div>
+			<div onclick="openMainMenu320()" class="openMenu-320"></div>
+			<div class="wrapper">
+				<div class="el1"><div></div></div>
+				<div class="el2"><div></div></div>
+				<div class="el13"><div></div></div>
+				<div class="logo"><a href="index.html"><img src="img/logo.png" alt="img"></a></div>
+				<div class="personal-area-header">	
+					<div class="box">
+						<div class="box-wrapper">
+							<a href="tel:7(123)725-00-66"><span>+7(123)</span> 456 78 90</a>
+							<a href="#" onclick="open_modal_window_PA()"><span>ЛИЧНЫЙ КАБИНЕТ</span></a>	
+						</div>
+					</div>
+					<div class="box">
+						<div class="box-wrapper">
+							<a href="#"></a>
+							<span>Товаров 10 <br> на 100 000 руб. <br>	<a href="#">ОФОРМИТЬ</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="main-menu">	
+					<form action="#">
+						<input type="text" placeholder="Найти на сайте">
+						<input type="submit" name="submit" value="">
+					</form>
+					<div class="menu">
+						<ul>
+							<li><a href="#"><img src="img/img9.png" alt="img"> ГЛАВНАЯ</a></li>
+							<li><a href="#"><img src="img/img10.png" alt="img"> КАТАЛОГ</a></li>
+							<li><a href="#"><img src="img/img11.png" alt="img">  ДОСТАВКА И ОПЛАТА </a></li>
+							<li><a href="#"><img src="img/img12.png" alt="img"> НОВОСТИ</a></li>
+							<li><a href="#"><img src="img/img13.png" alt="img">  КОНТАКТЫ</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- конец блок хеадер -->
+		<div class="min-heght">
+			<div class="page page-7">
+				<!-- начало блок-банер наши акции и наши бренды мобверсия -->
+				<div class="shares-and-brands-banner shares-and-brands-banner-320 ">
+					<div class="buttons-shares-and-brands-banner-320"><span class="scroll-down" onclick="openBrandsMob(this)">наши бренды</span><span class="scroll-down" onclick="openSharesMob(this)">наши акции</span></div>
+					<div class="wrapper">
+						<div class="shares-and-brands-banner-wrapper">
+							<div class="shares-banner" id="shares-banner">
+								<div class="body-shares-banner-wrapper">
+									<div class="body-shares-banner body-shares-banner-slider">
+										<div class="owl-carousel owl-theme body-shares-bannerSlider">
+											<div class="div"><a href="#"><span>Бормашина Профиль М-03 с 6 мм цангой </span><img src="img/img25.jpg" alt="img"></a></div>
+											<div class="div"><a href="#"><span>Бормашина Профиль Б-06, исполнение Торнадо с БП-6Т</span><img src="img/img26.jpg" alt="img"></a></div>
+											<div class="div"><a href="#"><span>Сменный шпиндель с цангой 6 мм</span><img src="img/img27.jpg" alt="img"></a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+							<div class="brands-banner" id="brands-banner">
+								<div class="body-brands-banner-wrapper">
+									<div class="body-brands-banner">
+										<div class="ourBrend-slider-banner-wrapper">
+											<div class="owl-carousel owl-theme ourBrend-slider-banner">
+											    <div class="item">
+											    	<img src="img/img39.png" alt="img" style="width: 39%;">
+											    </div>
+											     <div class="item">
+											    	<img src="img/img40.png" alt="img" style="width: 45%;">
+											    </div>
+											    <div class="item">
+											    	<img src="img/img41.jpg" alt="img" style="width: 88%;">
+											    </div>
+											    <div class="item">
+											    	<img src="img/img42.png" alt="img" style="width: 64%;">
+											    </div>
+											</div>
+										</div>		
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- конец блок-банер наши акции и наши бренды мобверсия -->
+
+				<!-- начало блока наша продукция -->
+				<div class="banner-our-production">
+					<div class="wrapper">
+						<div class="banner-our-production-content-wrapper">
+							<div class="banner-our-production-content">	
+								<h1 onclick="open_banner_our_production(this)">НАША ПРОДУКЦИЯ <img src="img/img15.png" alt="img"></h1>
+								<div class="banner-our-production-content-320" id="banner-our-production-content-320">
+									<div class="banner-our-production-menu banner-our-production-menu1">
+										<h3><a href="#"><span>ЭЛЕКТРОИНСТРУМЕНТ</span></a></h3>	
+										<div class="box">
+											<a href="#"><span></span>Бормашины</a>
+											<a href="#"><span></span>Камнерезный станок</a>
+											<a href="#"><span></span>УШМ</a>
+											<a href="#"><span></span>Токарный станок Skrab</a>	
+										</div>
+									</div>
+									<div class="banner-our-production-menu banner-our-production-menu2">
+										<h3><a href="#"><span>ОСНАСТКА</span></a></h3>
+										<div class="box">
+											<div class="box1" onmouseover="openSubmenuOurProduction1(this)" onmouseout="openSubmenuOurProduction2(this)">
+												<div class="block-name"><a href="#"><span></span>Борфрезы</a><span onclick="openSubmenuOurProduction(this)"></span></div>
+												<div class="box1-content submenuOurProduction">
+													<a href="#"><span></span>Ccылка на раздел1</a>
+													<a href="#"><span></span>Ccылка на раздел</a>
+													<a href="#"><span></span>Ccылка на раздел</a>
+													<a href="#"><span></span>Ccылка на раздел</a>
+												</div>
+											</div>
+											<div class="box1" onmouseover="openSubmenuOurProduction1(this)" onmouseout="openSubmenuOurProduction2(this)">
+												<div class="block-name"><a href="#"><span></span>Диски</a><span onclick="openSubmenuOurProduction(this)"></span></div>
+												<div class="box1-content submenuOurProduction">
+													<a href="#"><span></span>Ccылка на раздел2</a>
+													<a href="#"><span></span>Ccылка на раздел</a>
+													<a href="#"><span></span>Ccылка на раздел</a>
+													<a href="#"><span></span>Ccылка на раздел</a>
+												</div>
+											</div>
+											<div class="box1" onmouseover="openSubmenuOurProduction1(this)" onmouseout="openSubmenuOurProduction2(this)">
+												<div class="block-name"><a href="#"><span></span>Дискодержатели </a><span onclick="openSubmenuOurProduction(this)"></span></div>
+												<div class="box1-content submenuOurProduction">
+													<a href="#"><span></span>Ccылка на раздел3</a>
+													<a href="#"><span></span>Ccылка на раздел</a>
+													<a href="#"><span></span>Ccылка на раздел</a>
+													<a href="#"><span></span>Ccылка на раздел</a>
+												</div>
+											</div>
+											<div class="box1" onmouseover="openSubmenuOurProduction1(this)" onmouseout="openSubmenuOurProduction2(this)">
+												<div class="block-name"><a href="#"><span></span>Другое </a><span onclick="openSubmenuOurProduction(this)"></span></div>
+												<div class="box1-content submenuOurProduction">
+													<a href="#"><span></span>Ccылка на раздел4</a>
+													<a href="#"><span></span>Ccылка на раздел</a>
+													<a href="#"><span></span>Ccылка на раздел</a>
+													<a href="#"><span></span>Ccылка на раздел</a>
+												</div>
+											</div>	
+										</div>	
+									</div>
+
+									<div class="banner-our-production-menu banner-our-production-menu3">
+										<h3><a href="#"><span>ПРИСПОСОБЛЕНИЯ</span></a></h3>
+										<div class="box">
+											<a href="#"><span></span>Токарная станок/станина</a>
+											<a href="#"><span></span>Фрезерный стол</a>
+											<a href="#"><span></span>Распиловочный стол</a>
+											<a href="#"><span></span>Фрезерная приставка</a>
+											<a href="#"><span></span>Угловой наконечник</a>	
+											<a href="#"><span></span>Редукторный наконечник</a>	
+											<a href="#"><span></span>Сверлильная стойка</a>	
+										</div>		
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- конец блок наша продукция -->
+
+				<!-- блок навигация -->
+				<div class="main-navigation wrap-in">
+					<div class="wrapper">
+						<span><a href="#" class="el-main-navigation">Главная </a></span>
+						<span class="el-main-navigation">Оформление заказа </span>
+					</div>
+				</div>
+				<!-- конец блок навигация -->
+
+				<div class="wrapper">
+					<div class="wrap-in wrap-in-margin-top wrap-in-margin-bottom wrap-in-column">
+						<div class="el1"><div></div></div>
+						
+						<div class="box-pay-details">
+							<div class="name-container">
+								<h4>Детали оплаты</h4>
+							</div>
+							<form action="#" class="form-pay-details">
+								<input class="form-input-detailsa-pay" type="text" name="username" placeholder="Ваше имя" pattern="[a-zа-я]{1,15}" required>
+								<input class="form-input-detailsa-pay" type="tel" name="phone" placeholder="Номер телефона" pattern="[0-9]{6,11}" required />
+								<input class="form-input-detailsa-pay" type="email" placeholder="Ваш e-mail" required>
+								
+								<input type="radio" id="radio-from" name="radio-delivery">
+								<label for="radio-from">
+									<b>Самовывоз со склада (МО, Ленинский район)</b><br>
+									Стоимость самовывоза: <span>Бесплатно.</span>
+								</label>
+								<input type="radio" id="radio-within" name="radio-delivery">
+								<label for="radio-within">
+									<b>Доставка в пределах МКАД (до 5 кг)</b><br>
+									Стоимость доставки: <span>350 руб.</span><br>
+									Заказы от 10000 руб доставляются <span>бесплатно</span>
+								</label>
+								<input type="radio" id="radio-beyond" name="radio-delivery">
+								<label for="radio-beyond">
+									<b>Доставка за пределы МКАД (до 20 км)</b><br>
+									Стоимость доставки: <span>600 руб.</span>
+								</label>
+								<input type="radio" id="radio-to-company" name="radio-delivery">
+								<label for="radio-to-company">
+									<b>Доставка до транспортной компании</b><br>
+									Стоимость доставки до т/к: <span>200 руб</span><br>
+									Заказы от 10000 руб доставляются до т/к <span>бесплатно</span>
+									(доставка осуществляется только после 100% оплаты заказа)<br>
+									Для подробного расчета стоимости доставки транспортной компании Вы можете воспользоваться калькулятором на сайте выбранной компании
+								</label>
+								<input class="form-input-detailsa-pay" type="text" name="username" placeholder="Адрес доставки" pattern="[a-zа-я]{1,15}" required>
+								<textarea class="form-input-detailsa-pay" placeholder="Кометарии к заказу" required></textarea>
+								<input type="radio" id="radio-cash" name="radio-pay">
+								<label for="radio-cash">
+									Оплата наличными при доставке
+								</label>
+								<input type="radio" id="radio-yandex-pay" name="radio-pay">
+								<label for="radio-yandex-pay">
+									Яндекс касса (банковские карты, электронные деньги и др.)
+								</label>
+								<input type="submit" class="btn-form" value="Подтвердить заказ" />
+								<p>Заполняя форму, Вы даете согласие на обработку своих <a href="#">персональных данных</a></p>
+							</form>
+						</div>
+						<!-- /.box-pay-details -->
+
+						<div class="box-your-order">
+							<div class="name-container">
+								<h4>Ваш заказ</h4>
+							</div>
+
+							<table>
+								<tr>
+									<th>Товар</th>
+									<th>Итого</th>
+								</tr>
+								<tr>
+									<td>Бормашина Профиль М-03 с 6 мм цангой</td>
+									<td>6 800 руб</td>
+								</tr>    
+								<tr>
+									<td>Подытог:</td>
+									<td>6 800 руб  </td>
+								</tr>    
+								<tr>
+									<td>Доставка:</td>
+									<td>0 руб   </td>
+								</tr>    
+								<tr>
+									<td>Итого:</td>
+									<td>6 800 руб</td>
+								</tr>
+							</table>
+						</div>
+						<!-- /.box-your-order -->
+					</div>						
+				</div>
+	
+			</div>
+		</div>
+
+
+		<!-- начало футер -->
+		<div class="footer">
+			<div class="border-top-main"></div>	
+			<div class="wrapper">
+				<div class="el1"><div></div></div>	
+				<div class="el2"><div></div><div></div></div>
+				<div class="el3"><div></div></div>
+				<div class="content">	
+					<div class="footer-block-left">
+						<div class="div">
+							<p onclick="open_footer_menu(this)">ИНФОРМАЦИЯ</p>
+							<div class="footer-menu">	
+								<a href="#"><span></span>О нас</a>
+								<a href="#"><span></span>Информация о доставке</a>
+							</div>
+						</div>
+						<div class="div">
+							<p  onclick="open_footer_menu(this)">СЛУЖБА ПОДДЕРЖКИ</p>
+							<div  class="footer-menu">	
+								<a href="#"><span></span> Связаться с нами</a>
+								<a href="#"><span></span> Возврат товара</a>	
+								<a href="#"><span></span>Карта сайта</a>	
+							</div>
+						</div>
+						<div class="div">
+							<p  onclick="open_footer_menu(this)">ДОПОЛНИТЕЛЬНО</p>
+							<div class="footer-menu">	
+								<a href="#"><span></span>Производители</a>
+								<a href="#"><span></span> Подарочные сертификаты</a>
+								<a href="#"><span></span> Партнёры</a>
+								<a href="#"><span></span>Товары со скидкой</a>
+							</div>	
+						</div>
+						<div class="div">	
+							<p  onclick="open_footer_menu(this)">Личный кабинет</p>
+							<div class="footer-menu">	
+								<a href="#"><span></span> Личный кабинет</a>
+								<a href="#"><span></span>История заказов</a>
+								<a href="#"><span></span>Мои закладки</a>
+								<a href="#"><span></span>Рассылка новостей</a>
+							</div>
+						</div>	
+					</div>
+					<div class="footer-block-right">
+						<a href="tel:7(123)725-00-66" class="tel-footer"><span>+7(123)</span> 456 78 90</a>
+						<a href="mailto:mail@mail.com" class="email-footer"> <span>mail@mail.com</span></a>
+						<span class="span-footer">Copyright 2018 <br>Proril Sistem Tools</span>	
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- конец футер -->
+
+		<!-- модальное окно попап вход в личный кабинет -->
+		<div class="modal-window" id="modal-window-PA">
+			<div class="content">
+				<div class="close" onclick="closeModalWindow(this)"><img src="img/close.png" alt="img"></div>
+				<form  name="contact_form_PA" method="get" action="#" onsubmit="return validate_form_PA ( );">
+					<p>Вход на сайт</p>
+					<input type="email" name="email" class="formEmail" id="formEmail_PA" placeholder="E-mail:" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"><br>	
+					<input type="password" name="password" placeholder="Пароль" class="form_password" id="form_password_PA">
+					<div class="button"><div><span>войти</span><input type="submit" name="submit" value="" ></div></div>
+					<a href="#">Регистрация</a>
+				</form>	
+			</div>	
+		</div>
+
+		<!-- конец  -->
+
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>
