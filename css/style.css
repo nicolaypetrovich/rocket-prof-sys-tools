@@ -5666,8 +5666,23 @@ height: 100%;
  	display: none;
  } 
 .my-profile{
-	width: 100%;
+	width: 70%;
 	margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width:600px){
+.my-profile{
+	width: 97%;
+	margin: 0 auto;
+	}
+	.my-profile form .input-my-profile{
+		width: 95%;
+	}
+}
+@media only screen and (max-width:430px){
+	.my-profile form .input-my-profile{
+		width: 94%;
 	}
 }
 
