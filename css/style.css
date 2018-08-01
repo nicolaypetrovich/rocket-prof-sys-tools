@@ -4745,7 +4745,7 @@ height: 100%;
 }
 .wrap-in{
 	max-width: 1170px;
-	margin: 0 auto 50px;
+	margin: 30px auto 50px;
 	position: relative;
 }
 .wrap-in-margin-top {
@@ -4775,7 +4775,7 @@ height: 100%;
 @media only screen and (max-width:1210px){
 	.wrap-in{
 		max-width: 96%;
-		margin: 30px auto 30px;
+		margin: 50px auto 30px;
 	}
 }
 @media only screen and (max-width:950px){
@@ -5542,9 +5542,12 @@ height: 100%;
 
 
 /* Start Profile*/
-.page-8 .el1 div{
+.privat-cab .el1 div{
 	top: -120px;
 	left: 465px;
+}
+.privat-cab .name-container h4{
+	text-transform: uppercase;
 }
 
 
@@ -5599,6 +5602,9 @@ height: 100%;
 	-o-transition: all ease .3s;
 	transition: all ease .3s;
 }
+.privat-cab-nav ul li:first-child{
+	border-top: 1px dashed #fb9633;
+}
 .privat-cab-nav ul li:hover {
 	background-color: #ffa300;		
 	border-top: 1px dashed #fff;
@@ -5623,7 +5629,7 @@ height: 100%;
 }
 
 .my-profile{
-	margin: 0 270px 0 290px;
+	margin: 0 270px 0 295px;
 	color: #381d18;
   font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -5687,5 +5693,191 @@ height: 100%;
 }
 
 /* End Profile*/
+
+/* Start Orders*/
+
+.my-orders{
+	margin: 0 0 0 295px;
+  color: #381d18;
+  font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.my-orders .my-orders-table-wrap table{
+	width: 90%;
+	text-align: left;
+	border-collapse: collapse;
+	box-shadow: 0 1px 5px rgba(0, 2, 1, 0.3), inset 0 1px 0 #7ba00c;
+}
+.my-orders .my-orders-table-wrap table tr:nth-child(odd){
+	background-color: #fbf3e6;
+}
+.my-orders .my-orders-table-wrap table tr:nth-child(even){
+	background-color: #fff;
+}
+.my-orders .my-orders-table-wrap table th{
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	padding: 10px 20px;
+	color: #fff;
+	background-color: #7ba00c;
+}
+.my-orders .my-orders-table-wrap table td{
+	padding: 15px 20px;
+}
+.my-orders .my-orders-table-wrap table td:last-child{
+	text-align: center;
+}
+.my-orders .btn-form{
+	margin: 0;
+	font-size: 12px;
+	padding: 5px 25px;
+}
+.my-orders .my-orders-table-wrap-on-mobile {
+	display: none;
+}
+.my-orders .my-orders-table-wrap-on-mobile table{
+	width: 100%;
+	text-align: left;
+	border-top: 1px solid #7ba00c;
+	border-collapse: collapse;
+	margin-bottom: 10px;
+	box-shadow: 0 1px 5px rgba(0, 2, 1, 0.3), inset 0 1px 0 #7ba00c;
+}
+.my-orders .my-orders-table-wrap-on-mobile table th{
+	background-color: #7ba00c;
+	color: #fff;
+	padding: 15px 20px;
+}
+.my-orders .my-orders-table-wrap-on-mobile table td{
+	background-color: #fff;	
+	padding: 10px 20px;
+	width: 50%;
+}
+
+/* модальное окно попап просмотр заказа */
+
+.my-orders_popup{
+	display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  overflow:hidden;
+  position:fixed;
+  top:0px;
+  z-index: 10;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-orders_popup .my-orders_popup-content_item{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin: 15px auto;
+	overflow: hidden;
+}
+.my-orders_popup .my-orders_popup-content{
+	position: relative;
+	width: 55vw;
+	background-color: #fff;
+	padding: 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.my-orders_popup .my-orders_popup-content .btn-close_view{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: 0;
+	top: 0;
+}
+.my-orders_popup .my-orders_popup-content .my-orders_popup_img{
+	display: inline-block;
+	float: left;
+	font-size: 0;
+	width: 100px;
+	height: 100px;
+}
+.my-orders_popup .my-orders_popup-content_item div{
+	float: left;
+	margin-left: 10px;
+	width: 60%;
+}
+.my-orders_popup .my-orders_popup-content .my-orders_popup_title{
+	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #d78319;
+  margin-top: 10px;
+  display: inline-block;
+}
+.my-orders_popup .my-orders_popup-content p{
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+	color: #333333;	
+}
+.my-orders_popup .my-orders_popup-content .my-orders_popup_img img{
+	width: 100%;
+	height: 100%;
+}
+
+@media only screen and (max-width:790px){
+	.my-orders_popup .my-orders_popup-content{
+		width: 80vw;
+	}
+}
+@media only screen and (max-width:540px){
+	.my-orders_popup .my-orders_popup-content{
+		
+	}
+
+	.my-orders_popup .my-orders_popup-content .my-orders_popup_img{
+		
+	}
+}
+@media only screen and (max-width:393px){
+	.my-orders_popup .my-orders_popup-content_item div{
+		margin-left: 10px;
+		width: 40%;
+	}
+}
+
+/* конец модальное окно попап просмотр заказа */
+
+
+@media only screen and (max-width:950px){
+	.my-orders {
+		margin: 0;
+	}
+	.my-orders .my-orders-table-wrap{
+		width: 100%;
+		margin: 0 auto;
+		}
+	.my-orders .my-orders-table-wrap{
+		width: 100%;
+		margin: 0;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: center;
+		}
+}
+
+@media only screen and (max-width:555px){
+	.my-orders .my-orders-table-wrap{
+		display: none;
+	}
+	.my-orders .my-orders-table-wrap-on-mobile{
+		display: block;
+	}
+}
+@media only screen and (max-width:430px){
+}
+/* End Orders*/
 
 
