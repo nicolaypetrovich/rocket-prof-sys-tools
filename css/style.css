@@ -5609,13 +5609,13 @@ height: 100%;
 	-o-transition: all ease .3s;
 	transition: all ease .3s;
 }
-.privat-cab-nav ul li:first-child{
+.privat-cab-nav ul li{
 	border-top: 1px dashed #fb9633;
 }
 .privat-cab-nav ul li:hover {
 	background-color: #ffa300;		
 	border-top: 1px dashed #fff;
-	border-bottom: 1px dashed #fff
+	border-bottom: 1px dashed #fff;
 }
 .privat-cab-nav ul .prof-link-active {
 	background-color: #ffa300;	
