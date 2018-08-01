@@ -5938,6 +5938,7 @@ height: 100%;
 }
 
 .my-wishes .my-wishes-item .my-wishes-item_in{
+	position: relative;
 	padding-left: 20px;
 	background-image: url(../img/my-wishes-item_in-bg.png);
 	background-position: left center;
@@ -5945,6 +5946,19 @@ height: 100%;
 	color: #7ba00c;
 	font-size: 14px;
 	margin-bottom: 5px;
+}
+.my-wishes .my-wishes-item .my-wishes-item_in:before{
+	content: '';
+	display: none;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 0;
+	left: 50%;
+	margin-left: -45px;
+	background-image: url(../img/my-wishes-item_in-bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .my-wishes .my-wishes-item .my-wishes-item_in-not-available{
 	color: #a4a4a4;
@@ -6034,8 +6048,51 @@ height: 100%;
 
 
 @media only screen and (max-width:950px){
+	.prof-margin-left {
+	    margin-left: 0;
+	}
+	.my-wishes .my-wishes-item{
+		margin: 0 0 50px 0;
+		width: 95%;
+	}	
+}
+@media only screen and (max-width:570px){
+	.my-wishes .my-wishes-item {		
+  	justify-content: center;
+  	width: 91%;
+	}
+	.my-wishes .my-wishes-item .my-wishes-item_descr {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	.my-wishes .my-wishes-item .my-wishes-item_add {
+		margin-top: 40px;
+		display: block;
+		width: 100%;
+	}
+	.my-wishes .my-wishes-item .my-wishes-item_add p{
+		display: block;
+		float: left;
+	}
+	.my-wishes .my-wishes-item .my-wishes-item_add input{
+		display: block;
+		float: right;
+	}
 
-	
+	.my-wishes .my-wishes-item .my-wishes-item_in{
+		background-image: none;
+	}
+	.my-wishes .my-wishes-item .my-wishes-item_in:before{
+		display: block;
+	}
+}
+
+@media only screen and (max-width:450px){
+	.my-wishes .my-wishes-item{
+		margin: 0 0 50px 0;
+		width: 87%;
+	}	
 }
 
 /* End Wishes*/
