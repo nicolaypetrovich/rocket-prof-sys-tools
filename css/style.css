@@ -5886,3 +5886,116 @@ height: 100%;
 /* End Orders*/
 
 
+
+
+/* Start Wishes*/
+
+.my-wishes {
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+	color: #333333;	
+}
+.my-wishes .my-wishes-item {
+	position: relative;
+	background-color: #fff;
+  border-top: 1px solid #7ba00c;
+  box-shadow: 0 1px 5px rgba(0, 2, 1, 0.3), inset 0 1px 0 #7ba00c;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  margin-bottom: 50px;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 90%;
+}
+.my-wishes .my-wishes-item .my-wishes-item_descr a{
+	color: #d78319;
+	text-decoration: none;
+}
+.my-wishes .my-wishes-item .my-wishes-item_descr a:hover{
+	text-decoration: underline;
+}
+
+.my-wishes .my-wishes-item .my-wishes-item_in{
+	padding-left: 20px;
+	background-image: url(../img/my-wishes-item_in-bg.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	color: #7ba00c;
+	font-size: 14px;
+}
+
+.my-wishes .my-wishes-item .my-wishes-item_price {
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+	color: #4c4c4c;	
+}
+.my-wishes .my-wishes-item .my-wishes-item_price b{
+	color: #ff7f00;
+	font-size: 24px;
+}
+.btn-wishes_popap {
+	font-size: 14px;
+}
+
+.my-wishes .my-wishes-item_add {
+	text-align: right;
+}
+.my-wishes .my-wishes-item_add p{
+	margin-top: 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.my-wishes-item_popap{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+  font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #d78319;
+  width: 210px;
+  height: 50px;
+  padding: 25px 0;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 0 10px #d78319;
+  border: 1px solid #d78319;
+  border-radius: 5px;
+}
+
+
+/* End Wishes*/
+
+
