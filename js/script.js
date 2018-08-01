@@ -591,3 +591,24 @@ $('.plus').click(function () {
 
 
 /* Конец Поле с переключателем количества */
+
+
+
+/* модальное окно попап просмотр заказа */
+
+$('.btn-close_view').click(function(e) {
+    e.preventDefault();
+    //do other stuff when a click happens
+});
+$(document).ready(function(){
+    $("#my-orders_popup").show();
+});
+$(".btn-view").click (function PopUpShow(){
+    $("#my-orders_popup").show();
+});
+$(".btn-close_view").click (function PopUpHide(){
+    $("#my-orders_popup").hide();
+});
+
+
+/* конец модальное окно попап просмотр заказа */

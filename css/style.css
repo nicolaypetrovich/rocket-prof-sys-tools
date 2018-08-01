@@ -5753,6 +5753,100 @@ height: 100%;
 	width: 50%;
 }
 
+/* модальное окно попап просмотр заказа */
+
+.my-orders_popup{
+	display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  overflow:hidden;
+  position:fixed;
+  top:0px;
+  z-index: 10;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-orders_popup .my-orders_popup-content_item{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+.my-orders_popup .my-orders_popup-content{
+	position: relative;
+	width: 55vw;
+	background-color: #fff;
+	padding: 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.my-orders_popup .my-orders_popup-content .btn-close_view{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: 0;
+	top: 0;
+}
+.my-orders_popup .my-orders_popup-content .my-orders_popup_img{
+	display: inline-block;
+	float: left;
+	font-size: 0;
+	width: 100px;
+	height: 100px;
+}
+.my-orders_popup .my-orders_popup-content_item div{
+	float: left;
+	margin-left: 10px;
+	width: 60%;
+}
+.my-orders_popup .my-orders_popup-content .my-orders_popup_title{
+	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #d78319;
+  margin-top: 10px;
+  display: inline-block;
+}
+.my-orders_popup .my-orders_popup-content p{
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+	color: #333333;	
+}
+.my-orders_popup .my-orders_popup-content .my-orders_popup_img img{
+	width: 100%;
+	height: 100%;
+}
+
+@media only screen and (max-width:790px){
+	.my-orders_popup .my-orders_popup-content{
+		width: 80vw;
+	}
+}
+@media only screen and (max-width:540px){
+	.my-orders_popup .my-orders_popup-content{
+		
+	}
+
+	.my-orders_popup .my-orders_popup-content .my-orders_popup_img{
+		
+	}
+}
+@media only screen and (max-width:393px){
+	.my-orders_popup .my-orders_popup-content_item div{
+		margin-left: 10px;
+		width: 40%;
+	}
+}
+
+/* конец модальное окно попап просмотр заказа */
+
+
 @media only screen and (max-width:950px){
 	.my-orders {
 		margin: 0;
