@@ -601,7 +601,7 @@ $('.btn-close_view').click(function(e) {
     //do other stuff when a click happens
 });
 $(document).ready(function(){
-    $("#my-orders_popup").show();
+    $("#my-orders_popup").hide();
 });
 $(".btn-view").click (function PopUpShow(){
     $("#my-orders_popup").show();
