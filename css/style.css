@@ -5731,6 +5731,9 @@ height: 100%;
 	font-size: 12px;
 	padding: 5px 25px;
 }
+.my-orders .my-orders-table-wrap-on-mobile {
+	display: none;
+}
 .my-orders .my-orders-table-wrap-on-mobile table{
 	width: 100%;
 	text-align: left;
