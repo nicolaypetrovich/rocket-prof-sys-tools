@@ -4972,11 +4972,12 @@ height: 100%;
 	-moz-border-radius: 10px 0px 10px 0px;
 	-webkit-border-radius: 10px 0px 10px 0px;
 	border: none;
-	border-bottom: 4px solid #cc6f00;
+	border-bottom: 2px solid #cc6f00;
 	padding: 10px 25px;
 	margin-top: 30px;
 	margin-bottom: 10px;
 	text-shadow: 0 1px 0 rgba(0, 2, 1, 0.2);
+	box-shadow: 0 2px 5px rgba(0, 2, 1, 0.3), inset 0 -2px 0 rgba(0, 2, 1, 0.2);
 	color: white;
 	cursor: pointer;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
@@ -5281,6 +5282,7 @@ height: 100%;
 	border-bottom: 4px solid #cc6f00;
 	padding: 10px 30px;
 	text-shadow: 0 1px 0 rgba(0, 2, 1, 0.2);
+	box-shadow: 0 2px 5px rgba(0, 2, 1, 0.3), inset 0 -2px 0 rgba(0, 2, 1, 0.2);
 	color: white;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 21px;
@@ -5881,8 +5883,6 @@ height: 100%;
 		display: block;
 	}
 }
-@media only screen and (max-width:430px){
-}
 /* End Orders*/
 
 
@@ -5915,9 +5915,23 @@ height: 100%;
   flex-wrap: wrap;
   width: 90%;
 }
+.my-wishes .my-wishes-item .my-wishes-item_img{
+	display: block;
+	width: 180px;
+	height: 180px;
+}
+.my-wishes .my-wishes-item .my-wishes-item_img img{
+	width: 100%;
+}
+.my-wishes .my-wishes-item .my-wishes-item_descr {
+	width: 30%;
+}
 .my-wishes .my-wishes-item .my-wishes-item_descr a{
+	display: inline-block;
 	color: #d78319;
+	font-weight: bold;
 	text-decoration: none;
+	margin-top: 5px;
 }
 .my-wishes .my-wishes-item .my-wishes-item_descr a:hover{
 	text-decoration: underline;
@@ -5930,12 +5944,17 @@ height: 100%;
 	background-repeat: no-repeat;
 	color: #7ba00c;
 	font-size: 14px;
+	margin-bottom: 5px;
+}
+.my-wishes .my-wishes-item .my-wishes-item_in-not-available{
+	color: #a4a4a4;
 }
 
 .my-wishes .my-wishes-item .my-wishes-item_price {
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
   font-size: 16px;
 	color: #4c4c4c;	
+	margin-top: 0;
 }
 .my-wishes .my-wishes-item .my-wishes-item_price b{
 	color: #ff7f00;
@@ -5943,43 +5962,61 @@ height: 100%;
 }
 .btn-wishes_popap {
 	font-size: 14px;
+	margin: 0;
+}
+.btn-not-available {
+	margin: 0;
+	background: rgba(180, 180, 180, 1);
+  background: -moz-linear-gradient(top, rgba(202, 202, 202, 1) 0%, rgba(180, 180, 180, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(202, 202, 202, 1)), color-stop(100%, rgba(180, 180, 180, 1)));
+  background: -webkit-linear-gradient(top, rgba(202, 202, 202, 1) 0%, rgba(180, 180, 180, 1) 100%);
+  background: -o-linear-gradient(top, rgba(202, 202, 202, 1) 0%, rgba(180, 180, 180, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(202, 202, 202, 1) 0%, rgba(180, 180, 180, 1) 100%);
+  background: linear-gradient(to bottom,rgba(202, 202, 202, 1) 0%, rgba(180, 180, 180, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#b4b4b4', GradientType=0 );
+  border-bottom: 2px solid #8f908f;
+  font-size: 14px;
+} 
+.btn-not-available:hover{	
+	background: rgba(180, 180, 180, 1);
+  background: -moz-linear-gradient(top, rgba(202, 202, 202, 1) 0%, rgba(180, 180, 180, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(202, 202, 202, 1)), color-stop(100%, rgba(180, 180, 180, 1)));
+  background: -webkit-linear-gradient(top, rgba(202, 202, 202, 1) 0%, rgba(180, 180, 180, 1) 100%);
+  background: -o-linear-gradient(top, rgba(202, 202, 202, 1) 0%, rgba(180, 180, 180, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(202, 202, 202, 1) 0%, rgba(180, 180, 180, 1) 100%);
+  background: linear-gradient(to bottom,rgba(202, 202, 202, 1) 0%, rgba(180, 180, 180, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#b4b4b4', GradientType=0 );
+  border-bottom: 2px solid #8f908f;
+  font-size: 14px;
 }
 
 .my-wishes .my-wishes-item_add {
 	text-align: right;
 }
 .my-wishes .my-wishes-item_add p{
-	margin-top: 0;
-
+	margin-top: 5px;
+	color: #a4a4a4;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.my-wishes .my-wishes-item_add input{
+	padding: 5px;
+	padding-left: 20px;
+	padding-right: 0;
+	outline: none;
+	border: none;
+	background-color: inherit;
+	background-image: url(../img/cart-button-close.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	font-size: 14px;
+	color: #ff2800;
+	cursor: pointer;
+}
 
 .my-wishes-item_popap{
 	display: inline-block;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 5%;
+	left: 10%;
 	display: none;
   font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -5995,6 +6032,11 @@ height: 100%;
   border-radius: 5px;
 }
 
+
+@media only screen and (max-width:950px){
+
+	
+}
 
 /* End Wishes*/
 

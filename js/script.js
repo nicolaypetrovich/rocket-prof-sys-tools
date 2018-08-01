@@ -618,7 +618,7 @@ $(".btn-close_view").click (function PopUpHide(){
 
 
 $(".btn-wishes_popap").click (function PopUpShow(){
-    $(".my-wishes-item_popap").fadeIn('slow');
+    $(this).closest('.my-wishes-item').find(".my-wishes-item_popap").fadeIn('slow');
     setTimeout( function() { $(".my-wishes-item_popap").fadeOut('slow'); }, 1000);
 });
 
