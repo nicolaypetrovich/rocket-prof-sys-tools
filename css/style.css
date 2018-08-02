@@ -4947,7 +4947,7 @@ height: 100%;
 	outline: none;
 }
 .form-send-messege input::placeholder{	
-	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #eac176;
 }
@@ -6120,36 +6120,79 @@ height: 100%;
 
 /* End Wishes*/
 
-
-
 /* Start Registry*/
 
 .wrap-form-registry{
 	width: 570px;
 }
-
-
-
 @media only screen and (max-width:610px){	
 	.wrap-form-registry{
 		width: 100%;
 		margin: 0 auto;
 	}
-	.wrap-form-registry .input-my-profile{
-		
-	}
-
 }
 @media only screen and (max-width:470px){	
 	.wrap-form-registry{
 		width: 100%;
 		margin: 0 auto;
 	}
-	.wrap-form-registry .input-my-profile{
-		
-	}
-
 }
 
 /* End Registry*/
+
+
+
+/* Start Text*/
+
+.page12{
+	padding-bottom: 0;
+}
+
+.page12 .banner-our-production {
+	position: inherit;
+	width: 370px;
+	margin-top: -50px;
+	float: left;
+	clear: both;
+}
+
+.page12 .wrap-content {
+	margin-top: 90px;
+}
+.wrap-content .wrap-in{
+	width: 70%;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+	color: #4c4c4c;	
+}
+.wrap-content .name-container{
+	margin-left: 0;
+}
+.wrap-content .el1 div{
+	top: -100px;
+	left: 459px;
+}
+
+
+@media only screen and (max-width:950px){	
+	.page12 .banner-our-production {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin-top: -170px;
+	}
+
+	.wrap-content .wrap-in{
+		width: 100%;
+		font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	  font-size: 16px;
+		color: #4c4c4c;	
+	}
+
+	.wrap-content .name-container{
+		padding: 0;
+	}
+}
+
+/* End Text*/
 
