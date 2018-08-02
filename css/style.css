@@ -4735,6 +4735,20 @@ height: 100%;
 .page .banner-our-production-content{
 	display: none;
 }
+.page input{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.page input:not([type="submit"]){
+	width: 100%;
+}
+.page textarea{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 @media only screen and (max-width:950px){
 	.page .banner-our-production-content{
 		display: block;
@@ -5058,7 +5072,7 @@ height: 100%;
 		width: 45%;
 	}
 	.wrap-form-in textarea{
-		width: 45%;
+		
 	}
 }
 @media only screen and (max-width:680px){
@@ -5079,9 +5093,6 @@ height: 100%;
 	}
 	.wrap-form-in .wrap-input{
 		width: 100%;
-	}
-	.wrap-form-in .form-input-item{
-		width: 94%;
 	}
 	.wrap-form-in textarea{
 		width: 100%;
@@ -5157,7 +5168,7 @@ height: 100%;
   color: #333;
 }
 .cart-item-box .cart-item-box_switch{
-	margin: 0 20px 0 30px;
+	margin: 0 20px 0 30px;	
 }
 .cart-item-box .cart-item-box_switch input{
 	background-color: white;
@@ -5166,6 +5177,8 @@ height: 100%;
 	box-shadow: inset 2.5px 4.3px 0 #f7efdd;
 	text-align: center;
 	padding: 5px;
+	width: 50px;
+	vertical-align: middle;
 }
 .cart-item-box .cart-item-box_switch span{
 	cursor: pointer;
@@ -5181,7 +5194,7 @@ height: 100%;
 	color: white;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 20px;
-	line-height: 25px;
+	line-height: 20px;
 	font-weight: 700;
 	margin: 0 5px;
 	background: rgba(255,187,0,1);
@@ -5659,6 +5672,13 @@ height: 100%;
   margin-top: 10px;
 }
 
+.my-profile .wrap-profile-form{
+	width: 100%;
+	margin: 0 auto;
+}
+.my-profile form{
+}
+
 .my-profile form input::placeholder{
 	color: #381d18;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
@@ -5689,16 +5709,19 @@ height: 100%;
 	width: 97%;
 	margin: 0 auto;
 	}
-	.my-profile form .input-my-profile{
-		width: 95%;
-	}
 }
 @media only screen and (max-width:430px){
 	.my-profile form .input-my-profile{
-		width: 94%;
+		
 	}
 }
 
+@media only screen and (min-width:950px){ 
+	.my-profile .wrap-profile-form{
+		width: 600px;
+		margin: 0 auto;
+	}
+}
 /* End Profile*/
 
 /* Start Orders*/
@@ -6102,7 +6125,30 @@ height: 100%;
 /* Start Registry*/
 
 .wrap-form-registry{
-	width: 50%;
+	width: 570px;
+}
+
+
+
+@media only screen and (max-width:610px){	
+	.wrap-form-registry{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.wrap-form-registry .input-my-profile{
+		
+	}
+
+}
+@media only screen and (max-width:470px){	
+	.wrap-form-registry{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.wrap-form-registry .input-my-profile{
+		
+	}
+
 }
 
 /* End Registry*/
