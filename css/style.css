@@ -5642,7 +5642,7 @@ height: 100%;
   font-size: 16px;
 }
 
-.my-profile form .input-my-profile{
+.input-my-profile{
 	width: 92%;
   padding: 12px 10px;
   background-color: white;
@@ -6097,4 +6097,13 @@ height: 100%;
 
 /* End Wishes*/
 
+
+
+/* Start Registry*/
+
+.wrap-form-registry{
+	width: 50%;
+}
+
+/* End Registry*/
 
