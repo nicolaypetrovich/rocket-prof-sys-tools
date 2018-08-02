@@ -604,11 +604,23 @@ $(document).ready(function(){
     $("#my-orders_popup").hide();
 });
 $(".btn-view").click (function PopUpShow(){
-    $("#my-orders_popup").show();
+    $("#my-orders_popup").fadeIn();
 });
 $(".btn-close_view").click (function PopUpHide(){
-    $("#my-orders_popup").hide();
+    $("#my-orders_popup").fadeOut();
 });
 
 
 /* конец модальное окно попап просмотр заказа */
+
+
+/* попап просмотр заказа */
+
+
+$(".btn-wishes_popap").click (function PopUpShow(){
+    $(this).closest('.my-wishes-item').find(".my-wishes-item_popap").fadeIn('slow');
+    setTimeout( function() { $(".my-wishes-item_popap").fadeOut('slow'); }, 1000);
+});
+
+/* конец попап просмотр заказа */
+
