@@ -624,9 +624,30 @@ $(".btn-wishes_popap").click (function PopUpShow(){
 
 /* конец попап просмотр заказа */
 
+/*маска*/
 jQuery(function($){
 	$("#date").mask("99/99/9999");
 	$(".phone").mask("+7 (999) 999-9999");
 	$("#tin").mask("99-9999999");
 	$("#ssn").mask("999-99-9999");
 });
+/* конец маска*/
+
+/*проверка подтверждения пароля*/
+
+window.onload = function () {
+    document.getElementById("password1").onchange = validatePassword;
+    document.getElementById("password2").onchange = validatePassword;
+}
+function validatePassword(){
+var pass2=document.getElementById("password2").value;
+var pass1=document.getElementById("password1").value;
+if(pass1!=pass2)
+    document.getElementById("password2").setCustomValidity("Несовпадают пароли");
+else
+    document.getElementById("password2").setCustomValidity('');
+//empty string means no validation error
+}
+
+
+/* конец проверка подтверждения пароля*/
