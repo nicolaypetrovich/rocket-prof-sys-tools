@@ -624,3 +624,9 @@ $(".btn-wishes_popap").click (function PopUpShow(){
 
 /* конец попап просмотр заказа */
 
+jQuery(function($){
+	   $("#date").mask("99/99/9999");
+	   $("#phone").mask("+3 (999) 99-99-999");
+	   $("#tin").mask("99-9999999");
+	   $("#ssn").mask("999-99-9999");
+		});
