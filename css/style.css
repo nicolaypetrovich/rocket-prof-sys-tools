@@ -4780,7 +4780,7 @@ height: 100%;
   position: relative;
   z-index: 2;
   left: 95px;
-  top: -120px;
+  top: -170px;
   background: url(../img/img3.png);
   background-size: cover;
   background-position: center;
@@ -6196,5 +6196,110 @@ height: 100%;
 }
 
 
-	
+
+.wrap-error {
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 50px 0 150px;
+}
+.wrap-error h5{
+	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 80px;
+	color: #381d18;
+	margin: 0;
+}
+.wrap-error h5 span{
+	color: #ee7703;	
+}
+
+.wrap-error p{
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+	color: #381d18;
+	margin: 0;
+}
+.wrap-error a{
+	display: inline-block;
+	text-decoration: none;
+  position: relative;
+  padding: 15px;
+  margin: 50px;
+  font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #7ba00c;
+  text-transform: uppercase;
+  background-image: url(../img/arrow-cont-shoping-border.png);
+  background-position: center top;
+  -webkit-background-size: cover;
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+.wrap-error a:before{
+	content: '';
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  top: 0;
+  left: -15px;
+  background-image: url(../img/arrow-cont-shoping.png);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrap-error a:after{
+	content: '';
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  top: 0;
+  background-image: url(../img/arrow-cont-shoping.png);
+  background-position: right top;
+  background-size: cover;
+  right: -15px;
+}
+@media only screen and (max-width: 1210px){
+.wrap-in {
+    max-width: 96%;
+    margin: 40px auto 30px;
+	}
+}
+@media only screen and (max-width:780px){	
+		.wrap-error {
+		width: 80%;
+		text-align: center;
+		padding: 50px 0 150px;
+	}
+}
+@media only screen and (max-width:611px){	
+		.wrap-error {
+		width: 100%;
+		text-align: center;
+		padding: 50px 0 150px;
+	}
+}
+@media only screen and (max-width:488px){		
+	.wrap-error h5{
+	  font-size: 70px;
+	}
+
+	.wrap-error p{
+	  font-size: 15px;
+	}
+}
+@media only screen and (max-width:428px){		
+	.wrap-error h5{
+	  font-size: 52px;
+	}
+	.wrap-error p{
+	  font-size: 13px;
+	}
+}
+	@media only screen and (min-width:1210px){		
+		.wrap-in-margin-top {
+	    margin-top: 0px; 
+	}
+}
 	
