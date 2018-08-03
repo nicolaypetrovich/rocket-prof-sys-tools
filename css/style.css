@@ -6164,7 +6164,13 @@ height: 100%;
 }
 
 @media only screen and (max-width:950px){	
+	.page .banner-our-production {
+		display: block;
+    width: 100%;
+    margin-top: -70px;
+	}
 	.page12 .banner-our-production {
+		display: block;
     width: 100%;
     margin-top: -120px;
 	}
