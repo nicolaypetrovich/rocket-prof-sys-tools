@@ -1235,14 +1235,28 @@ height: 100%;
 	background-position: center;
 }
 
-.catalog-commodity .div4 .button div span{
+.catalog-commodity .div4 .button {
 	font-family:PTSansBold, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #fff;
 	text-transform: uppercase;
 	position: relative;
-	top: 7px;
+	top: -5px;
+	padding: 5px 10px 5px 35px;
 	left: 10px;
+}
+.catalog-commodity .div4 .button:before{
+	width: 18px;
+	height: 14px;
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	margin-top: -7px;
+	background-image: url(../img/cart-button.png);
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 .popap{
 	position: absolute;
@@ -2333,11 +2347,55 @@ height: 100%;
 	margin-left: 5px;
 }
 
-
+/*
 .page3 .card-product .container-right .top-box .button{
 	cursor: pointer;
 	position: relative;
+	margin: 0;
+	padding: 0 15px 0 60px;
+	height: auto;
 }
+
+.page3 .card-product .container-right .top-box .button:before{
+	content: '';
+	display: block;
+	width: 35px;
+	height: 29px;
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	margin-top: -16px;
+	background-image: url(../img/cart-button.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+*/
+
+.page3 .button{
+	cursor: pointer;
+	position: relative;
+	margin: 0;
+	padding: 10px 15px 10px 60px;
+	height: auto;
+}
+
+.page3 .button:before{
+	content: '';
+	display: block;
+	width: 35px;
+	height: 29px;
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	margin-top: -16px;
+	background-image: url(../img/cart-button.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+
+
 
 .page3 .card-product .container-right .top-box .button div{
 	width: 98px;
@@ -2550,8 +2608,8 @@ height: 100%;
 
 .shipping-and-payment .el1{
 	position: absolute;
-	left: 0;
-	bottom: -35px;
+	left: -65px;
+	bottom: -50px;
 	width: 100%;
 	text-align: center;
 }
