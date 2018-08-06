@@ -6126,6 +6126,22 @@ height: 100%;
 .wrap-form-registry{
 	width: 570px;
 }
+
+.wrap-form-registry p{
+	color: #381d18;
+  font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  margin: 0;
+}
+.wrap-form-registry p a{
+	color: #381d18;
+  font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+.wrap-form-registry p a:hover{
+	text-decoration: none;
+}
+
 @media only screen and (max-width:610px){	
 	.wrap-form-registry{
 		width: 100%;
