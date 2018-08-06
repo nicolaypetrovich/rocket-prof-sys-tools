@@ -4845,9 +4845,8 @@ height: 100%;
 .contacts-item .contact-info span{
 	line-height: 1;
   display: inline-block;
-  font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+  font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
   font-size: 18px;
-  font-weight: 700;
   color: #381d18;
 }
 
