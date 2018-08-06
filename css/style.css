@@ -1177,7 +1177,7 @@ height: 100%;
 
 .catalog-commodity .div4{
 	position: absolute;
-	bottom: 27px;
+	bottom: 32px;
 	left: 0;
 	width: 100%;
 }
@@ -1186,6 +1186,7 @@ height: 100%;
 	display: flex;
 	justify-content: center;
 	position: relative;
+	top: 5px;
 }
 
 .catalog-commodity .price span{
@@ -1194,10 +1195,13 @@ height: 100%;
 	color: #ff7f00;
 }
 
-.catalog-commodity .price{
+.page3 .catalog-commodity .price{
 	position: relative;
-	top: 2px;
-	margin-right: 10px;
+	
+}
+.page2 .catalog-commodity .price{
+	position: relative;
+	
 }
 
 .catalog-commodity .price span:after{
@@ -1213,24 +1217,40 @@ height: 100%;
 	position: relative;
 }
 
-.catalog-commodity .div4 .button div{
-	width: 98px;
-	height: 38px;
-	background: url(../img/img29.png);
+.catalog-commodity .div4 .button div {
+	line-height: 30px;
 	background-size: cover;
 	background-position: center;
+	padding: 0 10px 0 35px;
 	cursor: pointer;
 	text-align: center;
+	border-radius: 10px 0px 10px 0px;
+  -moz-border-radius: 10px 0px 10px 0px;
+  -webkit-border-radius: 10px 0px 10px 0px;
+  border: none;
+  border-bottom: 2px solid #cc6f00;
+  text-shadow: 0 1px 0 rgba(0, 2, 1, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 2, 1, 0.3), inset 0 -2px 0 rgba(0, 2, 1, 0.2);
+  background: rgba(255,187,0,1);
+  background: -moz-linear-gradient(top, rgba(255,187,0,1) 0%, rgba(255,140,0,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,187,0,1)), color-stop(100%, rgba(255,140,0,1)));
+  background: -webkit-linear-gradient(top, rgba(255,187,0,1) 0%, rgba(255,140,0,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,187,0,1) 0%, rgba(255,140,0,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,187,0,1) 0%, rgba(255,140,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,187,0,1) 0%, rgba(255,140,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbb00', endColorstr='#ff8c00', GradientType=0 );
 }
 
 .catalog-commodity .div4 .button div:hover{
-	background: url(../img/img30.png);
-	background-size: cover;
-	background-position: center;
-}
-
-.catalog-commodity .div4 .button div:active{
-	background: url(../img/img31.png);
+	border-bottom: 2px solid #ef8200;
+  background: rgba(247,194,49,1);
+  background: -moz-linear-gradient(top, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,194,49,1)), color-stop(100%, rgba(255,171,76,1)));
+  background: -webkit-linear-gradient(top, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
+  background: -o-linear-gradient(top, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
+  background: -ms-linear-gradient(top, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
+  background: linear-gradient(to bottom, rgba(247,194,49,1) 0%, rgba(255,171,76,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7c231', endColorstr='#ffab4c', GradientType=0 );
 	background-size: cover;
 	background-position: center;
 }
@@ -1242,10 +1262,12 @@ height: 100%;
 	text-transform: uppercase;
 	position: relative;
 	top: -5px;
-	padding: 5px 10px 5px 35px;
+	padding: 0;
 	left: 10px;
 }
 .catalog-commodity .div4 .button:before{
+	content: '';
+	display: block;
 	width: 18px;
 	height: 14px;
 	position: absolute;
@@ -1257,6 +1279,21 @@ height: 100%;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
+	z-index: 10;
+}
+.page2 .catalog-commodity .div4 .button:before{
+	width: 18px;
+	height: 14px;
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	margin-top: -7px;
+	background-image: url(../img/cart-button.png);
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 10;
 }
 .popap{
 	position: absolute;
