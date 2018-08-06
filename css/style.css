@@ -6252,6 +6252,9 @@ height: 100%;
   background-size: contain;
   background-repeat: repeat-x;
 }
+.wrap-error a:hover{
+	text-decoration: underline;
+}
 .wrap-error a:before{
 	content: '';
   display: block;
