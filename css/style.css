@@ -6176,8 +6176,9 @@ height: 100%;
 	display: block;
 	position: inherit;
 	float: left;
-	margin-top: -40px;
+	margin-top: 0;
 	width: 350px;
+	margin-left: 280px;
 }
 
 @media only screen and (max-width:950px){	
