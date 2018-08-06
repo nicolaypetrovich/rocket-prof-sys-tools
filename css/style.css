@@ -4553,9 +4553,9 @@ height: 100%;
 @media only screen and (max-width:500px){
 	
 	.page2 .catalog-commodity .box {
-	    width: 180px;
-	    height: 475px;
-	   margin: 0 5px 0 5px;
+	  width: 180px;
+	  height: 475px;
+	  margin: 0 5px 0 5px;
 	}
 
 	.page2 .catalog-commodity img {
@@ -4603,7 +4603,7 @@ height: 100%;
 	}
 
 	.page2 .catalog-commodity .box{
-		margin-top: -33px;
+		margin-top: 0;
 	}
 
 	.page2 .popap span {
@@ -4968,6 +4968,7 @@ height: 100%;
 	padding: 15px 10px;
 	margin-bottom: 30px;
 	outline: none;
+	overflow: hidden;
 }
 .form-send-messege textarea::placeholder{	
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
@@ -5097,7 +5098,6 @@ height: 100%;
 	.wrap-form-in textarea{
 		width: 100%;
 		min-height: 140px;
-		padding-left: 20px;
 	}
 }
 
@@ -5168,7 +5168,15 @@ height: 100%;
   color: #333;
 }
 .cart-item-box .cart-item-box_switch{
-	margin: 0 20px 0 30px;	
+	margin: 0 20px 0 30px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
 }
 .cart-item-box .cart-item-box_switch input{
 	background-color: white;
@@ -5185,7 +5193,7 @@ height: 100%;
 	display: inline-block;
 	text-align: center;
 	width: 23px;
-	height: 23px;
+	height: 21px;
 	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -5193,8 +5201,8 @@ height: 100%;
 	text-shadow: 0 1px 0 rgba(0, 2, 1, 0.2);
 	color: white;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 20px;
-	line-height: 20px;
+	font-size: 21px;
+	line-height: 21px;
 	font-weight: 700;
 	margin: 0 5px;
 	background: rgba(255,187,0,1);
@@ -5258,7 +5266,8 @@ height: 100%;
 	background-repeat: repeat-x;
 }
 .cart-footer .btn-continue-shopping:hover{
-	text-decoration: underline;
+	color: #ffbe00;
+	background-image: url(../img/arrow-cont-shoping-border-hover.png);
 }
 .cart-footer .btn-continue-shopping:before {
 	content: '';
@@ -5273,6 +5282,9 @@ height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+.cart-footer .btn-continue-shopping:hover::before {
+	background-image: url(../img/arrow-cont-shoping-hover.png);
+}
 .cart-footer .btn-continue-shopping:after{
 	content: '';
 	display: block;
@@ -5284,6 +5296,9 @@ height: 100%;
 	background-position: right top;
 	background-size: cover;
 	right: -15px;
+}
+.cart-footer .btn-continue-shopping:hover:after{
+	background-image: url(../img/arrow-cont-shoping-hover.png);
 }
 .cart-footer .btn-issue {
 	float: right;
@@ -5538,9 +5553,10 @@ height: 100%;
 .box-pay-details{
 		width: 100%;
 	}
-	.box-pay-details .form-input-detailsa-pay {
-    width: 93%;
-  }
+	.box-pay-details input {
+    display: block;
+    margin: 0 auto;
+}
 	.box-your-order{
 		width: 100%;
 	}
@@ -5656,7 +5672,6 @@ height: 100%;
 }
 
 .input-my-profile{
-	width: 92%;
   padding: 12px 10px;
   background-color: white;
   border: 1px solid #cfaf81;
@@ -5684,6 +5699,8 @@ height: 100%;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 16px;	
 	font-weight: bold;
+	height: 100%;
+	line-height: 100%;
 }
 
 .my-profile form p{
@@ -5691,6 +5708,7 @@ height: 100%;
 	font-weight: bold;
 	margin-top: 0;
 	margin-bottom: 30px;
+	font-size: 18.67px;
 }
 
 
@@ -5704,11 +5722,21 @@ height: 100%;
 	}
 }
 
+
+@media only screen and (max-width:720px){
+	.my-profile .btn-form{
+	  margin-top: 10px;
+	  margin: 0 auto;
+	  display: block;
+	}
+}
+
 @media only screen and (max-width:600px){
 .my-profile{
 	width: 97%;
 	margin: 0 auto;
 	}
+
 }
 @media only screen and (max-width:430px){
 	.my-profile form .input-my-profile{
@@ -5947,7 +5975,7 @@ height: 100%;
 	width: 100%;
 }
 .my-wishes .my-wishes-item .my-wishes-item_descr {
-	width: 30%;
+	width: 50%;
 }
 .my-wishes .my-wishes-item .my-wishes-item_descr a{
 	display: inline-block;
@@ -5998,7 +6026,7 @@ height: 100%;
 	font-size: 24px;
 }
 .btn-wishes_popap {
-	font-size: 14px;
+	font-size: 13px;
 	margin: 0;
 }
 .btn-not-available {
@@ -6012,7 +6040,7 @@ height: 100%;
   background: linear-gradient(to bottom,rgba(202, 202, 202, 1) 0%, rgba(180, 180, 180, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#b4b4b4', GradientType=0 );
   border-bottom: 2px solid #8f908f;
-  font-size: 14px;
+  font-size: 13px;
 } 
 .btn-not-available:hover{	
 	background: rgba(180, 180, 180, 1);
@@ -6040,7 +6068,7 @@ height: 100%;
 	padding-right: 0;
 	outline: none;
 	border: none;
-	background-color: inherit;
+	background-color: transparent;
 	background-image: url(../img/cart-button-close.png);
 	background-position: left center;
 	background-repeat: no-repeat;
@@ -6067,6 +6095,31 @@ height: 100%;
   box-shadow: 0 0 10px #d78319;
   border: 1px solid #d78319;
   border-radius: 5px;
+}
+
+
+@media only screen and (max-width:1088px){
+	.my-wishes .my-wishes-item .my-wishes-item_descr {
+		width: 48%;
+	}
+}
+
+@media only screen and (max-width:1059px){
+	.my-wishes .my-wishes-item .my-wishes-item_descr {
+		width: 45%;
+	}
+}
+
+@media only screen and (max-width:1018px){
+	.my-wishes .my-wishes-item .my-wishes-item_descr {
+		width: 42%;
+	}
+}
+
+@media only screen and (max-width:982px){
+	.my-wishes .my-wishes-item .my-wishes-item_descr {
+		width: 39%;
+	}
 }
 
 
@@ -6253,7 +6306,8 @@ height: 100%;
   background-repeat: repeat-x;
 }
 .wrap-error a:hover{
-	text-decoration: underline;
+	background-image: url(../img/arrow-cont-shoping-border-hover.png);
+	color: #ffbe00;
 }
 .wrap-error a:before{
 	content: '';
@@ -6268,6 +6322,9 @@ height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.wrap-error a:hover::before{
+  background-image: url(../img/arrow-cont-shoping-hover.png);
+}
 .wrap-error a:after{
 	content: '';
   display: block;
@@ -6280,10 +6337,13 @@ height: 100%;
   background-size: cover;
   right: -15px;
 }
+.wrap-error a:hover::after{
+  background-image: url(../img/arrow-cont-shoping-hover.png);
+}
 @media only screen and (max-width: 1210px){
 .wrap-in {
     max-width: 96%;
-    margin: 40px auto 30px;
+    margin: 40px auto 110px;
 	}
 }
 @media only screen and (max-width:780px){	
