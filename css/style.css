@@ -686,6 +686,10 @@ height: 100%;
 	right: 0;
 }
 
+.banner-our-production-menu .box > a:hover{
+	background: #ffa300;
+	border: 1px dashed #fff;
+}
 
 .banner-our-production-menu .box1:hover{
 	background: #ffa300;
