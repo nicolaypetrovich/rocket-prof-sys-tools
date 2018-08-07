@@ -698,12 +698,15 @@ height: 100%;
 	background-repeat: no-repeat;
 	background-position: 224px 13px;
 }
-/*
-.banner-our-production-menu .box .box1>a:hover{
+
+.banner-our-production-menu .box .box1 .box1-content a:hover{
 	background: #ffa300;
 	border: 1px dashed #fff;
 }
-*/
+.banner-our-production-menu .box .box1 .box1-content{
+	overflow: hidden;
+}
+
 .banner-our-production-menu .box a span{
 	display: inline-block;
 	width: 3px;
@@ -751,7 +754,6 @@ height: 100%;
 .banner-our-production-content-wrapper .box1-content a{
 	padding: 12px 20px 12px 20px;
 }
-
 /*конец блок наша продукция*/
 
 
@@ -1062,7 +1064,7 @@ height: 100%;
 
 .name-container{
 	overflow: hidden;
-	margin-bottom: 29px;
+	margin-bottom: 7px;
   margin-left: 346px;
 }
 
@@ -1248,6 +1250,7 @@ height: 100%;
   border-bottom: 2px solid #cc6f00;
   text-shadow: 0 1px 0 rgba(0, 2, 1, 0.2);
   box-shadow: 0 2px 5px rgba(0, 2, 1, 0.3), inset 0 -2px 0 rgba(0, 2, 1, 0.2);
+  overflow: auto;
   background: rgba(255,187,0,1);
   background: -moz-linear-gradient(top, rgba(255,187,0,1) 0%, rgba(255,140,0,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,187,0,1)), color-stop(100%, rgba(255,140,0,1)));
@@ -1403,14 +1406,14 @@ height: 100%;
 	background: url(../img/bg-block.png);
 	background-size: cover;
 	background-position: center;
-	padding-bottom: 120px;
-  padding-top: 114px;
-  margin-top: -45px;
+	padding-bottom: 87px;
+  padding-top: 17px;
+  margin-top: -55px;
 }
 
 .our-news .wrapper{
 	max-width: 1370px;
-	margin: 0 auto;
+	margin: 120px auto 0;
 	position: relative;
 }
 
@@ -1427,8 +1430,8 @@ height: 100%;
 	width: 114px;
 	height: 87px;
 	position: relative;
-	left: 321px;
-	top: -39px;
+	left: 318px;
+	top: 5px;
 	background: url(../img/img52.png);
 	background-size: cover;
 	background-position: center;
@@ -1683,7 +1686,7 @@ height: 100%;
 }
 
 .our-brend .our-brend-slider{
-	margin-left: 370px;
+	margin-left: 340px;
 	max-width: 1370px;
 	padding: 0 80px;
 	background: url(../img/img38.png);
@@ -1772,7 +1775,8 @@ height: 100%;
 
 
 .about-store .text{
-	width: 55%;
+	width: 52%;
+  margin-top: 35px;
 }
 
 .about-store .text p{
@@ -1946,7 +1950,12 @@ height: 100%;
 	color: #ffe9c7;
 	text-decoration: none;
 	line-height: 1;
-	margin-bottom: 10px;
+	margin-bottom: 31px;
+  margin-left: 27px;
+  margin-top: -11px;
+}
+.tel-footer:hover{
+	color: #ff7f00;
 }
 
 .tel-footer span{
@@ -1966,7 +1975,7 @@ height: 100%;
 	background: url(../img/img60.png) no-repeat 0 3px;
 	background-size: 14px 11px;
 	line-height: 1;
-	margin-left: 73px;
+	margin-left: 101px;
 	margin-bottom: 25px;
 }
 
@@ -1988,7 +1997,7 @@ height: 100%;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #fff;
-	margin-left: 90px;
+	margin-left: 119px;
 }
 /*конец футер*/
 
@@ -2430,7 +2439,8 @@ height: 100%;
 .page3 .button{
 	cursor: pointer;
 	position: relative;
-	margin: 0;
+	top: -22px;
+	left: -30px;
 	padding: 10px 15px 10px 60px;
 	height: auto;
 }
@@ -2538,6 +2548,13 @@ height: 100%;
 	display: block;
 	color: #381d18;
 	text-decoration: none;
+}
+.page3 .card-product .container-right .bottom-box .button{
+	top: 0;
+	left: -10px;
+}
+.page3 .card-product .container-right .bottom-box .button:before{
+	display: none;
 }
 
 .page3 .card-product .container-right .bottom-box .button{
@@ -2740,6 +2757,8 @@ height: 100%;
 	cursor: pointer;
 	position: relative;
 	margin-top: 25px;
+	top: 0;
+	left: 0;
 }
 .shipping-and-payment .button div{
 	width: 98px;
@@ -4172,7 +4191,9 @@ height: 100%;
 	.page3 .card-product .container-right .top-box .button{
 		display: flex;
 		justify-content: center;
-		margin-top: 20px;
+		margin-top: 40px;
+		left: 50%;
+		margin-left: -80px;
 	}
 
 	.page3 .card-product .container-right .table{
@@ -4829,6 +4850,10 @@ height: 100%;
 	
 	.page2 .catalog-commodity .box {
 	    width: 140px;
+	}
+
+	.page2 .catalog-commodity .div4 .button{
+		margin-left: 0px;
 	}
 
 }
@@ -6180,6 +6205,7 @@ height: 100%;
 .my-wishes .my-wishes-item_add p{
 	margin-top: 5px;
 	color: #a4a4a4;
+	font-size: 13px;
 }
 .my-wishes .my-wishes-item_add input{
 	padding: 5px;
@@ -6319,6 +6345,7 @@ height: 100%;
 	.wrap-form-registry{
 		width: 100%;
 		margin: 0 auto;
+		text-align: center;
 	}
 }
 @media only screen and (max-width:470px){	
