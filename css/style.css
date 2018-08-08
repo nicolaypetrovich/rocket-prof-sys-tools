@@ -1285,7 +1285,7 @@ height: 100%;
 	padding: 0;
 	left: 10px;
 }
-.catalog-commodity .div4 .button:before{
+.catalog-commodity .div4 .button div:before{
 	content: '';
 	display: block;
 	width: 18px;
@@ -1300,6 +1300,7 @@ height: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+/*
 .page2 .catalog-commodity .div4 .button:before{
 	width: 18px;
 	height: 14px;
@@ -1313,6 +1314,7 @@ height: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+*/
 .popap{
 	position: absolute;
 	left: 0;
@@ -1408,7 +1410,7 @@ height: 100%;
 	background-position: center;
 	padding-bottom: 87px;
   padding-top: 17px;
-  margin-top: -55px;
+  margin-top: -41px;
 }
 
 .our-news .wrapper{
@@ -2446,17 +2448,6 @@ height: 100%;
 }
 
 .page3 .button:before{
-	content: '';
-	display: block;
-	width: 35px;
-	height: 29px;
-	position: absolute;
-	left: 15px;
-	top: 50%;
-	margin-top: -16px;
-	background-image: url(../img/cart-button.png);
-	background-position: center;
-	background-repeat: no-repeat;
 }
 
 
@@ -4862,7 +4853,7 @@ height: 100%;
 	}
 
 	.page2 .catalog-commodity .div4 .button{
-		margin-left: 0px;
+		margin-left: 8px;
 	}
 
 }
@@ -5101,7 +5092,7 @@ height: 100%;
 	outline: none;
 }
 .form-send-messege input::placeholder{	
-	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #eac176;
 }
@@ -5621,7 +5612,6 @@ height: 100%;
 	color: #381d18;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 16px;
-	font-weight: 500;
 }
 
 .box-pay-details input[type="radio"]{
@@ -5852,14 +5842,12 @@ height: 100%;
 .my-profile form input::placeholder{
 	color: #381d18;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 16px;	
-	font-weight: bold;
+	font-size: 16px;
 }
 .my-profile form input::-webkit-input-placeholder{
 	color: #381d18;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 16px;	
-	font-weight: bold;
+	font-size: 16px;
 	height: 45px;
   line-height: 45px;
 }
