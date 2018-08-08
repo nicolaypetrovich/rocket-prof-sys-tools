@@ -3644,6 +3644,15 @@ height: 100%;
 	.shares-and-brands-banner .brands-banner,
 	.shares-and-brands-banner .shares-banner{
 		display: none;
+		margin-top: 20px;
+	}
+	.shares-and-brands-banner .shares-banner{
+		display: none;
+		margin-left: 31px;
+	}
+	.shares-and-brands-banner .brands-banner{
+		display: none;
+		margin-left: 40px;
 	}
 
 	.shares-and-brands-banner .body-brands-banner .active {
@@ -4886,6 +4895,8 @@ height: 100%;
 }
 .page input:not([type="submit"]){
 	width: 100%;
+	height: 45px;
+	line-height: 45px;
 }
 .page textarea{
 	-webkit-box-sizing: border-box;
@@ -5816,7 +5827,7 @@ height: 100%;
 }
 
 .input-my-profile{
-  padding: 12px 10px;
+  padding: 0 10px;
   background-color: white;
   border: 1px solid #cfaf81;
   border-radius: 7px;
@@ -5843,8 +5854,14 @@ height: 100%;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 16px;	
 	font-weight: bold;
-	height: 100%;
-	line-height: 100%;
+}
+.my-profile form input::-webkit-input-placeholder{
+	color: #381d18;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;	
+	font-weight: bold;
+	height: 45px;
+  line-height: 45px;
 }
 
 .my-profile form p{
