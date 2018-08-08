@@ -249,14 +249,14 @@
 								<h4>Отправить сообщение</h4>
 							</div>
 							<div class="wrap-form">
-								<form action="#" class="form-send-messege">
+								<form  action="#" class="form-send-messege">
 									<div class="wrap-form-in">
 										<div class="wrap-input">
-											<input class="form-input-item" type="text" name="username" placeholder="Ваше имя" autocomplete="off" required>
-											<input class="form-input-item phone" id="" type="tel" name="phone" placeholder="Номер телефона"  autocomplete="off" required />
-											<input class="form-input-item" type="email" placeholder="Ваш e-mail" autocomplete="off" required>
+											<input class="form-input-item  required" type="text" name="username" placeholder="Ваше имя" />
+											<input class="form-input-item phone required" id="" type="tel" name="phone" placeholder="Номер телефона" />
+											<input class="form-input-item required" type="email" placeholder="Ваш e-mail" />
 										</div>
-										<textarea placeholder="Сообщение" required></textarea>
+										<textarea placeholder="Сообщение" class="required"></textarea>
 								  </div>
 								  <span>Заполняя форму, Вы даете согласие на обработку своих <a href="#">персональных данных</a></span><br>
 									<input type="submit" class="btn-form" value="Отправить" />	
@@ -340,12 +340,11 @@
 	</div>
 	</div>
 </div>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+	<script src="js/jQuery/jquery-3.3.1.min.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>	
 	<script async defer src="js/jquery.maskedinput.min.js" type="text/javascript"></script>
+	<script src="js/forms.js"></script>
 	<script src="js/script.js"></script>
-	<script>
-		
-	</script>
+	
 </body>
 </html>

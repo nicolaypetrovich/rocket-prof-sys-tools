@@ -555,8 +555,9 @@ window.onresize = function(){
 /* Карта на странице контактов конец*/
 
 /* попап для сабмит*/
-
+/*
 $('form').submit(function(e) {
+	e.preventDefault();
   var empty = $(this).parent().find("input").filter(function() {
     return this.value === "";
   });
@@ -567,8 +568,8 @@ $('form').submit(function(e) {
     //очищаем все данные текстовых полей, кроме кнопок
     $('form input, form textarea').not(':button, :submit').val('');
   }
-  e.preventDefault();
-});
+  $(this).submit();
+});*/
 
 /* конец попап для сабмит*/
 
@@ -634,7 +635,7 @@ jQuery(function($){
 /* конец маска*/
 
 /*проверка подтверждения пароля*/
-
+/*
 window.onload = function () {
     document.getElementById("password1").onchange = validatePassword;
     document.getElementById("password2").onchange = validatePassword;
@@ -649,5 +650,27 @@ else
 //empty string means no validation error
 }
 
+
+
+
+
+window.onload = function () {
+    document.getElementById("password1").onchange = validatePassword;
+    document.getElementById("password2").onchange = validatePassword;
+    document.getElementById("password3").onchange = validatePassword;
+}
+function validatePassword(){
+var pass2=document.getElementById("password2").value;
+var pass1=document.getElementById("password1").value;
+var pass3=document.getElementById("password3").value;
+if(pass1==pass2)
+    document.getElementById("password2").setCustomValidity("Cовпадают пароли");
+else if(pass2!=pass3)
+    document.getElementById("password3").setCustomValidity("Несовпадают пароли");
+else
+    document.getElementById("password3").setCustomValidity('');
+//empty string means no validation error
+}
+*/
 
 /* конец проверка подтверждения пароля*/

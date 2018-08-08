@@ -205,11 +205,11 @@
 								<h4>Детали оплаты</h4>
 							</div>
 							<form action="#" class="form-pay-details">
-								<input class="form-input-detailsa-pay" type="text" name="username" placeholder="Ваше имя" required>
-								<input class="form-input-detailsa-pay phone" type="tel" name="phone" placeholder="Номер телефона"  required />
-								<input class="form-input-detailsa-pay" type="email" placeholder="Ваш e-mail" required>
+								<div><input class="form-input-detailsa-pay required" type="text" name="username" placeholder="Ваше имя" ></div>
+								<input class="form-input-detailsa-pay phone required" type="tel" name="phone" placeholder="Номер телефона"  />
+								<input class="form-input-detailsa-pay required" type="email" placeholder="Ваш e-mail" />
 								
-								<input type="radio" id="radio-from" name="radio-delivery">
+								<input type="radio" id="radio-from" name="radio-delivery" checked>
 								<label for="radio-from">
 									<b>Самовывоз со склада (МО, Ленинский район)</b><br>
 									Стоимость самовывоза: <span>Бесплатно.</span>
@@ -233,9 +233,9 @@
 									(доставка осуществляется только после 100% оплаты заказа)<br>
 									Для подробного расчета стоимости доставки транспортной компании Вы можете воспользоваться калькулятором на сайте выбранной компании
 								</label>
-								<input class="form-input-detailsa-pay" type="text" name="username" placeholder="Адрес доставки" required>
-								<textarea class="form-input-detailsa-pay" placeholder="Комметарии к заказу" required></textarea>
-								<input type="radio" id="radio-cash" name="radio-pay">
+								<input class="form-input-detailsa-pay required" type="text" name="username" placeholder="Адрес доставки" >
+								<textarea class="form-input-detailsa-pay required" placeholder="Комметарии к заказу" ></textarea>
+								<input type="radio" id="radio-cash" name="radio-pay" checked>
 								<label for="radio-cash">
 									Оплата наличными при доставке
 								</label>
@@ -357,8 +357,9 @@
 
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+	<script src="js/jQuery/jquery-3.3.1.min.js"></script>
 	<script async defer src="js/jquery.maskedinput.min.js" type="text/javascript"></script>
+	<script src="js/forms.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

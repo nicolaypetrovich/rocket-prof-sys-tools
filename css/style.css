@@ -2190,8 +2190,8 @@ height: 100%;
 
 .page2   .block-catalog-page2-active{
 	display: block;
+	margin-left: -95px;
 }
-
 .page2 .shares-and-brands-banner{
 	top: 566px;
 }
@@ -5714,10 +5714,21 @@ height: 100%;
 		padding-right: 50px;
 	}
 }
-/* End Check*/
+/* End Check */
 
-
-
+form div{
+	position: relative;
+}
+.error{
+	color: #ff0000;
+	position: absolute;
+	top: -25px;
+	left: 20px;
+	display: block;
+}
+form .invalid{
+	border: 1px solid #ff0000!important;
+}
 
 /* Start Profile*/
 .privat-cab .el1 div{
@@ -5727,7 +5738,6 @@ height: 100%;
 .privat-cab .name-container h4{
 	text-transform: uppercase;
 }
-
 
  .prof-margin-left{
  	margin-left: 295px;

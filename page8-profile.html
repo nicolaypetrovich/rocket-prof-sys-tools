@@ -156,13 +156,13 @@
 								<h4>Мой профиль</h4>
 							</div>
 							<div class="wrap-profile-form">
-								<form action="#">
-									<input class="input-my-profile" type="text" name="username" placeholder="Имя" autocomplete="off" required />
-									<input class="input-my-profile" type="email" placeholder="E-mail" autocomplete="off" required />
+								<form action="#" method='get'>
+									<input class="input-my-profile required"  type="text" name="username" placeholder="Имя"  />
+									<input class="input-my-profile required" type="email" placeholder="E-mail" />
 									<p>Смена пароля</p>
-									<input class="input-my-profile" type="password" placeholder="Действующий пароль" autocomplete="off" required />
-									<input class="input-my-profile" id="password1" type="password" placeholder="Новый пароль" autocomplete="off" required />
-									<input class="input-my-profile" id="password2" type="password" placeholder="Подтвердите новый пароль" autocomplete="off" required />
+									<div><input class="input-my-profile required oldPassword" type="password" placeholder="Действующий пароль"  /></div>
+									<div><input class="input-my-profile required password" id="password1" type="password" placeholder="Новый пароль"  /></div>
+									<div><input class="input-my-profile required passwordConfirmation" id="password2" type="password" placeholder="Подтвердите новый пароль" /></div>
 									<input type="submit" class="btn-form" value="Сохранить изменения" />
 								</form>
 							</div>
@@ -247,6 +247,8 @@
 		<!-- конец  -->
 
 	</div>
+	<script src="js/jQuery/jquery-3.3.1.min.js"></script>
+	<script src="js/forms.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
