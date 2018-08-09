@@ -14,7 +14,7 @@ $(document).ready(function () {
 
         var removeValidate = function( self ) {
             var errors = self.querySelectorAll('.error');
-            console.log(1);
+            
 
             for ( var i = 0; i < errors.length; i++ ){
                 errors[i].remove();

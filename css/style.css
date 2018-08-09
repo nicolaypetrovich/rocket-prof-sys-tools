@@ -809,8 +809,6 @@ height: 100%;
 	height: 217px;
 	position: relative;
 	z-index: 2;
-	left: -31px;
-  top: -20px;
 }
 
 .shares-and-brands-banner .shares-banner .button2{
@@ -952,8 +950,6 @@ height: 100%;
 	overflow: hidden;
 	position: relative;
 	z-index: 2;
-	left: -32px;
-  top: -21px;
 }
 
 .shares-and-brands-banner .brands-banner .item{
@@ -1093,7 +1089,7 @@ height: 100%;
 
 .name-container{
 	overflow: hidden;
-	margin-bottom: 7px;
+	margin-bottom: 10px;
   margin-left: 346px;
 }
 
@@ -3166,7 +3162,7 @@ height: 100%;
 	}
 
 	.page1 .name-container .button{
-		margin-right: 10px;
+		
 	}
 
 	.page1 .our-brend .our-brend-slider{
@@ -3544,7 +3540,7 @@ height: 100%;
 	.page2 .shares-and-brands-banner-320{
 		display: block;
 		top: auto;
-		bottom: 0;
+		bottom: 0px;
 		left: 0;
 		width: 100%;
 		z-index: 3;
@@ -3606,6 +3602,8 @@ height: 100%;
 
 	.shares-and-brands-banner .wrapper{
 		text-align: center;
+		width: 100%;
+
 	}
 
 	.shares-and-brands-banner .shares-banner{
@@ -3631,7 +3629,7 @@ height: 100%;
 
 	.shares-and-brands-banner .brands-banner{
 		display: block;
-		padding: 20px 0;
+		padding: 23px 0 22px;
 	}
 
 	.shares-and-brands-banner .shares-banner{
@@ -3666,15 +3664,13 @@ height: 100%;
 	.shares-and-brands-banner .brands-banner,
 	.shares-and-brands-banner .shares-banner{
 		display: none;
-		margin-top: 20px;
 	}
 	.shares-and-brands-banner .shares-banner{
 		display: none;
-		margin-left: 31px;
 	}
 	.shares-and-brands-banner .brands-banner{
 		display: none;
-		margin-left: 40px;
+		
 	}
 
 	.shares-and-brands-banner .body-brands-banner .active {
