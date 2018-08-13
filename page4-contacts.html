@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -253,7 +253,7 @@
 									<div class="wrap-form-in">
 										<div class="wrap-input">
 											<input class="form-input-item  required" type="text" name="username" placeholder="Ваше имя" />
-											<input class="form-input-item phone required" id="" type="tel" name="phone" placeholder="Номер телефона" />
+											<input class="form-input-item phone required" type="tel" name="phone" placeholder="Номер телефона" />
 											<input class="form-input-item required" type="email" placeholder="Ваш e-mail" />
 										</div>
 										<textarea placeholder="Сообщение" class="required"></textarea>
@@ -264,9 +264,14 @@
 								<!-- /.form-send-messege -->
 								<div class="popap-form-out">Спасибо, ваше сообщение отправлено. Менеджер с вами свяжется в течении дня</div>
 							<!-- /.wrap-form -->							
+							</div>
+							
 						</div>
-					</div>
+					
 				</div>
+				<div class="contacts-note contacts-img-bg"><img src="img/contacts-note.png" alt="img"></div>
+				<div class="contacts-inkwell contacts-img-bg"><img src="img/contacts-inkwell.png" alt="img"></div>
+				<div class="contacts-pen contacts-img-bg"><img src="img/contacts-pen.png" alt="img"></div>
 				<!-- конец блока Отправить сообщение -->
 		</div>
 		
@@ -341,10 +346,14 @@
 	</div>
 </div>
 	<script src="js/jQuery/jquery-3.3.1.min.js"></script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>	
-	<script async defer src="js/jquery.maskedinput.min.js" type="text/javascript"></script>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>	
+	<script defer src="js/jquery.maskedinput.min.js"></script>
 	<script src="js/forms.js"></script>
 	<script src="js/script.js"></script>
-	
+	<script>
+		jQuery(function($){
+	$(".phone").mask("+7 (999) 999-9999");
+});
+	</script>
 </body>
 </html>
