@@ -43,6 +43,14 @@ function open_modal_window_PA() {
 	        e.preventDefault();
 	}, false);
 }
+$(document).mouseup(function (e) {
+    var modalPA = $("#modal-window-PA");
+    if (modalPA.has(e.target).length === 0){
+        modalPA.hide();
+    }
+});
+
+
 
 function closeModalWindow(ell) {
 	ell.parentNode.parentNode.style.display = "none";
@@ -269,14 +277,14 @@ function openBrandsMob(argument) {
 		document.getElementById('shares-banner').style.display = "none";
 	}
 }
-
+/*
 $(document).ready(function() {
 	$('.scroll-down').click(function(){
 	$('html, body').animate({scrollTop:$(document).height()}, 'slow');
 	return false;
 	});
 });
-
+*/
 function openSharesMob(argument) {
 
 	if (document.getElementById('shares-banner').style.display == "block") {
@@ -603,13 +611,23 @@ $('.btn-close_view').click(function(e) {
 });
 $(document).ready(function(){
     $("#my-orders_popup").hide();
+
+		$(".btn-view").click (function PopUpShow(){
+		    $("#my-orders_popup").fadeIn();
+		});
+		$(".btn-close_view").click (function PopUpHide(){
+		    $("#my-orders_popup").fadeOut();
+		});
 });
-$(".btn-view").click (function PopUpShow(){
-    $("#my-orders_popup").fadeIn();
+
+$(document).mouseup(function (e) {
+    var myOrders = $("#my-orders_popup");
+    if (myOrders.has(e.target).length === 0){
+        myOrders.fadeOut();
+    }
 });
-$(".btn-close_view").click (function PopUpHide(){
-    $("#my-orders_popup").fadeOut();
-});
+
+
 
 
 /* конец модальное окно попап просмотр заказа */
