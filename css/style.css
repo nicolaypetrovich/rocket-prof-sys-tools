@@ -27,7 +27,7 @@ img{
 	z-index: 20;
 	left: 0;
 	top: 0;
-	width: 100%;
+	width: 101%;
 	height: 100%;
 	background: rgba(0,0,0,0.8);
 	display: none;
@@ -35,13 +35,12 @@ img{
 
 .modal-window .content{
 	width: 500px;
-	padding: 50px 0px;
+	padding: 25px 0px;
 	background: #fff;
 	position: relative;
 	margin: 0 auto;
 	margin-top: 70px;
 }
-
 .modal-window .close{
 	width: 30px;
 	height: 30px;
@@ -58,10 +57,10 @@ img{
 }
 
 .modal-window .close img{
-	width: 11px;
+	width: 10px;
 	height: auto;
 	position: relative;
-	top: 6px;
+	top: 5px;
 }
 
 .modal-window form{
@@ -151,6 +150,27 @@ img{
 .modal-window form a:hover{
 	color: #ffa300;
 	border-bottom: 1px solid #ffa300;
+}
+
+
+@media only screen and (max-height:415px){
+	.modal-window .content{
+		position: relative;
+		margin-top: 15px;
+	}
+}
+
+@media only screen and (max-height:360px){
+	.modal-window .content{
+		margin-top: 10px;
+	}
+	.modal-window .content p{
+		margin-bottom: 15px;
+	}
+	.modal-window .formEmail, 
+	.modal-window .form_password {
+    margin-bottom: 10px;
+	}
 }
 
 
