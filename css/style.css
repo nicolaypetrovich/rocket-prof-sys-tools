@@ -2883,7 +2883,55 @@ height: 100%;
 .page3 .see-also .catalog-commodity .box:last-child{
 	margin-right: 0;
 }
+.share_popup {
+	position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 101%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: block;
+}
+.share_popup_popup-content{
+  width: 500px;
+  padding: 25px 0px;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 70px;
+  padding: 40px 20px;
+  text-align: center;
+}
+.share_popup_popup-content .btn-close_view{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.share_popup h5{
+	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #7ba00c;
+  margin: 0;
+  margin-bottom: 0;
+}
+.share_popup ul{
+	padding: 0;
+	margin: 20px 0 30px;
+}
+.share_popup ul li{
+	list-style-type: none;
+	display: inline-block;
+	margin: 10px;
+}
 
+.share_popup_popup-content .copy-share{
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
 /*начало блок информация и сервисе*/
 .information-and-servicer{
 	position: relative;
@@ -5199,7 +5247,7 @@ height: 100%;
 }
 .page .wrapper input:not([type="submit"]){
 	width: 100%;
-	height: 45px;
+	height: 30px;
 	line-height: 45px;
 }
 .page textarea{
@@ -5801,9 +5849,9 @@ height: 100%;
 }
 .cart-item-box .cart-item-box_switch span{
 	cursor: pointer;
-	display: inline-block;
+	display: block;
 	text-align: center;
-	width: 23px;
+	width: 40px;
 	height: 21px;
 	border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -6446,11 +6494,6 @@ form .invalid{
   position:fixed;
   top:0px;
   z-index: 10;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -6469,6 +6512,9 @@ form .invalid{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	top: 150px;
+	left: 50%;
+	margin-left: -27.5vw;
 }
 .my-orders_popup .my-orders_popup-content .btn-close_view{
 	position: absolute;
@@ -6940,7 +6986,6 @@ form .invalid{
   text-transform: uppercase;
   background-image: url(../img/arrow-cont-shoping-border.png);
   background-position: center top;
-  -webkit-background-size: cover;
   background-size: contain;
   background-repeat: repeat-x;
 }

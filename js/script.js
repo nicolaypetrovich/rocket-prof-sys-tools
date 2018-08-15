@@ -610,9 +610,7 @@ $('.btn-close_view').click(function(e) {
     //do other stuff when a click happens
 });
 $(document).ready(function(){
-    $("#my-orders_popup").hide();
-
-		$(".btn-view").click (function PopUpShow(){
+   	$(".btn-view").click (function PopUpShow(){
 		    $("#my-orders_popup").fadeIn();
 		});
 		$(".btn-close_view").click (function PopUpHide(){
@@ -626,10 +624,6 @@ $(document).mouseup(function (e) {
         myOrders.fadeOut();
     }
 });
-
-
-
-
 /* конец модальное окно попап просмотр заказа */
 
 
@@ -643,14 +637,57 @@ $(".btn-wishes_popap").click (function PopUpShow(){
 
 /* конец попап просмотр заказа */
 
-/*маска*/
-jQuery(function($){
-	$("#date").mask("99/99/9999");
-	$(".phone").mask("+7 (999) 999-9999");
-	$("#tin").mask("99-9999999");
-	$("#ssn").mask("999-99-9999");
+
+
+
+/* модальное окно попап просмотр заказа */
+
+$('.bottom-box a').click(function(e) {
+    e.preventDefault();
+    //do other stuff when a click happens
 });
-/* конец маска*/
+$(document).ready(function(){
+   	$(".bottom-box a").click (function (){
+		    $("#modal-share").fadeIn();
+		});
+		$(".btn-close_view").click (function (){
+		    $("#modal-share").fadeOut();
+		});
+});
+
+$(document).mouseup(function (e) {
+    var mShare = $("#modal-share");
+    if (mShare.has(e.target).length === 0){
+        mShare.fadeOut();
+    }
+});
+/* конец модальное окно попап просмотр заказа */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// /*маска*/
+// jQuery(function($){
+// 	$("#date").mask("99/99/9999");
+// 	$(".phone").mask("+7 (999) 999-9999");
+// 	$("#tin").mask("99-9999999");
+// 	$("#ssn").mask("999-99-9999");
+// });
+// /* конец маска*/
 
 /*проверка подтверждения пароля*/
 /*
