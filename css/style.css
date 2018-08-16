@@ -2891,13 +2891,13 @@ height: 100%;
   width: 101%;
   height: 100%;
   background: rgba(0,0,0,0.8);
-  display: block;
+  display: none;
 }
 .share_popup_popup-content{
-  width: 500px;
-  padding: 25px 0px;
+  width: 300px;
   background: #fff;
   position: relative;
+  top: 30vh;
   margin: 0 auto;
   margin-top: 70px;
   padding: 40px 20px;
@@ -2925,12 +2925,16 @@ height: 100%;
 	display: inline-block;
 	margin: 10px;
 }
+.share_popup ul li img{
+	width: 40px;
+	height: 40px;
+}
 
 .share_popup_popup-content .copy-share{
   font-size: 14px;
   text-decoration: none;
-  margin-top: 10px;
-  margin-bottom: 50px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 /*начало блок информация и сервисе*/
 .information-and-servicer{
@@ -5247,7 +5251,7 @@ height: 100%;
 }
 .page .wrapper input:not([type="submit"]){
 	width: 100%;
-	height: 30px;
+	height: 45px;
 	line-height: 45px;
 }
 .page textarea{
@@ -5781,7 +5785,7 @@ height: 100%;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	-ms-align-items: center;
 	align-items: center;
 	padding: 20px;
@@ -5836,6 +5840,7 @@ height: 100%;
 	justify-content: space-between;
 	-ms-align-items: center;
 	align-items: center;
+	text-align: center;
 }
 .cart-item-box .cart-item-box_switch input{
 	background-color: white;
@@ -5877,6 +5882,8 @@ height: 100%;
 	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
   font-size: 24px;
   color: #ff7f00;
+  width: 10%;
+  text-align: center;
 }
 .cart-item-box .cart-item-box_price span {	
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
@@ -5913,14 +5920,13 @@ height: 100%;
 	position: relative;
 	float: left;
 	margin-left: 15px;
-	padding: 15px;
 	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	color: #7ba00c;
 	text-transform: uppercase;
 	background-image: url(../img/arrow-cont-shoping-border.png);
 	background-position: center top;
-	-webkit-background-size: cover;
+	-webkit-background-size: contain;
 	background-size: contain;
 	background-repeat: repeat-x;
 }
@@ -5928,6 +5934,24 @@ height: 100%;
 	color: #ffbe00;
 	background-image: url(../img/arrow-cont-shoping-border-hover.png);
 }
+.cart-footer .btn-continue-shopping div{
+	display: inline-block;
+	padding: 15px;
+	height: 100%;
+  background-image: url(../img/arrow-cont-shoping-border-hover.png);
+  background-position: 0 100px;
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+.cart-footer .btn-continue-shopping:hover div{
+	background-image: url(../img/arrow-cont-shoping-border-hover.png);
+	color: #ffbe00;
+	background-position: center top;
+}
+
+
+
+
 .cart-footer .btn-continue-shopping:before {
 	content: '';
 	display: block;
@@ -5944,6 +5968,28 @@ height: 100%;
 .cart-footer .btn-continue-shopping:hover::before {
 	background-image: url(../img/arrow-cont-shoping-hover.png);
 }
+
+.cart-footer .btn-continue-shopping div:before{
+	content: '';
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  top: 0;
+  left: -15px;
+  background-image: url(../img/arrow-cont-shoping-hover.png);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+}
+.cart-footer .btn-continue-shopping:hover div::before{
+  background-image: url(../img/arrow-cont-shoping-hover.png);
+  opacity: 1;
+}
+
+
+
 .cart-footer .btn-continue-shopping:after{
 	content: '';
 	display: block;
@@ -5959,6 +6005,72 @@ height: 100%;
 .cart-footer .btn-continue-shopping:hover:after{
 	background-image: url(../img/arrow-cont-shoping-hover.png);
 }
+
+.cart-footer .btn-continue-shopping div:after{
+	content: '';
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  top: 0;
+  background-image: url(../img/arrow-cont-shoping-hover.png);
+  background-position: right top;
+  background-size: cover;
+  right: -15px;
+  opacity: 0;
+}
+.cart-footer .btn-continue-shopping:hover div::after{
+  background-image: url(../img/arrow-cont-shoping-hover.png);
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .cart-footer .btn-issue {
 	float: right;
 	text-decoration: none;
@@ -6978,7 +7090,7 @@ form .invalid{
 	display: inline-block;
 	text-decoration: none;
   position: relative;
-  padding: 15px;
+  padding: 0px;
   margin: 50px;
   font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -6990,9 +7102,24 @@ form .invalid{
   background-repeat: repeat-x;
 }
 .wrap-error a:hover{
-	background-image: url(../img/arrow-cont-shoping-border-hover.png);
+	background-image: none;
 	color: #ffbe00;
 }
+.wrap-error a div{
+	display: inline-block;
+	padding: 15px;
+	height: 100%;
+  background-image: url(../img/arrow-cont-shoping-border-hover.png);
+  background-position: 0 100px;
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+.wrap-error a:hover div{
+	background-image: url(../img/arrow-cont-shoping-border-hover.png);
+	color: #ffbe00;
+	background-position: center top;
+}
+
 .wrap-error a:before{
 	content: '';
   display: block;
@@ -7009,6 +7136,29 @@ form .invalid{
 .wrap-error a:hover::before{
   background-image: url(../img/arrow-cont-shoping-hover.png);
 }
+
+.wrap-error a div:before{
+	content: '';
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  top: 0;
+  left: -15px;
+  background-image: url(../img/arrow-cont-shoping-hover.png);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+}
+.wrap-error a:hover div::before{
+  background-image: url(../img/arrow-cont-shoping-hover.png);
+  opacity: 1;
+}
+
+
+
+
 .wrap-error a:after{
 	content: '';
   display: block;
@@ -7024,6 +7174,31 @@ form .invalid{
 .wrap-error a:hover::after{
   background-image: url(../img/arrow-cont-shoping-hover.png);
 }
+
+
+.wrap-error a div:after{
+	content: '';
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  top: 0;
+  background-image: url(../img/arrow-cont-shoping-hover.png);
+  background-position: right top;
+  background-size: cover;
+  right: -15px;
+  opacity: 0;
+}
+.wrap-error a:hover div::after{
+  background-image: url(../img/arrow-cont-shoping-hover.png);
+  opacity: 1;
+}
+
+
+
+
+
+
 @media only screen and (max-width: 1210px){
  .privat-cab .wrap-in {
     max-width: 96%;

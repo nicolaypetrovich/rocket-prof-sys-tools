@@ -47,6 +47,7 @@ $(document).mouseup(function (e) {
     var modalPA = $("#modal-window-PA");
     if (modalPA.has(e.target).length === 0){
         modalPA.hide();
+        $("html,body").css("overflow","auto");
     }
 });
 

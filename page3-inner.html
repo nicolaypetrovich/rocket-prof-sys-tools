@@ -631,7 +631,7 @@
 							<li><a href="#"><img src="img/whatsapp.png" alt="img"></a></li>
 						</ul>
 						<a href="#" class="btn-close_view"><img src="img/img89.png" alt="X"></a>
-						<a href="#" class="copy-share btn-form">Скопировать ссылку</a>
+						<button class="copy-share btn-form" data-clipboard-text="http://prof-sys-tools.rocketcompany.website/page3-inner.html">Скопировать ссылку</button>
 						
 					</div>
 				
@@ -639,6 +639,19 @@
 		<!-- конец  -->
 
 	</div>
+	<script src="js/clipboard.min.js"></script>
 	<script src="js/script.js"></script>
+	<script>
+		var btns = document.querySelectorAll('button');
+    var clipboard = new ClipboardJS(btns);
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+	</script>
 </body>
 </html>
