@@ -428,7 +428,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f0e0', end
 }
 
 
-@media only screen and (max-width:1300px){
+@media only screen and (max-width:1366px){
 	.body:after, 
 	.body:before {
 		content: '';
