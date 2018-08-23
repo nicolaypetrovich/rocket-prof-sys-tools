@@ -24,7 +24,7 @@ function prof_sys_tools_setup() {
     add_theme_support('woocommerce');
 	register_nav_menus( array(
 		'main' => 'Главное меню',
-		'footer' => 'Меню в футере',
+		'footer' => 'Меню в футере', 
 	) );
 }
 //end add menus
