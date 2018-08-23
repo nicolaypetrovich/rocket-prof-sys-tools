@@ -144,9 +144,9 @@ the_post();
                         <div class="banner-our-production-content-320" id="banner-our-production-content-320">
                             <div class="banner-our-production-menu banner-our-production-menu1">
                                 <div class="box">
-                                    <a href="http://profsys.tools/my-account/edit-account/">Профиль</a>
-                                    <a href="http://profsys.tools/my-account/orders/">Мои заказы</a>
-                                    <a class="is-active" href="http://profsys.tools/my-account/tinv_wihlist/">Мои желания</a>
+                                    <a href="<?php echo home_url();?>/my-account/edit-account/">Профиль</a>
+                                    <a href="<?php echo home_url();?>/my-account/orders/">Мои заказы</a>
+                                    <a class="is-active" href="<?php echo home_url();?>/my-account/tinv_wihlist/">Мои желания</a>
                                 </div>
                             </div>
                         </div>
@@ -169,13 +169,13 @@ the_post();
                     <nav class="woocommerce-MyAccount-navigation privat-cab-nav">
                         <ul>
                             <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account">
-                                <a href="http://profsys.tools/my-account/edit-account/">Профиль</a>
+                                <a href="<?php echo home_url();?>/my-account/edit-account/">Профиль</a>
                             </li>
                             <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
-                                <a href="http://profsys.tools/my-account/orders/">Мои заказы</a>
+                                <a href="<?php echo home_url();?>/my-account/orders/">Мои заказы</a>
                             </li>
                             <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--tinv_wihlist is-active">
-                                <a href="http://profsys.tools/my-account/wishlist/">Мои желания</a>
+                                <a href="<?php echo home_url();?>/my-account/wishlist/">Мои желания</a>
                             </li>
                         </ul>
                     </nav>

@@ -50,7 +50,7 @@ function prof_sys_tools_scripts() {
     wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/style.css' );
 
     wp_enqueue_script( 'js-script', get_template_directory_uri() . '/js/script.js', array(), '3.1.1', true );
-    add_action( 'wp_enqueue_scripts', 'wcc_enqueue_scripts' );
+    wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/js/ajax.js', array(), '1.0.0', true );
 }
 //auto update cart on quantity change
 add_action( 'wp_footer', 'cart_update_qty_script' );
@@ -75,6 +75,8 @@ function cart_update_qty_script() {
 require 'inc/wc-hooks.php';
 //disable wc hoocks
 require 'inc/wc-disabling.php';
+//add ajax file
+require 'inc/ajax.php';
 
 //check if category
 function check_cat_child($id){

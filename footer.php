@@ -56,13 +56,28 @@
 		<div class="modal-window" id="modal-window-PA">
 			<div class="content">
 				<div class="close" onclick="closeModalWindow(this)"><img src="<?php echo get_template_directory_uri(); ?>/img/close.png" alt="img"></div>
-				<form  name="contact_form_PA" method="get" action="#" onsubmit="return validate_form_PA ( );">
-					<p>Вход на сайт</p>
-					<input type="email" name="email" class="formEmail" id="formEmail_PA" placeholder="E-mail:" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"><br>	
-					<input type="password" name="password" placeholder="Пароль" class="form_password" id="form_password_PA">
-					<div class="button"><div><span>войти</span><input type="submit" name="submit" value="" ></div></div>
-					<a href="#">Регистрация</a>
-				</form>	
+				<form class="woocommerce-form woocommerce-form-login login" method="post">
+
+				<?php do_action( 'woocommerce_login_form_start' ); ?>
+
+				<p>Вход на сайт</p>
+				<input placeholder="E-mail" type="text" class="formEmail woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+				<input placeholder="Пароль" class="form_password woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" />
+
+				<?php do_action( 'woocommerce_login_form' ); ?>
+				<div class="button">
+					<div>
+						<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
+						<span>войти</span>
+						<button type="submit" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
+					</div>
+				</div>
+
+				<a href="#">Регистрация</a>
+
+				<?php do_action( 'woocommerce_login_form_end' ); ?>
+
+				</form>
 			</div>	
 		</div>
 

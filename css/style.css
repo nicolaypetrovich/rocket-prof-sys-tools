@@ -125,7 +125,7 @@ img{
 	top: 16px;
 }
 
-.modal-window .button div input{
+.modal-window .button div input, .modal-window .button div button{
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -1510,14 +1510,6 @@ height: 100%;
 	
 }
 
-.catalog-commodity .price span:after{
-	content: "руб.";
-	font-family:PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	color: #4c4c4c;
-	margin-left: 5px;
-}
-
 .catalog-commodity .div4 .button{
 	cursor: pointer;
 	position: relative;
@@ -2694,22 +2686,6 @@ height: 100%;
 	line-height: 1;
 	text-align: center;
 	text-decoration: line-through;
-}
-
-.page3 .card-product .container-right .price span:first-child:after{
-	content: "руб.";
-	font-family:PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 27px;
-	color: #4c4c4c;
-	margin-left: 5px;
-}
-
-.page3 .card-product .container-right .price span:last-child:after{
-	content: "руб.";
-	font-family:PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	color: #4c4c4c;
-	margin-left: 5px;
 }
 
 /*
@@ -6426,7 +6402,7 @@ form .invalid{
 	border-top: 1px dashed #fff;
 	border-bottom: 1px dashed #fff;
 }
-.privat-cab-nav ul .prof-link-active {
+.privat-cab-nav ul .is-active {
 	background-color: #ffa300;	
 	border-top: 1px dashed #fff;
 	border-bottom: 1px dashed #fff;
@@ -6487,7 +6463,7 @@ form .invalid{
   line-height: 45px;
 }
 
-.my-profile form p{
+.wrap-profile-form form .pass_noty{
 	color: #7ba00c;
 	font-weight: bold;
 	margin-top: 0;
@@ -7249,7 +7225,7 @@ button[name="update_cart"] {
 .shop_table{
 	width: 100%;
 }
-.product-remove a{
+.product-remove div{
 	display: block;
     background: none;
     border: none;
