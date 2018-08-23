@@ -1,5 +1,5 @@
 <?php get_header(); global $front_page; ?>
-
+		
 	<!-- начало бллок главное меню мобверсия -->
 	<div class="main-menu-320" id="main-menu-320">
 		<img src="<?php echo get_template_directory_uri(); ?>/img/img89.png" alt="img" class="close320" onclick="closeMainMenu320()">

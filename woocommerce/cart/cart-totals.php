@@ -25,13 +25,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	<h2><?php _e( 'Cart totals', 'woocommerce' ); ?></h2>
+	<h2><?php //_e( 'Cart totals', 'woocommerce' ); ?></h2>
 
 	<table cellspacing="0" class="shop_table shop_table_responsive">
 
 		<tr class="cart-subtotal">
-			<th><?php _e( 'Subtotal', 'woocommerce' ); ?></th>
-			<td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
+			<th><?php //_e( 'Subtotal', 'woocommerce' ); ?></th>
+			<td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php //wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
@@ -88,17 +88,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
-		<tr class="order-total">
-			<th><?php _e( 'Total', 'woocommerce' ); ?></th>
-			<td data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
-		</tr>
-
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
 
 	</table>
 
-	<div class="wc-proceed-to-checkout">
-		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
+	<div class="cart-footer_total">
+		<span class="total">Итого:</span>
+		<span class="price"><?php wc_cart_totals_order_total_html(); ?></span>
+	</div>
+	<div class="clear"></div>
+
+
+	<!-- <div class="wc-proceed-to-checkout"> -->
+		<?php //do_action( 'woocommerce_proceed_to_checkout' ); ?>
+	<!-- </div> -->
+	<div class="cart-footer_links">								
+		<a href="<?php echo WC()->cart->get_checkout_url(); ?>" class="btn-issue">Оформить</a><br>
+		<a href="#" class="btn-continue-shopping"><div>Продолжить покупки</div></a>
 	</div>
 
 	<?php do_action( 'woocommerce_after_cart_totals' ); ?>

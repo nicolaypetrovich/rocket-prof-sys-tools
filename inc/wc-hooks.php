@@ -139,6 +139,17 @@ add_action('woocommerce_edit_account_form_end', 'account_form_end', 5);
     }
     add_action('woocommerce_after_shop_loop_item_title', 'shop_loop_item_pricing_wrap', 2);
     add_action('woocommerce_after_shop_loop_item', 'shop_loop_item_pricing_wrap_end', 12);
-    
-    
-    
+
+//add archive page ordering hook
+add_action('custom_filtering_plase', 'woocommerce_catalog_ordering', 10);  
+
+//add woocommerce price format
+function addPriceSuffix($format, $currency_pos) {
+    $format = '%2$s <span>руб.</span>';
+	return $format;
+}
+function addPriceSuffixAction() {
+	add_action('woocommerce_price_format', 'addPriceSuffix', 1, 2);
+}
+add_action('woocommerce_before_cart', 'addPriceSuffixAction');
+add_action('woocommerce_review_order_before_order_total', 'addPriceSuffixAction');

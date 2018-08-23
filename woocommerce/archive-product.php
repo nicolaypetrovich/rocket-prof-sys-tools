@@ -290,14 +290,19 @@ get_header( 'shop' ); ?>
 			 * @hooked woocommerce_taxonomy_archive_description - 10
 			 * @hooked woocommerce_product_archive_description - 10
 			 */
-			//do_action( 'woocommerce_archive_description' );
+			do_action( 'woocommerce_archive_description' );
 			?>
 		</div>
+
 			<div class="filter">
+			<?php do_action( 'custom_filtering_plase' ); ?>
 				<div class="button-filter-320"><span onclick="openFilter320(this)">фильтр</span></div>
 				<div class="filter-wrapper" id="filter-wrapper">
 					<div class="button-filter-320"><span onclick="openFilter320(this)">фильтр</span></div>
-					<div  class="filterWrapper">
+						<div  class="filterWrapper">
+							<?php dynamic_sidebar( 'sidebar-1' ); ?>
+						</div> 
+					<!-- <div  class="filterWrapper">
 						<div class="filter-block">
 							<div class="filter-box"><span>Пункт фильтра</span></div>
 							<div class="filter-box">
@@ -331,7 +336,7 @@ get_header( 'shop' ); ?>
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<?php
@@ -386,34 +391,7 @@ get_header( 'shop' ); ?>
 
 				</div>
 
-				<?php
-
-				$total   = isset( $total ) ? $total : wc_get_loop_prop( 'total_pages' );
-				$current = isset( $current ) ? $current : wc_get_loop_prop( 'current_page' );
-				$base    = isset( $base ) ? $base : esc_url_raw( str_replace( 999999999, '%#%', remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) );
-				$format  = isset( $format ) ? $format : '';
-				if ( $total <= 1 ) {
-					return;
-				}
-				?>
-				<div class="switch">
-					<div class="switch-content">
-						<?php
-							echo paginate_links( apply_filters( 'woocommerce_pagination_args', array( // WPCS: XSS ok.
-								'base'         => $base,
-								'format'       => $format,
-								'add_args'     => false,
-								'current'      => max( 1, $current ),
-								'total'        => $total,
-								'prev_text'    => 'Назад',
-								'next_text'    => 'Далее',
-								'type'         => 'plain',
-								'end_size'     => 3,
-								'mid_size'     => 3,
-							) ) );
-						?>
-					</div>
-				</div> 
+				<?php paginate_links(); ?>
 
 
 			<?php

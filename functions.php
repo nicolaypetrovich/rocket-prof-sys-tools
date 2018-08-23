@@ -18,6 +18,7 @@ include_once( get_stylesheet_directory() . '/acf/acf.php' );
 add_action( 'after_setup_theme', 'prof_sys_tools_setup' );
 function prof_sys_tools_setup() {
     add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'widgets' );
     add_image_size('related_prods', 180, 158, true);
     add_image_size('prod_page', 500, 500, true);
     add_image_size('fp_news', 220, 150, true);
@@ -29,13 +30,44 @@ function prof_sys_tools_setup() {
 }
 //end add menus
 
+function twentyfifteen_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Widget Area', 'twentyfifteen' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentyfifteen' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'twentyfifteen_widgets_init' );
+
 //add styles and scripts
 add_action( 'wp_enqueue_scripts', 'prof_sys_tools_scripts' );
 function prof_sys_tools_scripts() {
     wp_enqueue_style( 'wp-style', get_stylesheet_uri() );
     wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/style.css' );
 
-	wp_enqueue_script( 'js-script', get_template_directory_uri() . '/js/script.js', array(), '3.1.1', true );
+    wp_enqueue_script( 'js-script', get_template_directory_uri() . '/js/script.js', array(), '3.1.1', true );
+    add_action( 'wp_enqueue_scripts', 'wcc_enqueue_scripts' );
+}
+//auto update cart on quantity change
+add_action( 'wp_footer', 'cart_update_qty_script' );
+function cart_update_qty_script() {
+    if (is_cart()) :
+        ?>
+        <script type="text/javascript">
+            (function($){
+                $(function(){
+                    $('div.woocommerce').on( 'change', '.qty', function(){
+                        $("[name='update_cart']").trigger('click');
+                    });
+                });
+            })(jQuery);
+        </script>
+        <?php
+    endif;
 }
 //end add styles and scripts
 
