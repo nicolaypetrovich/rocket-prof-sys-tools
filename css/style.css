@@ -5644,7 +5644,7 @@ height: 100%;
 	color: #eac176;
 }/*это плейсхолдер для edge*/
 
-.btn-form {
+.btn-form, .button.alt {
 	border-radius: 10px 0px 10px 0px;
 	-moz-border-radius: 10px 0px 10px 0px;
 	-webkit-border-radius: 10px 0px 10px 0px;
@@ -6222,7 +6222,7 @@ height: 100%;
 	display: block;
 	outline: none;
 }
-.box-pay-details .form-input-detailsa-pay {
+.box-pay-details .form-input-detailsa-pay input, .box-pay-details .form-input-detailsa-pay textarea{
 	width: 100%;
 	padding: 12px 10px;
 	background-color: white;

@@ -163,3 +163,11 @@ function wp_example_excerpt_length( $length ) {
     return 30;
 }
 add_filter( 'excerpt_length', 'wp_example_excerpt_length');
+
+// add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+// // Our hooked in function - $fields is passed via the filter!
+// function custom_override_checkout_fields( $fields ) {
+//      $fields['order']['order_comments']['placeholder'] = 'My new placeholder';
+//      return $fields;
+// }
