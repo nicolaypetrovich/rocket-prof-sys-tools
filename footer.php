@@ -10,41 +10,77 @@
 						<div class="div">
 							<p onclick="open_footer_menu(this)">ИНФОРМАЦИЯ</p>
 							<div class="footer-menu">	
-								<a href="#"><span></span>О нас</a>
-								<a href="#"><span></span>Информация о доставке</a>
+								<?php 
+								$menu_name = 'footer1';
+								$locations = get_nav_menu_locations();
+								if( $locations && isset($locations[ $menu_name ]) ){
+									$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+									$menu_items = wp_get_nav_menu_items( $menu );
+									foreach ( (array) $menu_items as $key => $menu_item ) {
+										$menu_desktop .= '<a href="' . $menu_item->url . '"><span></span>' . $menu_item->title . '</a>';
+									}
+									echo $menu_desktop;
+									$menu_desktop = '';
+								}; ?>
 							</div>
 						</div>
 						<div class="div">
 							<p  onclick="open_footer_menu(this)">СЛУЖБА ПОДДЕРЖКИ</p>
 							<div  class="footer-menu">	
-								<a href="#"><span></span> Связаться с нами</a>
-								<a href="#"><span></span> Возврат товара</a>	
-								<a href="#"><span></span>Карта сайта</a>	
+								<?php 
+									$menu_name = 'footer2';
+									$locations = get_nav_menu_locations();
+									if( $locations && isset($locations[ $menu_name ]) ){
+										$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+										$menu_items = wp_get_nav_menu_items( $menu );
+										foreach ( (array) $menu_items as $key => $menu_item ) {
+											$menu_desktop .= '<a href="' . $menu_item->url . '"><span></span>' . $menu_item->title . '</a>';
+										}
+										echo $menu_desktop;
+										$menu_desktop = '';
+									}; ?>	
 							</div>
 						</div>
 						<div class="div">
 							<p  onclick="open_footer_menu(this)">ДОПОЛНИТЕЛЬНО</p>
 							<div class="footer-menu">	
-								<a href="#"><span></span>Производители</a>
-								<a href="#"><span></span> Подарочные сертификаты</a>
-								<a href="#"><span></span> Партнёры</a>
-								<a href="#"><span></span>Товары со скидкой</a>
+								<?php 
+									$menu_name = 'footer3';
+									$locations = get_nav_menu_locations();
+									if( $locations && isset($locations[ $menu_name ]) ){
+										$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+										$menu_items = wp_get_nav_menu_items( $menu );
+										foreach ( (array) $menu_items as $key => $menu_item ) {
+											$menu_desktop .= '<a href="' . $menu_item->url . '"><span></span>' . $menu_item->title . '</a>';
+										}
+										echo $menu_desktop;
+										$menu_desktop = '';
+									}; ?>
 							</div>	
 						</div>
 						<div class="div">	
 							<p  onclick="open_footer_menu(this)">Личный кабинет</p>
 							<div class="footer-menu">	
-								<a href="#"><span></span> Личный кабинет</a>
-								<a href="#"><span></span>История заказов</a>
-								<a href="#"><span></span>Мои закладки</a>
-								<a href="#"><span></span>Рассылка новостей</a>
+								<?php 
+									$menu_name = 'footer4';
+									$locations = get_nav_menu_locations();
+									if( $locations && isset($locations[ $menu_name ]) ){
+										$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+										$menu_items = wp_get_nav_menu_items( $menu );
+										foreach ( (array) $menu_items as $key => $menu_item ) {
+											$menu_desktop .= '<a href="' . $menu_item->url . '"><span></span>' . $menu_item->title . '</a>';
+										}
+										echo $menu_desktop;
+										$menu_desktop = '';
+									}; ?>
 							</div>
 						</div>	
 					</div>
 					<div class="footer-block-right">
-						<a href="tel:7(123)725-00-66" class="tel-footer"><span>+7(123)</span> 456 78 90</a>
-						<a href="mailto:mail@mail.com" class="email-footer"> <span>mail@mail.com</span></a>
-						<span class="span-footer">Copyright 2018 <br>Proril Sistem Tools</span>	
+						<?php $phone = get_theme_mod('phone_little') . get_theme_mod('phone_big'); $phone = preg_replace('/[^0-9]/', '', $phone); ?>
+						<a href="tel:<?php echo $phone; ?>" class="tel-footer"><span><?php echo get_theme_mod('phone_little'); ?></span> <?php echo get_theme_mod('phone_big'); ?></a>
+						<a href="mailto:<?php echo get_option('admin_email'); ?>" class="email-footer"> <span><?php echo get_option('admin_email'); ?></span></a>
+						<span class="span-footer"><?php echo get_theme_mod('copyright'); ?> <br><?php echo get_theme_mod('copyright_desc'); ?></span>	
 
 					</div>
 				</div>

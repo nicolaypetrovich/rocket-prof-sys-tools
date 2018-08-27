@@ -149,7 +149,7 @@ function addPriceSuffix($format, $currency_pos) {
 	return $format;
 }
 function addPriceSuffixAction() {
-	add_action('woocommerce_price_format', 'addPriceSuffix', 1, 2);
+	// add_action('woocommerce_price_format', 'addPriceSuffix', 1, 2);
 }
-add_action('woocommerce_before_cart', 'addPriceSuffixAction');
-add_action('woocommerce_review_order_before_order_total', 'addPriceSuffixAction');
+// add_action('woocommerce_before_cart', 'addPriceSuffixAction');
+// add_action('woocommerce_review_order_before_order_total', 'addPriceSuffixAction');

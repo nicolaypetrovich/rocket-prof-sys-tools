@@ -19,13 +19,21 @@ add_action( 'after_setup_theme', 'prof_sys_tools_setup' );
 function prof_sys_tools_setup() {
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'widgets' );
+
+
     add_image_size('related_prods', 180, 158, true);
     add_image_size('prod_page', 500, 500, true);
     add_image_size('fp_news', 220, 150, true);
+    add_image_size('fp_about', 330, 275, true);
+    add_image_size('stock', 125, 125, true);
+
     add_theme_support('woocommerce');
 	register_nav_menus( array(
-		'main' => 'Главное меню',
-		'footer' => 'Меню в футере', 
+		'main'      => 'Главное меню',
+        'footer1'   => 'Информация',
+        'footer2'   => 'Служба поддержки',
+        'footer3'   => 'Дополнительно',
+        'footer4'   => 'Личный кабинет',
 	) );
 }
 //end add menus
@@ -77,6 +85,8 @@ require 'inc/wc-hooks.php';
 require 'inc/wc-disabling.php';
 //add ajax file
 require 'inc/ajax.php';
+//add customizer
+require 'inc/customizer.php';
 
 //check if category
 function check_cat_child($id){
