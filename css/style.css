@@ -7251,3 +7251,7 @@ button[name="update_cart"] {
 .cart .quantity {
 	display: none;
 }
+
+#login_error {
+	margin-bottom: 5px;
+}

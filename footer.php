@@ -92,27 +92,22 @@
 		<div class="modal-window" id="modal-window-PA">
 			<div class="content">
 				<div class="close" onclick="closeModalWindow(this)"><img src="<?php echo get_template_directory_uri(); ?>/img/close.png" alt="img"></div>
-				<form class="woocommerce-form woocommerce-form-login login" method="post">
-
-				<?php do_action( 'woocommerce_login_form_start' ); ?>
+				<form method="post" data-action="login">
 
 				<p>Вход на сайт</p>
-				<input placeholder="E-mail" type="text" class="formEmail woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
-				<input placeholder="Пароль" class="form_password woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" />
+				<input placeholder="E-mail" type="text" class="formEmail" name="login_name" autocomplete="username" />
+				<input placeholder="Пароль" class="form_password" type="password" name="login_password" autocomplete="current-password" />
 
-				<?php do_action( 'woocommerce_login_form' ); ?>
+				<div id="login_error"></div>
+
 				<div class="button">
 					<div>
-						<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
 						<span>войти</span>
-						<button type="submit" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
+						<button type="submit" class="button" name="login" value="Войти">Войти</button>
 					</div>
 				</div>
 
-				<a href="#">Регистрация</a>
-
-				<?php do_action( 'woocommerce_login_form_end' ); ?>
-
+				<a href="/registratsiya/">Регистрация</a>
 				</form>
 			</div>	
 		</div>

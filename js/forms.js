@@ -177,6 +177,7 @@ $(document).ready(function () {
                 }
                 if ( this.classList.contains('form-send-messege') ){
                     if ( submit ){
+                        $('#login_error').text('');
                         console.log(2);
                          $('.popap-form-out').show('slow');
                         setTimeout(function() { $(".popap-form-out").hide('slow'); }, 2000);
@@ -184,7 +185,29 @@ $(document).ready(function () {
                         $('form input, form textarea').not(':button, :submit').val('');
                         return false;
                     }
-                } else if ( submit ) this.submit();
+                } else if ( submit ) {
+                    $('#login_error').text('');
+                    var form_data = $(this).serialize();
+                    var data = new FormData;
+                    data.append('action', $(this).data('action'));
+                    data.append('data', form_data);
+                    $.ajax({
+                        method:'POST',
+                        url:ajax,
+                        data:data,
+                        contentType: false,
+                        processData: false,
+                        cache:false,
+                        success:function(r){
+                            console.dir(r);
+                            if((r == 'ok') || (r == 'user_ok')){ window.location.href = "http://prof-sys-tools.rocketcompany.website/my-account/"; }
+                            if(r == 'error'){ $('#login_error').text('Логин или пароль введены не верно!'); }
+                            if(r == 'pass_error'){ $('#reg_error').text('Пароли не совпадают!'); }
+                            if(r == 'user_exists'){ $('#reg_error').text('Такой пользователь уже сущевствует!'); }                       
+                        }
+                    });
+                    return false;
+                };
             })
         }
     }
