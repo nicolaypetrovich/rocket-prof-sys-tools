@@ -175,17 +175,18 @@ $(document).ready(function () {
 
                     }
                 }
-                if ( this.classList.contains('form-send-messege') ){
-                    if ( submit ){
-                        $('#login_error').text('');
-                        console.log(2);
-                         $('.popap-form-out').show('slow');
-                        setTimeout(function() { $(".popap-form-out").hide('slow'); }, 2000);
-                        //очищаем все данные текстовых полей, кроме кнопок
-                        $('form input, form textarea').not(':button, :submit').val('');
-                        return false;
-                    }
-                } else if ( submit ) {
+                // if ( this.classList.contains('form-send-messege') ){
+                //     if ( submit ){
+                //         $('#login_error').text('');
+                //         console.log(2);
+                //          $('.popap-form-out').show('slow');
+                //         setTimeout(function() { $(".popap-form-out").hide('slow'); }, 2000);
+                //         //очищаем все данные текстовых полей, кроме кнопок
+                //         $('form input, form textarea').not(':button, :submit').val('');
+                //         return false;
+                //     }
+                // } else 
+                if ( submit ) {
                     $('#login_error').text('');
                     var form_data = $(this).serialize();
                     var data = new FormData;
@@ -200,10 +201,19 @@ $(document).ready(function () {
                         cache:false,
                         success:function(r){
                             console.dir(r);
+                            //login
                             if((r == 'ok') || (r == 'user_ok')){ window.location.href = "http://prof-sys-tools.rocketcompany.website/my-account/"; }
                             if(r == 'error'){ $('#login_error').text('Логин или пароль введены не верно!'); }
+                            //registration
                             if(r == 'pass_error'){ $('#reg_error').text('Пароли не совпадают!'); }
-                            if(r == 'user_exists'){ $('#reg_error').text('Такой пользователь уже сущевствует!'); }                       
+                            if(r == 'user_exists'){ $('#reg_error').text('Такой пользователь уже сущевствует!'); }
+                            //contacts
+                            if(r == 'mess_ok'){ 
+                                $('.popap-form-out').show('slow'); 
+                                setTimeout(function() { $(".popap-form-out").hide('slow'); }, 2000); 
+                                $('form input, form textarea').not(':button, :submit').val('');
+                            }
+                            if(r == 'mess_error'){ $('#mess_error').text('Ошибка во время отправки уведомления'); }
                         }
                     });
                     return false;

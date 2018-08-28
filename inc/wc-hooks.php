@@ -4,7 +4,7 @@ add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 function jk_woocommerce_breadcrumbs() {
     return array(
             'delimiter'   => ' &#47; ',
-            'wrap_before' => '<div class="main-navigation" itemprop="breadcrumb"><div class="wrapper">',
+            'wrap_before' => '<div class="main-navigation wrap-in" itemprop="breadcrumb"><div class="wrapper">',
             'wrap_after'  => '</div></div>',
             'before'      => '',
             'after'       => '',

@@ -1,7 +1,6 @@
 <?php 
 global $front_page; 
 global $stock;
-var_dump($front_page);
 ?>
 <!-- начало блок-банер наши акции и наши бренды мобверсия -->
 <div class="shares-and-brands-banner shares-and-brands-banner-320 ">

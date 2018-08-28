@@ -47,6 +47,38 @@ function registration(){
     wp_die();
 }
 
+add_action('wp_ajax_nopriv_message', 'message');
+add_action('wp_ajax_message', 'message');
+function message(){
+
+    parse_str($_POST['data'], $data);
+
+    if(empty($data['message_name'])||empty($data['message_phone'])||empty($data['message_email'])||empty($data['message_message'])){
+        echo 'mess_error';
+        return false;
+    }
+
+    $message = 'Имя: ' . $data['message_name'] . '.<br>Телефон: ' . $data['message_phone'] . '.<br>Email: ' . $data['message_email'] . '.<br>Текст: ' . $data['message_message'];
+
+    $post_data = array(
+        'post_type'     => 'messages',
+        'post_title'    => wp_strip_all_tags( $data['message_name'] ),
+        'post_content'  => $message,
+        'post_status'   => 'draft',
+    );
+    $post_id = wp_insert_post( $post_data );
+    if($post_id){
+        echo 'mess_ok';
+        $headers = array(
+            'content-type: text/html',
+        );
+        wp_mail(get_option('admin_email'), 'Уведомление', $message, $headers);
+    }else{
+        echo 'mess_error';
+    }
+    wp_die();;
+}
+
 add_action('wp_ajax_nopriv_login', 'login');
 add_action('wp_ajax_login', 'login');
 function login(){

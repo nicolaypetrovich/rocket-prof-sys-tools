@@ -59,6 +59,9 @@ function prof_sys_tools_scripts() {
 
     wp_enqueue_script( 'js-script', get_template_directory_uri() . '/js/script.js', array(), '3.1.1', true );
     wp_enqueue_script( 'forms-script', get_template_directory_uri() . '/js/forms.js', array(), '3.1.1', true );
+    wp_enqueue_script( 'mask-script', get_template_directory_uri() . '/js/jquery.maskedinput.min.js', array(), '3.1.1', true );
+
+    wp_enqueue_script( 'map', '//api-maps.yandex.ru/2.1/?lang=ru_RU', array(), 2.1, false);
     wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/js/ajax.js', array(), '1.0.0', true );
 }
 //auto update cart on quantity change

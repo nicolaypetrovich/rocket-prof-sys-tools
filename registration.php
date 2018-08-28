@@ -17,13 +17,13 @@ get_header();
             <?php get_template_part('parts/category', 'list'); ?>
 
             <!-- блок навигация -->
-            <div class="main-navigation wrap-in">
-                <?php woocommerce_breadcrumb(); ?>
+            <?php woocommerce_breadcrumb(); ?>
+            <!-- <div class="main-navigation wrap-in">
                 <div class="wrapper">
                     <span><a href="#" class="el-main-navigation">Главная </a></span>
                     <span class="el-main-navigation">Регистрация</span>
                 </div>
-            </div>
+            </div> -->
             <!-- конец блок навигация -->
 
             <div class="wrapper">

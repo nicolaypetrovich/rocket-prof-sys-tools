@@ -116,5 +116,13 @@
 
 	</div>
 	<?php wp_footer(); ?>
+	
+    <?php if( get_page_template_slug() == 'contacts.php' ){ ?>
+		<script>
+			jQuery(function($){
+				$(".phone").mask("+7 (999) 999-9999");
+			});
+		</script>
+    <?php } ?>
 </body>
 </html>
