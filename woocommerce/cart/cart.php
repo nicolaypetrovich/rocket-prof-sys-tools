@@ -94,27 +94,23 @@ do_action( 'woocommerce_before_cart' ); ?>
 						</td> -->
 
 						<td class="product-quantity cart-item-box_switch number" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
-							<?php
-							if ( $_product->is_sold_individually() ) {
-								$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
-							} else {
-								$product_quantity = woocommerce_quantity_input( array(
-									'input_name'   => "cart[{$cart_item_key}][qty]",
-									'input_value'  => $cart_item['quantity'],
-									'max_value'    => $_product->get_max_purchase_quantity(),
-									'min_value'    => '0',
-									'product_name' => $_product->get_name(),
-								), $_product, false );
-							}
+							<span class="minus">-</span>
+								<?php
+								// if ( $_product->is_sold_individually() ) {
+									$product_quantity = sprintf( '<input type="text" class="qty" name="cart[%s][qty]" value="%d" />', $cart_item_key, $cart_item['quantity'] );
+								// } else {
+								// 	$product_quantity = woocommerce_quantity_input( array(
+								// 		'input_name'   => "cart[{$cart_item_key}][qty]",
+								// 		'input_value'  => $cart_item['quantity'],
+								// 		'max_value'    => $_product->get_max_purchase_quantity(),
+								// 		'min_value'    => '0',
+								// 		'product_name' => $_product->get_name(),
+								// 	), $_product, false );
+								// }
 
-							//echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
-							?>
-							<input type="number"
-									class="input-text qty text" step="1" min="0" max="" 
-									name="<?php echo 'cart['.$cart_item_key.'][qty]'; ?>" 
-									value="<?php echo $cart_item['quantity']; ?>" title="Кол-во" size="4" 
-									pattern="[0-9]*" inputmode="numeric" 
-									aria-labelledby="Количество <?php echo $_product->get_name(); ?>">
+								echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
+								?>
+    						<span class="plus">+</span>
 						</td>
 
 						<td class="product-subtotal cart-item-box_price" data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>">

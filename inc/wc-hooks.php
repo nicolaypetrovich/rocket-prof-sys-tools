@@ -143,13 +143,11 @@ add_action('woocommerce_edit_account_form_end', 'account_form_end', 5);
 //add archive page ordering hook
 add_action('custom_filtering_plase', 'woocommerce_catalog_ordering', 10);  
 
-//add woocommerce price format
-function addPriceSuffix($format, $currency_pos) {
-    $format = '%2$s <span>руб.</span>';
-	return $format;
+add_filter( 'woocommerce_currency_symbol', 'change_currency_symbol', 10, 2 );
+
+function change_currency_symbol( $symbols, $currency ) {
+	if ( 'RUB' === $currency ) {
+		return ' руб.';
+	}
+    return $symbols;
 }
-function addPriceSuffixAction() {
-	// add_action('woocommerce_price_format', 'addPriceSuffix', 1, 2);
-}
-// add_action('woocommerce_before_cart', 'addPriceSuffixAction');
-// add_action('woocommerce_review_order_before_order_total', 'addPriceSuffixAction');

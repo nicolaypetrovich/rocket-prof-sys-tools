@@ -21,12 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $product;
-
-$price = ($product->is_on_sale()) ? $product->get_sale_price() : $product->get_regular_price();
-
-if(!empty($price)) {
-	echo "<div class='price'><span>{$price}</span> руб.</div>";
-}
-
 ?>
+
+<?php if ( $price_html = $product->get_price_html() ) : ?>
+	<span class="price"><?php echo $price_html; ?></span>
+<?php endif; ?>
 

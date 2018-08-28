@@ -24,6 +24,7 @@ function prof_sys_tools_setup() {
     add_image_size('related_prods', 180, 158, true);
     add_image_size('prod_page', 500, 500, true);
     add_image_size('fp_news', 220, 150, true);
+    add_image_size('prod_slider', 250, 250, true);
     add_image_size('fp_about', 330, 275, true);
     add_image_size('stock', 125, 125, true);
 
@@ -73,6 +74,7 @@ function cart_update_qty_script() {
             (function($){
                 $(function(){
                     $('div.woocommerce').on( 'change', '.qty', function(){
+                        console.log(111);
                         $("[name='update_cart']").trigger('click');
                     });
                 });

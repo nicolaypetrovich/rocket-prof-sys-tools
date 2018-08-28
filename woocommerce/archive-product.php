@@ -82,46 +82,31 @@ get_header( 'shop' ); ?>
 						<div class="button-filter-320"><span onclick="openFilter320(this)">фильтр</span></div>
 						<div  class="filterWrapper">
 							<div class="filter-block">
-								<div class="filter-box"><span>Фильтр по цене</span></div>
+								<div class="filter-box"><span>Цена</span></div>
 								<div class="filter-box">
 									<?php $order = $_GET['orderby']; 
 									$order = ($order == 'price') ? 'По возрастанию' : 'По убыванию'; ?>
 									<div onclick="filter_menu(this)"><span><?php echo $order; ?></span></div>
 									<div class="filter-menu">
-										<span><a href="/shop/?orderby=price
-											<?php if($_GET['filter_proizvoditel']){
-												echo '/shop/&filter_proizvoditel='.$_GET['filter_proizvoditel'];
-												};
-											?>">По возрастанию</a></span>
-										<span><a href="?orderby=price-desc
-											<?php if($_GET['filter_proizvoditel']){
-												echo '/shop/&filter_proizvoditel='.$_GET['filter_proizvoditel'];
-												};
-											?>">По убыванию</a></span>
+										<span><a href="/shop/?orderby=price<?php if($_GET['filter_proizvoditel']){echo '/shop/&filter_proizvoditel='.$_GET['filter_proizvoditel'];};?>">По возрастанию</a></span>
+										<span><a href="/shop/?orderby=price-desc<?php if($_GET['filter_proizvoditel']){echo '/shop/&filter_proizvoditel='.$_GET['filter_proizvoditel'];};?>">По убыванию</a></span>
 									</div>
 								</div>
 							</div>
 							<div class="filter-block">
-								<div class="filter-box"><span>Фильтр по производителю</span></div>
+								<div class="filter-box"><span>Производитель</span></div>
 								<div class="filter-box">
 									<?php $filter_proizvoditel = (!empty($_GET['filter_proizvoditel'])) ? $filter2[$_GET['filter_proizvoditel']] : 'Любой производитель'; ?>
 									<div onclick="filter_menu(this)"><span><?php echo $filter_proizvoditel; ?></span></div>
 									<div class="filter-menu">
-										<span><a href="/shop/?
-												<?php if($_GET['orderby']){
-													echo 'orderby='.$_GET['orderby'];}
-													;?>">Любой производитель</a></span>
+										<span><a href="/shop/?<?php if($_GET['orderby']){echo 'orderby='.$_GET['orderby'];};?>">Любой производитель</a></span>
 										<?php 						
 										$terms = get_terms( array(
 											'taxonomy'      => array( 'pa_proizvoditel' ),
 											'hide_empty'    => true, 
 										) );
 										foreach( $terms as $term ){ ?>							
-											<span><a href="/shop/?
-												<?php if($_GET['orderby']){
-													echo 'orderby='.$_GET['orderby'].'&';}
-													;?>
-													filter_proizvoditel=<?php echo $term->slug; ?>"><?php echo $term->name; ?></a></span>
+											<span><a href="/shop/?<?php if($_GET['orderby']){echo 'orderby='.$_GET['orderby'].'&';};?>filter_proizvoditel=<?php echo $term->slug; ?>"><?php echo $term->name; ?></a></span>
 										<?php } ?>
 									</div>
 								</div>

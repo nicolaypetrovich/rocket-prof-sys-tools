@@ -51,7 +51,7 @@ if ( post_password_required() ) {
 					<div class="small-pictures small-pictures-760">
 						<?php foreach ( $attachment_ids as $attachment_id ) { ?>
 							<div class="small-box" onclick="openBigPhoto(this)">
-								<img src="<?php echo wp_get_attachment_image_url($attachment_id); ?>" alt="img">
+								<img src="<?php echo wp_get_attachment_image_src($attachment_id, 'prod_page')[0]; ?>" alt="img">
 							</div>
 						<?php } ?>
 					</div>
@@ -60,11 +60,11 @@ if ( post_password_required() ) {
 				<?php $attachment_ids = $product->get_gallery_image_ids();
 					if ( $attachment_ids && has_post_thumbnail() ) { ?>
 					<div class="small-pictures small-pictures-slider">
-						<?php foreach ( $attachment_ids as $attachment_id ) { ?>
-							<div class="owl-carousel owl-theme  small-picturesSlider">
-								<div class="small-box"><img src="<?php echo wp_get_attachment_image_url($attachment_id); ?>" alt="img"></div>
-							</div>
-						<?php } ?>
+						<div class="owl-carousel owl-theme  small-picturesSlider">
+							<?php foreach ( $attachment_ids as $attachment_id ) { ?>
+								<div class="small-box"><img src="<?php echo wp_get_attachment_image_src($attachment_id, 'prod_slider')[0]; ?>" alt="img"></div>
+							<?php } ?>
+						</div>
 					</div> 
 				<?php } ?> 	
 

@@ -24,15 +24,7 @@ global $product;
 
 ?>
 <div class="price">
-	<?php if ( $product->is_on_sale() ) { ?>
 
-		<span> <?php echo $product->get_sale_price(); ?> </span>
-		<span> <?php echo $product->get_regular_price(); ?> </span>
-
-	<?php } else { ?>
-
-		<span> <?php echo $product->get_regular_price(); ?> </span>
-		
-	<?php } ?>
+	<?php echo $product->get_price_html(); ?>
 	
 </div>
