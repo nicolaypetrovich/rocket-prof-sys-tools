@@ -58,6 +58,7 @@ function prof_sys_tools_scripts() {
     wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/style.css' );
 
     wp_enqueue_script( 'js-script', get_template_directory_uri() . '/js/script.js', array(), '3.1.1', true );
+    wp_enqueue_script( 'forms-script', get_template_directory_uri() . '/js/forms.js', array(), '3.1.1', true );
     wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/js/ajax.js', array(), '1.0.0', true );
 }
 //auto update cart on quantity change
@@ -176,10 +177,29 @@ function wp_example_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'wp_example_excerpt_length');
 
-// add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
+function my_navigation_template( $template, $class ){
+	/*
+	Вид базового шаблона:
+	<nav class="navigation %1$s" role="navigation">
+		<h2 class="screen-reader-text">%2$s</h2>
+		<div class="nav-links">%3$s</div>
+	</nav>
+	*/
 
-// // Our hooked in function - $fields is passed via the filter!
-// function custom_override_checkout_fields( $fields ) {
-//      $fields['order']['order_comments']['placeholder'] = 'My new placeholder';
-//      return $fields;
-// }
+	return '
+	<div class="switch">
+		<div class="switch-content">%3$s</div>
+	</div>    
+	';
+}
+
+
+//global variables
+$front_page = get_option( 'page_on_front' ); 
+$stock_args = array(
+	'post_type' 	 => 'product',
+	'meta_key'       => 'ac_t',
+	'meta_value'     => true,
+);
+$stock = new WP_Query($stock_args);

@@ -11,5 +11,4 @@
 	</script>
 </head>
 <body>
-<?php $front_page = get_option( 'page_on_front' ); ?>
     <div class="body body-page2" id="body">

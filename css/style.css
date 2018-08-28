@@ -1850,10 +1850,15 @@ height: 100%;
 	text-decoration: none;
 }
 
+
 .product .box .div2-3{
 	color: #fff;
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
     font-size: 15px;
+}
+
+.our-novelties .product .box .div2-3 {
+	color: black;
 }
 
 /*слайдер2*/
@@ -2419,7 +2424,7 @@ height: 100%;
 	margin-left: 370px;
 }
 
-.switch .el{
+.switch .el, .switch a, .switch span{
 	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 15px;
 	color: #d78319;
@@ -2430,7 +2435,7 @@ height: 100%;
 	cursor: pointer;text-transform: uppercase;
 }
 
-.switch .active,
+.switch .active, .switch .current,
 .switch .el:hover{
 	box-shadow: 0 0 11px -2px #000;
 	background: #fff;
@@ -2443,7 +2448,7 @@ height: 100%;
 	top: 4px;
 }
 
-.switch .el-L{
+.switch .el-L, .switch .prev{
 	margin-right: 20px;
 	width: auto;
 	height: auto;
@@ -2452,7 +2457,9 @@ height: 100%;
 }
 
 .switch .el-L:hover,
-.switch .el-R:hover{
+.switch .el-R:hover,
+.switch .prev:hover,
+.switch .next:hover{
 	background: none;
 	box-shadow: none;
 }
@@ -2461,7 +2468,7 @@ height: 100%;
 	margin-right: 10px;
 }
 
-.switch .el-R{
+.switch .el-R, .switch .next{
 	margin-left: 20px;
 	margin-right: 0;
 	width: auto;
