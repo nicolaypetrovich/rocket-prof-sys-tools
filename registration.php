@@ -16,15 +16,8 @@ get_header();
 
             <?php get_template_part('parts/category', 'list'); ?>
 
-            <!-- блок навигация -->
             <?php woocommerce_breadcrumb(); ?>
-            <!-- <div class="main-navigation wrap-in">
-                <div class="wrapper">
-                    <span><a href="#" class="el-main-navigation">Главная </a></span>
-                    <span class="el-main-navigation">Регистрация</span>
-                </div>
-            </div> -->
-            <!-- конец блок навигация -->
+
 
             <div class="wrapper">
                 <div class="wrap-in wrap-in-margin-top wrap-in-margin-bottom">

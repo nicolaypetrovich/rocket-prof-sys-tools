@@ -27,7 +27,7 @@
                 <div class="box-wrapper">
                     <a href="<?php echo WC()->cart->get_cart_url(); ?>"></a>
                     <span>Товаров <?php echo WC()->cart->get_cart_contents_count(); ?> <br>
-                    на <?php echo WC()->cart->get_cart_contents_total(); ?> <br>	
+                    на <?php echo WC()->cart->get_cart_contents_total(); ?> руб.<br>	
                     <a href="<?php echo WC()->cart->get_cart_url(); ?>">ОФОРМИТЬ</a></span>
                 </div>
             </div>

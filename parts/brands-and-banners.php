@@ -46,11 +46,16 @@ global $stock;
                     <div class="body-brands-banner">
                         <div class="ourBrend-slider-banner-wrapper">
                             <div class="owl-carousel owl-theme ourBrend-slider-banner">
-                                <?php $brands = get_field('brand', $front_page); foreach($brands as $brand){ ?>
+                                <?php 						
+                                    $filtered = get_terms( array(
+                                        'taxonomy'      => array( 'pa_proizvoditel' ),
+                                        'hide_empty'    => true, 
+                                    ) );
+                                    foreach( $filtered as $term ){ $image = get_field('image', $term)['url']; if(!empty($image)){?>
                                     <div class="item">
-                                        <img src="<?php echo $brand['url']; ?>" alt="img" style="width: 39%;">
+                                        <a href="/shop/?filter_proizvoditel=<?php echo $term->slug; ?>"><img src="<?php echo $image; ?>" alt="<?php echo $term->name; ?>"></a>
                                     </div>
-                                <?php } ?>
+                                <?php } } ?>
                             </div>
                         </div>		
                     </div>
