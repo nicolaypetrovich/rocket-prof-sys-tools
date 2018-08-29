@@ -35,7 +35,7 @@ function woocommerce_custom_product_bottom_box_start(){
     echo '<div class="bottom-box">';
 }
 function wishlist_wrapper(){
-    echo '<span class="button">Добавить в избранное</span><a href="#" class="a">Поделиться</a>';
+    get_template_part('parts/wishlist', 'product');
 }
 function woocommerce_custom_product_bottom_box_end(){
     echo '</div>';

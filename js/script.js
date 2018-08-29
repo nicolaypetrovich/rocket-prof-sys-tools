@@ -618,7 +618,6 @@ $(document).ready(function(){
 		$.ajax({
 			url: ajax,
 			type:'POST',
-			// dataType:'JSON',
 			data: {action:'order_details', id:$(this).data('order-id')},
 			success:function(r){
 				$('.lds-dual-ring').addClass('spin-hide');

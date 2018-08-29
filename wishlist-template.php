@@ -43,6 +43,33 @@ the_post();
                         <div class="name-container">
                             <h4>Мои желания</h4>
                         </div>
+
+                        <div class="my-wishes-item-wrap">
+                            <?php
+                            
+                            
+                            $wishlist = get_user_meta(get_current_user_id(), 'wishlist')[0];
+                            if(!empty($wishlist)){
+                                foreach($wishlist as $list){ $product = wc_get_product($list['product_id']); var_dump($product);?>
+                                    <div class="my-wishes-item">
+                                        <a href="<?php echo get_the_permalink($list['product_id']); ?>" class="my-wishes-item_img"><img src="img/cart-img1.png" alt="img"></a>
+                                        <div class="my-wishes-item_descr">
+                                            <a href="<?php echo get_the_permalink($list['product_id']); ?>"><?php echo $product->name; ?></a>
+                                            <p class="my-wishes-item_in-not-available"><?php if($product->is_in_stock()){echo 'test'; }?>Нет в наличии</p>
+                                            <p class="my-wishes-item_price"><b><?php echo $product->get_price(); ?></b> руб.</p>
+                                            <input type="submit" class="btn-form btn-not-available" value="Добавить в корзину" />
+                                        </div>
+                                        <div class="my-wishes-item_add">
+                                            <p>Добавлено <?php echo $list['date']?></p>
+                                            <input type="submit" class="" value="Удалить" />
+                                        </div>
+                                        <div class="my-wishes-item_popap"><span>Товар добавлен в корзину</span></div>	
+                                    </div>
+                                <?php } } ?>                        
+                            
+                        </div>                        
+
+
                     </div>
                 <div class="clear"></div>
             </div>						

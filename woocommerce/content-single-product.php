@@ -110,3 +110,20 @@ if ( post_password_required() ) {
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
+
+<div class="share_popup" id="modal-share">
+	<div class="share_popup_popup-content">
+	
+			<h5>Поделиться</h5>
+			<ul>
+				<li><a href="#"><img src="<?php echo get_template_directory_uri()?>/img/facebook (1).png" alt="img"></a></li>
+				<li><a href="#"><img src="<?php echo get_template_directory_uri()?>/img/odnoklassniki-logo (4).png" alt="img"></a></li>
+				<li><a href="#"><img src="<?php echo get_template_directory_uri()?>/img/vk (5).png" alt="img"></a></li>
+				<li><a href="#"><img src="<?php echo get_template_directory_uri()?>/img/whatsapp.png" alt="img"></a></li>
+			</ul>
+			<a href="#" class="btn-close_view"><img src="<?php echo get_template_directory_uri()?>/img/img89.png" alt="X"></a>
+			<button class="copy-share btn-form" data-clipboard-text="http://prof-sys-tools.rocketcompany.website/page3-inner.html">Скопировать ссылку</button>
+			
+		</div>
+	
+</div>
