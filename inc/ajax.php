@@ -49,6 +49,68 @@ function ajax_add_to_wishlist(){
 
 }
 
+add_action('wp_ajax_nopriv_remove_from_wishes', 'remove_from_wishes');
+add_action('wp_ajax_remove_from_wishes', 'remove_from_wishes');
+function remove_from_wishes(){
+
+    $user_id = get_current_user_id();
+    $wishlist = get_user_meta( $user_id, 'wishlist' )[0];
+
+    foreach ($wishlist as $key => $val) {
+        if($val['product_id'] == $_POST['prod_id']){
+            $remove = $key;
+        }
+    }
+
+    unset($wishlist[$remove]);
+
+    update_user_meta($user_id, 'wishlist', $wishlist);
+
+    echo wishlist_ajax_template();
+
+    wp_die();
+
+}
+
+function wishlist_ajax_template(){
+    $wishlist = get_user_meta(get_current_user_id(), 'wishlist')[0];
+    if(!empty($wishlist)){
+        foreach($wishlist as $list){ 
+            $product = new WC_Product($list['product_id']); ?>
+            <div class="my-wishes-item">
+                <a href="<?php echo get_the_permalink($list['product_id']); ?>" class="my-wishes-item_img">
+                    <img src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($list['product_id']), 'prod_page' )[0];?>" alt="img">
+                </a>
+                <div class="my-wishes-item_descr">
+
+                    <a href="<?php echo get_the_permalink($list['product_id']); ?>"><?php echo $product->name; ?></a>
+
+                    <?php if($product->is_in_stock()){?>
+                        <p class="my-wishes-item_in">В наличии</p>
+                        <p class="my-wishes-item_price"><b><?php echo $product->get_regular_price(); ?></b> руб.</p>
+                        <input type="submit" class="btn-form btn-wishes_popap custom-ajax-add-to-cart" data-id="<?php echo $list['product_id']; ?>" value="Добавить в корзину" />
+                    <?php }else{ ?>
+                        <p class="my-wishes-item_in-not-available">Нет в наличии</p> 
+                        <input type="submit" class="btn-form btn-not-available" value="Добавить в корзину" />
+                    <?php }; ?>
+                    
+                </div>
+
+                <div class="my-wishes-item_add">
+                    <p>Добавлено <?php echo $list['date']?></p>
+                    <input type="submit" class="wishes-delete" value="Удалить" data-id="<?php echo $list['product_id']; ?>" />
+                </div>
+                <div class="my-wishes-item_popap"><span>Товар добавлен в корзину</span></div>	
+            </div>
+        <?php 
+        }
+    } else { ?>
+
+        <div class="my-wishes-item">В списке желаний нет товаров</div>
+
+    <?php }
+}
+
 add_action('wp_ajax_nopriv_registration', 'registration');
 add_action('wp_ajax_registration', 'registration');
 function registration(){

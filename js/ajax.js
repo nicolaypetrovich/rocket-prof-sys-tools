@@ -19,3 +19,17 @@ $('.add-to-wishlist').on('click', function(e){
         success:function(r){console.log(r)}
     });
 })
+
+$('.my-wishes-item-wrap').on('click', '.wishes-delete', function(e){
+    e.preventDefault();
+    console.log(11);
+    $.ajax({
+        url:ajax,
+        type:"POST",
+        data:{action:'remove_from_wishes', prod_id:$(this).data('id')},
+        success:function(r){
+            $('.my-wishes-item-wrap').text("");
+            $('.my-wishes-item-wrap').append(r);
+        }
+    });
+})

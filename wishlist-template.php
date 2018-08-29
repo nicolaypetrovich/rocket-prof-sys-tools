@@ -43,33 +43,42 @@ the_post();
                         <div class="name-container">
                             <h4>Мои желания</h4>
                         </div>
-
                         <div class="my-wishes-item-wrap">
-                            <?php
-                            
-                            
+                            <?php                            
                             $wishlist = get_user_meta(get_current_user_id(), 'wishlist')[0];
                             if(!empty($wishlist)){
-                                foreach($wishlist as $list){ $product = wc_get_product($list['product_id']); var_dump($product);?>
+                                foreach($wishlist as $list){ $product = new WC_Product($list['product_id']); ?>
                                     <div class="my-wishes-item">
-                                        <a href="<?php echo get_the_permalink($list['product_id']); ?>" class="my-wishes-item_img"><img src="img/cart-img1.png" alt="img"></a>
+                                        <a href="<?php echo get_the_permalink($list['product_id']); ?>" class="my-wishes-item_img">
+                                            <img src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($list['product_id']), 'prod_page' )[0];?>" alt="img">
+                                        </a>
                                         <div class="my-wishes-item_descr">
+
                                             <a href="<?php echo get_the_permalink($list['product_id']); ?>"><?php echo $product->name; ?></a>
-                                            <p class="my-wishes-item_in-not-available"><?php if($product->is_in_stock()){echo 'test'; }?>Нет в наличии</p>
-                                            <p class="my-wishes-item_price"><b><?php echo $product->get_price(); ?></b> руб.</p>
-                                            <input type="submit" class="btn-form btn-not-available" value="Добавить в корзину" />
+
+                                            <?php if($product->is_in_stock()){?>
+                                                <p class="my-wishes-item_in">В наличии</p>
+                                                <p class="my-wishes-item_price"><b><?php echo $product->get_regular_price(); ?></b> руб.</p>
+                                                <input type="submit" class="btn-form btn-wishes_popap custom-ajax-add-to-cart" data-id="<?php echo $list['product_id']; ?>" value="Добавить в корзину" />
+                                            <?php }else{ ?>
+                                                <p class="my-wishes-item_in-not-available">Нет в наличии</p> 
+                                                <input type="submit" class="btn-form btn-not-available" value="Добавить в корзину" />
+                                            <?php }; ?>
+                                            
                                         </div>
+
                                         <div class="my-wishes-item_add">
                                             <p>Добавлено <?php echo $list['date']?></p>
-                                            <input type="submit" class="" value="Удалить" />
+                                            <input type="submit" class="wishes-delete" value="Удалить" data-id="<?php echo $list['product_id']; ?>" />
                                         </div>
                                         <div class="my-wishes-item_popap"><span>Товар добавлен в корзину</span></div>	
                                     </div>
-                                <?php } } ?>                        
-                            
+                                <?php 
+                                } 
+                            }else{
+                                echo '<div class="my-wishes-item">В списке желаний нет товаров</div>';
+                            } ?>                        
                         </div>                        
-
-
                     </div>
                 <div class="clear"></div>
             </div>						

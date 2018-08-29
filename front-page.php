@@ -69,7 +69,7 @@ global $stock;
 									<div class="div4">
 										<div class="wrapper-div4">
 											<div class="price"><span><?php echo $product->get_regular_price();?></span></div>
-											<div class="button"><div onclick="openPopap(this)"><span>купить</span></div></div>
+											<div class="button"><div onclick="openPopap(this)"<span class="custom-ajax-add-to-cart" data-id="<?php echo get_the_ID(); ?>">купить</span></div></div>
 										</div>
 									</div>
 									<div class="popap"><span>Товар добавлен в корзину</span></div>	
