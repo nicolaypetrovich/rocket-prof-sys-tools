@@ -33,5 +33,12 @@ the_post();
 
     </div>
 </div>
+<div class="my-orders_popup" id="my-orders_popup">
+    <div class="my-orders_popup-content">
+        <a href="#" class="btn-close_view"><img src="<?php echo get_template_directory_uri()?>/img/img89.png" alt="X"></a>
+        <div class="lds-dual-ring"></div>
+        <div class="order-items"></div>
+    </div>
+</div>
 
 <?php get_footer(); ?>

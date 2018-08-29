@@ -612,12 +612,24 @@ $('.btn-close_view').click(function(e) {
     //do other stuff when a click happens
 });
 $(document).ready(function(){
-   	$(".btn-view").click (function PopUpShow(){
-		    $("#my-orders_popup").fadeIn();
+	$(".btn-view").click (function PopUpShow(){
+		$('.order-items').text('');
+		$('.lds-dual-ring').removeClass('spin-hide');
+		$.ajax({
+			url: ajax,
+			type:'POST',
+			// dataType:'JSON',
+			data: {action:'order_details', id:$(this).data('order-id')},
+			success:function(r){
+				$('.lds-dual-ring').addClass('spin-hide');
+				$('.order-items').append(r);
+			}
 		});
-		$(".btn-close_view").click (function PopUpHide(){
-		    $("#my-orders_popup").fadeOut();
-		});
+		$("#my-orders_popup").fadeIn();
+	});
+	$(".btn-close_view").click (function PopUpHide(){
+		$("#my-orders_popup").fadeOut();
+	});
 });
 
 $(document).mouseup(function (e) {

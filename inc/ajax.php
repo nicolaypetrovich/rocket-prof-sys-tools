@@ -98,3 +98,37 @@ function login(){
     }
     wp_die();
 }
+
+add_action('wp_ajax_nopriv_order_details', 'order_details');
+add_action('wp_ajax_order_details', 'order_details');
+function order_details(){
+    $order = wc_get_order($_POST['id']);
+
+    $result = '<div class="slide-down">';
+
+    foreach ($order->get_items() as $item_key => $item_values):
+        $item_id = $item_values->get_id();    
+        $product_id = $item_values->get_product_id();
+        $item_data = $item_values->get_data();
+        $product_name = $item_data['name'];
+        $product_id = $item_data['product_id'];
+        $prod_link = get_the_permalink($product_id);
+        $prod_img = wp_get_attachment_image_src( get_post_thumbnail_id($product_id), 'cart_popup' )[0];
+        
+        $result .= "<div class='my-orders_popup-content_item'>
+        <a href='{$prod_link}' class='my-orders_popup_img'><img src='{$prod_img}' alt='img'></a>
+        <div>
+            <a href='{$prod_link}' class='my-orders_popup_title'>{$product_name}</a>
+            <p>Это пример текста, создан для описания товара в три строки</p>
+        </div>
+        <div class='clear'></div>
+    </div>";
+
+    endforeach;
+
+    $result .= '</div>'; 
+
+    echo $result;
+
+    wp_die();
+}

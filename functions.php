@@ -27,6 +27,7 @@ function prof_sys_tools_setup() {
     add_image_size('prod_slider', 250, 250, true);
     add_image_size('fp_about', 330, 275, true);
     add_image_size('stock', 125, 125, true);
+    add_image_size('cart_popup', 100, 100, true);
 
     add_theme_support('woocommerce');
 	register_nav_menus( array(

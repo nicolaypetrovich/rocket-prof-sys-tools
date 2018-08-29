@@ -7276,3 +7276,52 @@ button[name="update_cart"] {
 .screen-reader-text {
 	display: none;
 }
+
+.spin-hide {
+	display: none!important;
+}
+.lds-dual-ring {
+	margin-left: 46%;
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+  }
+  .lds-dual-ring:after {
+	content: " ";
+	display: block;
+	width: 46px;
+	height: 46px;
+	margin: 1px;
+	border-radius: 50%;
+	border: 5px solid rgb(62, 185, 0);
+	border-color: rgb(62, 185, 0) transparent rgb(62, 185, 0) transparent;
+	animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+
+ .slide-down{
+	animation: animateElement linear 0.4s;
+	animation-iteration-count: 1;
+	margin-bottom:5px;
+	width:100%;
+	min-height:30px;
+	border-radius:10px;
+  }
+  
+  @keyframes animateElement{
+	0% {
+	  opacity:1;
+	  transform:  translate(0px,-15px);
+	}
+	100% {
+	  opacity:1;
+	  transform:  translate(0px,0px);
+	}
+  }
