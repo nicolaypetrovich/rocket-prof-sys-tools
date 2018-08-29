@@ -15,7 +15,7 @@ the_post();
 
 			<?php get_template_part('parts/brands-and-banners', '320'); ?>
 
-			<?php get_template_part('parts/category', 'list'); ?>
+			<?php get_template_part('parts/account', 'banner'); ?>
 
 
         <div class="wrapper">
