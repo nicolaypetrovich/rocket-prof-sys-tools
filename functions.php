@@ -73,9 +73,22 @@ function cart_update_qty_script() {
         <script type="text/javascript">
             (function($){
                 $(function(){
-                    $('div.woocommerce').on( 'change', '.qty', function(){
-                        console.log(111);
+                    $('div.woocommerce').on('click', '.minus', function () {
+                        var $input = $(this).parent().find('input');
+                        if($input.val() <= 1){return false;};
+                        var count = parseInt($input.val()) - 1;
+                        count = count < 1 ? 1 : count;
+                        $input.val(count);
+                        $input.change();
                         $("[name='update_cart']").trigger('click');
+                        return false;
+                    });
+                    $('div.woocommerce').on('click', '.plus', function () {
+                        var $input = $(this).parent().find('input');
+                        $input.val(parseInt($input.val()) + 1);
+                        $input.change();
+                        $("[name='update_cart']").trigger('click');
+                        return false;
                     });
                 });
             })(jQuery);

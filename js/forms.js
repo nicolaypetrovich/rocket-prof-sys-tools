@@ -187,6 +187,7 @@ $(document).ready(function () {
                 //     }
                 // } else 
                 if ( submit ) {
+                    if($(this).hasClass('woocommerce-cart-form')){return false;};
                     $('#login_error').text('');
                     var form_data = $(this).serialize();
                     var data = new FormData;
