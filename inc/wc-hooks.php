@@ -34,6 +34,9 @@ function woocommerce_custom_product_table_box_end(){
 function woocommerce_custom_product_bottom_box_start(){
     echo '<div class="bottom-box">';
 }
+function wishlist_wrapper(){
+    echo '<span class="button">Добавить в избранное</span><a href="#" class="a">Поделиться</a>';
+}
 function woocommerce_custom_product_bottom_box_end(){
     echo '</div>';
 }
@@ -41,15 +44,11 @@ function woocommerce_custom_product_bottom_box_end(){
 function additional_information(){
     return call_user_func( 'woocommerce_product_additional_information_tab');
 }
-function wishlist(){
-    echo do_shortcode('[ti_wishlists_addtowishlist]');
-}
 
 //customazing product template
 add_action('woocommerce_single_product_summary', 'woocommerce_custom_product_top_box_start', 1);
 add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 2);
 add_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 4);
-add_action('woocommerce_single_product_summary', 'wishlist', 24);
 add_action('woocommerce_single_product_summary', 'woocommerce_custom_product_top_box_end', 10);
 
 add_action('woocommerce_single_product_summary', 'woocommerce_custom_product_table_box_start', 20);
@@ -58,6 +57,7 @@ add_action('woocommerce_single_product_summary', 'additional_information', 22);
 add_action('woocommerce_single_product_summary', 'woocommerce_custom_product_table_box_end', 30);
 
 add_action('woocommerce_single_product_summary', 'woocommerce_custom_product_bottom_box_start', 40);
+add_action('woocommerce_single_product_summary', 'wishlist_wrapper', 44);
 add_action('woocommerce_single_product_summary', 'woocommerce_custom_product_bottom_box_end', 50);
 
 //список пунктов на странице моего акаунта

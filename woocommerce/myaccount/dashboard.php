@@ -34,11 +34,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?></p>
 
 		<p><?php
-			printf(
-				__( 'From your account dashboard you can view your <a href="%1$s">recent orders</a>, manage your <a href="%2$s">shipping and billing addresses</a>, and <a href="%3$s">edit your password and account details</a>.', 'woocommerce' ),
+			printf('Вы можете настроить <a href="%1$s">свой профиль</a>, просмотреть <a href="%2$s">заказы</a>, или же просмотреть свой <a href="%3$s">список желаний</a>',
+				esc_url( wc_get_endpoint_url( 'edit-account' ) ),
 				esc_url( wc_get_endpoint_url( 'orders' ) ),
-				esc_url( wc_get_endpoint_url( 'edit-address' ) ),
-				esc_url( wc_get_endpoint_url( 'edit-account' ) )
+				home_url() . '/my-account/wishlist/'
 			);
 		?></p>
 	</div>

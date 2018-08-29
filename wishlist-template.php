@@ -14,8 +14,7 @@ the_post();
 
     <?php get_template_part('parts/brands-and-banners', '320'); ?>
 
-    <?php get_template_part('parts/category', 'list'); ?>
-
+    <?php get_template_part('parts/account', 'banner'); ?>
 
         <div class="wrapper">
             <div class="wrap-in">
@@ -39,15 +38,12 @@ the_post();
                             </li>
                         </ul>
                     </nav>
-
                     </div>
                     <div class="my-wishes prof-margin-left">
                         <div class="name-container">
                             <h4>Мои желания</h4>
                         </div>
-                        <?php the_content(); ?>
                     </div>
-
                 <div class="clear"></div>
             </div>						
         </div>
