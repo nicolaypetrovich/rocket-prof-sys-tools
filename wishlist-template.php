@@ -58,7 +58,16 @@ the_post();
 
                                             <?php if($product->is_in_stock()){?>
                                                 <p class="my-wishes-item_in">В наличии</p>
-                                                <p class="my-wishes-item_price"><b><?php echo $product->get_price_html(); ?></b></p>
+                                                
+                                                <?php if($product->is_on_sale()){ ?>
+                                                    <p class="my-wishes-item_price"><b><?php echo $product->get_sale_price(); ?></b></p>
+                                                    <p class="my-wishes-item_price_dashed"><b><?php echo $product->get_regular_price(); ?></b></p>
+                                                <?php } else {?>
+                                                    <div class="price">
+                                                    <p class="my-wishes-item_price_dashed"><b><?php echo $product->get_regular_price(); ?></b></p>
+                                                    </div>
+                                                <?php } ?>
+        
                                                 <input type="submit" class="btn-form btn-wishes_popap custom-ajax-add-to-cart" data-id="<?php echo $list['product_id']; ?>" value="Добавить в корзину" />
                                             <?php }else{ ?>
                                                 <p class="my-wishes-item_in-not-available">Нет в наличии</p> 

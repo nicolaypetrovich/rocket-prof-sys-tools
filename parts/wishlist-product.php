@@ -15,5 +15,5 @@
     <?php } ?>
 
 <?php } else { ?>
-    <span class="button" onclick="open_modal_window_PA()">Для доступа к списку желаний необходимо войти</span>
+    <span class="button" onclick="open_modal_window_PA()">Для доступа к списку желаний необходимо войти</span><a href="#" class="a">Поделиться</a>
 <?php } ?>

@@ -6,7 +6,13 @@ $('.custom-ajax-add-to-cart').on('click', function(e){
         url:ajax,
         type:"POST",
         data:{action:'ajax_add_to_cart', prod_id:$(this).data('id')},
-        success:function(r){console.log(r)}
+        success:function(r){
+            var r = JSON.parse(r);
+            if(r[0] == 'ok'){
+                $('.cart-ajax-update').text("");
+                $('.cart-ajax-update').append(r[1]);
+            }
+        }
     });
 })
 
@@ -22,7 +28,6 @@ $('.add-to-wishlist').on('click', function(e){
 
 $('.my-wishes-item-wrap').on('click', '.wishes-delete', function(e){
     e.preventDefault();
-    console.log(11);
     $.ajax({
         url:ajax,
         type:"POST",

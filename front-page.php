@@ -21,8 +21,8 @@ global $stock;
 				<div  class="el1"><div></div></div>
 				<div class="wrapper">
 					<div class="name-container">
-							<h4><?php the_field('news_block_title', $front_page); ?><span><?php the_field('news_block_desc', $front_page); ?></span></h4>
-							<div class="button"><div><a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>"><?php the_field('news_block_link', $front_page); ?></a></div></div>
+							<h4><?php the_field('prod_block_title', $front_page); ?><span><?php the_field('prod_block_desc', $front_page); ?></span></h4>
+							<div class="button"><div><a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>"><?php the_field('prod_block_link', $front_page); ?></a></div></div>
 						</div>
 					<div class="catalog-commodity">
 						<?php 
@@ -40,7 +40,7 @@ global $stock;
 								<div class="div4">
 									<div class="wrapper-div4">
 										<?php $price = $product->get_regular_price(); if($price) { ?>
-											<div class="price"><span><?php echo $product->get_regular_price();?></span> руб.</div>
+											<div class="price"><span><?php echo $product->get_price_html(); ?></span></div>
 											<div class="button">
 												<div onclick="openPopap(this)">
 													<span class="custom-ajax-add-to-cart" data-id="<?php echo get_the_ID(); ?>">купить</span>
@@ -49,7 +49,9 @@ global $stock;
 										<?php }else{ ?>
 											<div class="price">Нет в наличии</div>
 											<div class="button">
-												<a href="<?php echo get_the_permalink(get_the_ID()); ?>">Подробнее</a>
+												<div>
+													<a href="<?php echo get_the_permalink(get_the_ID()); ?>">Подробнее</a>
+												</div>
 											</div>
 										<?php } ?>
 									</div>
@@ -89,8 +91,8 @@ global $stock;
 					<div class="wrapper">
 						<div class="name-container">
 							<?php $term = get_term_by('name', 'Новости', 'category'); ?>
-							<h4><?php echo $term->name; ?><span><?php echo $term->description; ?></span></h4>
-							<div class="button"><div><a href="<?php echo get_term_link($term->term_id); ?>"><?php echo $term->name; ?></a></div></div>
+							<h4><?php the_field('prod_block_title', $front_page); ?><span><?php the_field('news_block_desc', $front_page); ?></span></h4>
+							<div class="button"><div><a href="<?php echo get_term_link($term->term_id); ?>"><?php the_field('news_block_link', $front_page); ?></a></div></div>
 						</div>
 						<div class="product">
 							<?php 
@@ -156,11 +158,16 @@ global $stock;
 
 					<div class="our-brend-slider">
 						<div class="owl-carousel owl-theme ourBrend-slider">
-							<?php $brands = get_field('brand', $front_page); foreach($brands as $brand){ ?>
+							<?php 						
+								$filtered = get_terms( array(
+									'taxonomy'      => array( 'pa_proizvoditel' ),
+									'hide_empty'    => true, 
+								) );
+								foreach( $filtered as $term ){ $image = get_field('image', $term)['url']; if(!empty($image)){?>
 								<div class="item">
-									<img src="<?php echo $brand['url']; ?>" alt="img" style="width: 39%;">
+									<a href="/shop/?filter_proizvoditel=<?php echo $term->slug; ?>"><img src="<?php echo $image; ?>" alt="<?php echo $term->name; ?>"></a>
 								</div>
-							<?php } ?>
+							<?php } } ?>
 						</div>
 					</div>
 

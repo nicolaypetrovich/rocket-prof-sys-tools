@@ -1396,14 +1396,20 @@ height: 100%;
 	cursor: pointer;
 }
 
-.name-container .button div:hover{
+.name-container .button:hover div {
 	color: #ffa300;
 	background: url(../img/img45.png);
 	background-size: cover;
 	background-position: center;
 }
 
-.name-container .button div span{
+.name-container .button:hover a {
+	color: #ffa300;
+}
+
+.name-container .button div span, .name-container .button div a{
+	text-decoration: none;
+	color: #7ba00c;
 	position: relative;
 	top: 15px;
 }
@@ -1552,6 +1558,11 @@ height: 100%;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7c231', endColorstr='#ffab4c', GradientType=0 );
 	background-size: cover;
 	background-position: center;
+}
+
+.catalog-commodity .div4 .button div a {
+	text-decoration: none;
+	color: white;
 }
 
 .catalog-commodity .div4 .button {
@@ -1750,12 +1761,20 @@ height: 100%;
     color: #ffbf00;
 }
 
-.our-news .name-container .button div:hover {
+.our-news .name-container .button a {
+	color: #ffbf00;
+}
+
+.our-news .name-container .button:hover div{
     background: url(../img/img22.png);
     background-size: cover;
     background-position: center;
     text-align: center;
     color: #7ba00c;
+}
+
+.our-news .name-container .button:hover a{
+	color: #7ba00c;
 }
 
 .our-news .name-container .button {
@@ -2677,7 +2696,7 @@ height: 100%;
 	display: block;
 }
 
-.page3 .card-product .container-right .price span:first-child{
+.woocommerce-Price-amount.amount{
 	font-family:PTSansBold, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 39px;
 	color: #ff7f00;
@@ -2685,14 +2704,70 @@ height: 100%;
 	margin-bottom: 10px;
 }
 
+.card-product .container-right .top-box .price span:first-child {
+	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 39px;
+    color: #ff7f00;
+    line-height: 1;
+    margin-bottom: 10px;
+}
 
-.page3 .card-product .container-right .price span:last-child{
+.card-product .container-right .top-box .price span:first-child:after {
+	content:" руб.";
+	font-family:PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: 100;
+	font-size: 24px;
+	color: #4c4c4c;
+	line-height: 1;
+	text-align: center;
+}
+.my-wishes-item_price b:after {
+	content:" руб.";
+	font-family:PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: 100;
+	font-size: 20px;
+	color: #4c4c4c;
+	line-height: 1;
+	text-align: center;
+}
+
+.card-product .container-right .top-box .price span:last-child {
 	font-family:PTSansBold, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	color: #4c4c4c;
 	line-height: 1;
 	text-align: center;
+	text-decoration: line-through;
 }
+.card-product .container-right .top-box .price span:last-child:after {
+	content:" руб.";
+	font-family:PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #4c4c4c;
+	line-height: 1;
+	text-align: center;
+	text-decoration: line-through;
+}
+.my-wishes-item_price_dashed b{
+	text-decoration: line-through;
+}
+.my-wishes-item_price_dashed b:after {
+	content:" руб.";
+	font-family:PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #4c4c4c;
+	line-height: 1;
+	text-align: center;
+	text-decoration: line-through;
+}
+
+/* .page3 .card-product .container-right .price span:last-child{
+	font-family:PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #4c4c4c;
+	line-height: 1;
+	text-align: center;
+} */
 
 /*
 .page3 .card-product .container-right .top-box .button{
@@ -5861,8 +5936,21 @@ height: 100%;
   background: linear-gradient(to bottom, rgba(255,187,0,1) 0%, rgba(255,140,0,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbb00', endColorstr='#ff8c00', GradientType=0 );
 }
-.cart-item-box .cart-item-box_price  span.woocommerce-Price-amount.amount, .cart-footer .cart-footer_total span.woocommerce-Price-amount.amount{	
-	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+.my-orders-table-wrap span.woocommerce-Price-amount.amount {
+	font-size: 18px;
+	color: #ff7f00;
+	width: 10%;
+	text-align: center;
+}
+
+.my-orders-table-wrap span.woocommerce-Price-amount.amount .woocommerce-Price-currencySymbol {
+	font-size: 14px;
+	color: black;
+	width: 10%;
+	text-align: center;
+}
+.cart-item-box .cart-item-box_price span.woocommerce-Price-amount.amount, .cart-footer .cart-footer_total span.woocommerce-Price-amount.amount{	
+font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
   font-size: 24px;
   color: #ff7f00;
   width: 10%;
@@ -7333,4 +7421,8 @@ button[name="update_cart"] {
 
 .filter-menu a:hover{
 	color: #ffa300;
+}
+
+.single-product-quantity .quantity {
+	display: none;
 }

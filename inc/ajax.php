@@ -3,12 +3,24 @@
 add_action('wp_ajax_nopriv_ajax_add_to_cart', 'ajax_add_to_cart');
 add_action('wp_ajax_ajax_add_to_cart', 'ajax_add_to_cart');
 function ajax_add_to_cart(){
+    $result = array();
     $product_id = $_POST['prod_id'];
     $quantity = 1;
     if(WC()->cart->add_to_cart( $product_id, $quantity )){
-        return 'ok';
+        $result[] = 'ok';
+        $cart_url = WC()->cart->get_cart_url();
+        $cart_count = WC()->cart->get_cart_contents_count();
+        $cart_total = WC()->cart->get_cart_contents_total();
+        $result[] = "<a href='{$cart_url}'></a>
+            <span>Товаров {$cart_count} <br>
+            на {$cart_total} руб.<br>	
+            <a href='{$cart_url}'>ОФОРМИТЬ</a></span>";
+        
+    }else{
+        $result[] = 'error';
     }
-    return 'false';
+
+    echo json_encode($result); 
 
     wp_die();
 }

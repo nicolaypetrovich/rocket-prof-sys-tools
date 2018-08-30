@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="box">
-                <div class="box-wrapper">
+                <div class="box-wrapper cart-ajax-update">
                     <a href="<?php echo WC()->cart->get_cart_url(); ?>"></a>
                     <span>Товаров <?php echo WC()->cart->get_cart_contents_count(); ?> <br>
                     на <?php echo WC()->cart->get_cart_contents_total(); ?> руб.<br>	

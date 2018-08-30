@@ -18,6 +18,21 @@ add_action('woocommerce_before_single_product_summary', 'woocommerce_template_si
 function woocommerce_custom_product_top_box_start(){
     echo '<div class="top-box">';
 }
+function custom_price_template(){ 
+    global $product;
+    if($product->is_on_sale()){ ?>
+        <div class="price">
+            <span><?php echo $product->get_sale_price(); ?></span>
+            <span><?php echo $product->get_regular_price(); ?></span>
+        </div>
+    <?php } else {?>
+        <div class="price">
+            <span><?php echo $product->get_regular_price(); ?></span>
+        </div>
+    <?php }
+    ?>
+    
+<?php }
 function woocommerce_custom_product_top_box_end(){
     echo '</div>';
 }
@@ -47,7 +62,7 @@ function additional_information(){
 
 //customazing product template
 add_action('woocommerce_single_product_summary', 'woocommerce_custom_product_top_box_start', 1);
-add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 2);
+add_action('woocommerce_single_product_summary', 'custom_price_template', 2);
 add_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 4);
 add_action('woocommerce_single_product_summary', 'woocommerce_custom_product_top_box_end', 10);
 

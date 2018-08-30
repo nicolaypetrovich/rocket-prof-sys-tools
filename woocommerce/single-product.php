@@ -35,6 +35,19 @@ get_header( 'shop' ); global $product; ?>
 
 			<?php get_template_part('parts/brands-and', 'banners'); ?>
 
+			<?php 
+			
+			$args = array(
+				'delimiter'   => ' &#47; ',
+				'wrap_before' => '<div class="main-navigation" itemprop="breadcrumb"><div class="wrapper">',
+				'wrap_after'  => '</div></div>',
+				'before'      => '',
+				'after'       => '',
+				'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+			);
+			
+			woocommerce_breadcrumb($args); ?>
+
 				<?php
 					/**
 					 * woocommerce_before_main_content hook.
@@ -45,7 +58,7 @@ get_header( 'shop' ); global $product; ?>
 					do_action( 'woocommerce_before_main_content' );
 				?>
 
-					<div class="card-product">
+					<div class="card-product single-product-quantity">
 						<div  class="el1"><div></div></div>
 						<div class="wrapper">
 
@@ -107,9 +120,9 @@ get_header( 'shop' ); global $product; ?>
 								</div>
 								<div class="container-box">
 
-									<a href="/shop/?add-to-cart=<?php echo get_the_id(); ?>" data-quantity="1" 
+									<span
 									class="button btn-form custom-ajax-add-to-cart"
-									data-product_id="<?php echo get_the_id(); ?>" data-product_sku="" aria-label="" 
+									data-id="<?php echo get_the_id(); ?>" data-product_sku="" aria-label="" 
 									rel="nofollow" onclick="openPopapPage3()">В корзину</a>
 									
 								</div>
