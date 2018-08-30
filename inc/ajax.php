@@ -87,7 +87,7 @@ function wishlist_ajax_template(){
 
                     <?php if($product->is_in_stock()){?>
                         <p class="my-wishes-item_in">В наличии</p>
-                        <p class="my-wishes-item_price"><b><?php echo $product->get_regular_price(); ?></b> руб.</p>
+                        <p class="my-wishes-item_price"><b><?php echo $product->get_price_html(); ?></b></p>
                         <input type="submit" class="btn-form btn-wishes_popap custom-ajax-add-to-cart" data-id="<?php echo $list['product_id']; ?>" value="Добавить в корзину" />
                     <?php }else{ ?>
                         <p class="my-wishes-item_in-not-available">Нет в наличии</p> 

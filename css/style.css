@@ -7325,3 +7325,12 @@ button[name="update_cart"] {
 	  transform:  translate(0px,0px);
 	}
   }
+
+.filter-menu a {
+	text-decoration: none;
+	color: black;
+}
+
+.filter-menu a:hover{
+	color: #ffa300;
+}
