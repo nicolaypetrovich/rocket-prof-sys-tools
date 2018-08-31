@@ -67,7 +67,7 @@ img{
 	text-align: center;
 }
 
-.modal-window form p{
+.modal-window form p, .authorization form p{
 	font-family:PTSansBold, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 24px;
 	text-transform: uppercase;
@@ -78,7 +78,9 @@ img{
 }
 
 .modal-window .formEmail,
-.modal-window .form_password{
+.modal-window .form_password,
+.authorization .formEmail,
+.authorization .form_password{
 	border: 1px solid #cfaf81;
 	border-radius: 5px;
 	height: 38px;
@@ -96,7 +98,7 @@ img{
 .modal-window form input:-moz-placeholder           { color: #381d18; } /* Firefox 18- */
 .modal-window form input:-ms-input-placeholder      { color: #381d18; }
  
-.modal-window .button div{
+.modal-window .button div, .authorization .button div{
 	width: 199px;
 	height: 67px;
 	background: url(../img/img21.png);
@@ -110,22 +112,23 @@ img{
 	text-align: center;
 }
 
-.modal-window .button div{
+.modal-window .button div, .authorization .button div{
 	margin: 0 auto;
 	margin-bottom: 15px;
 	cursor: pointer;
 }
 
-.modal-window .button div:hover{
+.modal-window .button div:hover, .authorization .button div:hover{
 	opacity: 0.7;
 }
 
-.modal-window .button div span{
+.modal-window .button div span, .authorization .button div span{
 	position: relative;
 	top: 16px;
 }
 
-.modal-window .button div input, .modal-window .button div button{
+.modal-window .button div input, .modal-window .button div button,
+.authorization .button div input, .authorization .button div button{
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -137,7 +140,7 @@ img{
 	cursor: pointer;
 }
 
-.modal-window form a{
+.modal-window form a, .authorization form a{
 	display: inline-block;
 	text-decoration: none;
 	font-family:PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
@@ -147,7 +150,7 @@ img{
 	border-bottom: 1px solid #381d18;
 }
 
-.modal-window form a:hover{
+.modal-window form a:hover, .authorization form a:hover{
 	color: #ffa300;
 	border-bottom: 1px solid #ffa300;
 }
@@ -7425,4 +7428,8 @@ button[name="update_cart"] {
 
 .single-product-quantity .quantity {
 	display: none;
+}
+
+.authorization {
+	max-width: 450px; 
 }

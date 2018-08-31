@@ -23,21 +23,22 @@ the_post();
         </div>
         <div class="wrapper">
             <div class="wrap-in wrap-in-margin-bottom">
-                <div class="woocommerce"><div class="privat-cab-nav-box">
-                <h3>Личный кабинет</h3>
-                    <nav class="woocommerce-MyAccount-navigation privat-cab-nav">
-                        <ul>
-                            <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account">
-                                <a href="<?php echo home_url();?>/my-account/edit-account/">Профиль</a>
-                            </li>
-                            <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
-                                <a href="<?php echo home_url();?>/my-account/orders/">Мои заказы</a>
-                            </li>
-                            <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--tinv_wihlist is-active">
-                                <a href="<?php echo home_url();?>/my-account/wishlist/">Мои желания</a>
-                            </li>
-                        </ul>
-                    </nav>
+                <?php if(is_user_logged_in()){?>
+                    <div class="woocommerce"><div class="privat-cab-nav-box">
+                        <h3>Личный кабинет</h3>
+                        <nav class="woocommerce-MyAccount-navigation privat-cab-nav">
+                            <ul>
+                                <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account">
+                                    <a href="<?php echo home_url();?>/my-account/edit-account/">Профиль</a>
+                                </li>
+                                <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
+                                    <a href="<?php echo home_url();?>/my-account/orders/">Мои заказы</a>
+                                </li>
+                                <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--tinv_wihlist is-active">
+                                    <a href="<?php echo home_url();?>/my-account/wishlist/">Мои желания</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                     <div class="my-wishes prof-margin-left">
                         <div class="name-container">
@@ -89,7 +90,27 @@ the_post();
                             } ?>                        
                         </div>                        
                     </div>
-                <div class="clear"></div>
+                    <div class="clear"></div>
+                <?php }else{ ?>
+                    <div class="authorization">
+                        <form method="post" data-action="login">
+                            <p>Авторизация</p>
+                            <input placeholder="E-mail" type="text" class="formEmail" name="login_name" autocomplete="username">
+                            <input placeholder="Пароль" class="form_password" type="password" name="login_password" autocomplete="current-password">
+
+                            <div id="login_error"></div>
+
+                            <div class="button">
+                                <div>
+                                    <span>войти</span>
+                                    <button type="submit" class="button" name="login" value="Войти">Войти</button>
+                                </div>
+                            </div>
+
+                            <a href="/registratsiya/">Регистрация</a>
+                        </form>
+                    </div>
+                <?php } ?>
             </div>						
         </div>
     </div>

@@ -18,11 +18,15 @@ $('.custom-ajax-add-to-cart').on('click', function(e){
 
 $('.add-to-wishlist').on('click', function(e){
     e.preventDefault();
+    var btn = $(this);
     $.ajax({
         url:ajax,
         type:"POST",
         data:{action:'ajax_add_to_wishlist', prod_id:$(this).data('id')},
-        success:function(r){console.log(r)}
+        success:function(r){
+            btn.removeClass('add-to-wishlist');
+            btn.text('Товар был добавлен в список желаний!');
+        }
     });
 })
 
