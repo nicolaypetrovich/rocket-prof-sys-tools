@@ -30,7 +30,7 @@ get_header();
                                 <img src="<?php echo get_template_directory_uri()?>/img/img-phone.png" alt="img">
                                 <div class="contact-info">
                                     <h5>Тeлефон:</h5><br>
-                                    <span><b><?php echo get_theme_mod('phone_little'); ?><?php echo get_theme_mod('phone_big'); ?></b></span>
+                                    <span><b><?php echo get_theme_mod('phone_little'); ?> <?php echo get_theme_mod('phone_big'); ?></b></span>
                                 </div>									
                             </div>
                             
