@@ -184,8 +184,6 @@ img{
 	border:1px solid red;
 }
 
-.test{}
-
 body{
 	margin: 0;
 }
@@ -2807,13 +2805,6 @@ height: 100%;
 	height: auto;
 }
 
-.page3 .button:before{
-}
-
-
-
-
-
 .page3 .card-product .container-right .top-box .button div{
 	width: 98px;
 	height: 38px;
@@ -3546,10 +3537,6 @@ height: 100%;
 
 	.page1 .our-news .name-container .button {
 	    margin-right: 10px;
-	}
-
-	.page1 .name-container .button{
-		
 	}
 
 	.page1 .our-brend .our-brend-slider{
@@ -5384,8 +5371,7 @@ height: 100%;
   z-index: 10;
 	}
 }
-.main-navigation {
-}
+
 /*Конец Основные для остальных страниц*/
 
 /* Start Contacts*/
@@ -5794,9 +5780,6 @@ height: 100%;
 @media only screen and (max-width:1035px){
 	.wrap-form-in .wrap-input{
 		width: 45%;
-	}
-	.wrap-form-in textarea{
-		
 	}
 }
 @media only screen and (max-width:680px){
@@ -6476,9 +6459,6 @@ form .invalid{
 	background-size: cover;
 }
 
-.privat-cab-nav{
-
-}
 .privat-cab-nav ul{
 	width: 100%;
 	list-style: none;
@@ -6545,8 +6525,6 @@ form .invalid{
 	width: 100%;
 	margin: 0 auto;
 }
-.my-profile form{
-}
 
 .my-profile form input::placeholder{
 	color: #381d18;
@@ -6595,11 +6573,6 @@ form .invalid{
 	margin: 0 auto;
 	}
 
-}
-@media only screen and (max-width:430px){
-	.my-profile form .input-my-profile{
-		
-	}
 }
 
 @media only screen and (min-width:950px){ 
