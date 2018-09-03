@@ -35,6 +35,10 @@ $text_align = is_rtl() ? 'right' : 'left';
 				<?php if ( $order->get_billing_email() ) : ?>
 					<p><?php echo esc_html( $order->get_billing_email() ); ?></p>
 				<?php endif; ?>
+				<?php if($order->payment_method == 'custom'){?>
+					<p>Название организации: <?php echo get_post_meta( $order->id, 'mobile', true );?></p>
+					<p>Номер ИНН: <?php echo get_post_meta( $order->id, 'inn_number', true );?></p>
+				<?php } ?>
 			</address>
 		</td>
 		<?php if ( ! wc_ship_to_billing_address_only() && $order->needs_shipping_address() && ( $shipping = $order->get_formatted_shipping_address() ) ) : ?>

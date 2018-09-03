@@ -38,6 +38,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php else : ?>
 
+		<?php if($order->payment_method == 'custom'){
+
+			$myPluginGateway = new WC_Gateway_Custom();
+
+			$instractions = $myPluginGateway->get_option('instructions');
+
+			echo $instractions . '<br>';
+
+		} else if($order->payment_method == 'uc_payment'){
+
+			$myPluginGateway = new UC_Gateway();
+
+			$instractions = $myPluginGateway->get_option('instraction');
+			$user_name = $myPluginGateway->get_option('user_name');
+			$user_sur = $myPluginGateway->get_option('user_sur');
+			$user_otch = $myPluginGateway->get_option('user_otch');
+			$user_phone = $myPluginGateway->get_option('user_phone');
+
+			echo $instractions . '<br>';
+			echo $user_name . '<br>';
+			echo $user_sur . '<br>';
+			echo $user_otch . '<br>';
+			echo $user_phone . '<br>';
+
+		} else{ ?>
+
 			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
 
 			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
@@ -73,10 +99,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			</ul>
 
+		<?php } ?>
+
+			
+
 		<?php endif; ?>
 
-		<?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
-		<?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
+		<?php if(($order->payment_method != 'custom')&&($order->payment_method != 'uc_payment')) { ?>
+
+			<?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
+			<?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
+
+		<?php } ?>
 
 	<?php else : ?>
 
