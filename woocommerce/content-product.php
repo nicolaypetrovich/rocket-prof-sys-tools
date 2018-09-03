@@ -66,4 +66,5 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	do_action( 'woocommerce_after_shop_loop_item' );
 	
 	?>
+	<div class="popap"><span>Товар добавлен в корзину</span></div>
 </div>
