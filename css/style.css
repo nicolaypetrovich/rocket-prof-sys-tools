@@ -846,7 +846,7 @@ height: 100%;
 	content: url(../img/img1000.png);
 	position: absolute;
 	bottom: -62px;
-	left: 20px;
+	left: 19px;
 }
 
 .banner-our-production-content{
@@ -6375,6 +6375,60 @@ font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
 	background-color: rgba(255, 137, 0, 0.1);
 }
 
+.page-7 .woocommerce-billing-fields h3{
+    line-height: 1;
+    display: inline-block;
+    font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #7ba00c;
+    border-left: 2px solid #ffbf00;
+    padding-left: 20px;
+    float: left;
+}
+
+/*МОИ ПРАВКИ*/
+
+.page-7 .checkout{
+	display: flex;
+	justify-content: space-between;
+}
+
+.page-7 .woocommerce-Price-amount.amount{
+	color: #381d18;
+    font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.page-7 .box-your-order table .cart_item:nth-child(odd){
+	background-color: rgba(255, 137, 0, 0.1);
+}
+
+.page-7 .box-your-order table .cart_item:nth-child(even){
+	background: none;
+}
+
+.page-7 .box-your-order ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.page-7 .box-your-order table tr{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0;
+}
+
+.page-7 .box-your-order table th{
+	padding-top: 10px;
+}
+
+
+
+
+/* КОНЦ МОИ ПРАВКИ*/
+
 
 @media only screen and (max-width:580px){
 	.wrap-in-column{
@@ -7412,6 +7466,8 @@ button[name="update_cart"] {
 .authorization {
 	max-width: 450px; 
 }
+
+
 
 
 
