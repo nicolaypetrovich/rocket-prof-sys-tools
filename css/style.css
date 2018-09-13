@@ -839,14 +839,21 @@ height: 100%;
 	position: relative;
 	z-index: 1;
 	left: 19px;
-  top: -84px;
+  	top: -84px;
+}
+
+.banner-our-production-content-wrapper:after{
+	content: url(../img/img1000.png);
+	position: absolute;
+	bottom: -62px;
+	left: 20px;
 }
 
 .banner-our-production-content{
 	margin: 0 auto;
-	background: url(../img/img14.png) no-repeat;
+	background: linear-gradient(to right, #f3bd8a, #f7d4b3);
+	padding-bottom: 30px;
 	width: 264px;
-	height: 784px;
 }
 
 .banner-our-production-content-wrapper h1{
@@ -875,6 +882,23 @@ height: 100%;
 .banner-our-production-content-wrapper h3{
 	margin: 0;
 	line-height: 1;
+	background: linear-gradient(to right, #f09556, #f2a36f);
+	border-bottom: 1px solid #fb9532;
+	border-top: 1px solid #fb9532;
+}
+
+.banner-our-production-menu{
+	position: relative;
+}
+
+.banner-our-production-content-wrapper .number-h3{
+	position: absolute;
+	top: -7px;
+	right: 10px;
+	font-size: 57px;
+	font-family:PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+	color: #f6c1a1;
+	line-height: 1;
 }
 
 .banner-our-production-content-wrapper h3 a{
@@ -887,23 +911,13 @@ height: 100%;
 	padding-left: 25px;
 	height: 42px;
 	line-height: 1;
+	position: relative;
+	z-index: 1;
 }
 
 .banner-our-production-content-wrapper h3 span{
 	position: relative;
 	top: 16px;
-}
-
-.banner-our-production-menu1 h3 a{
-	background: #f09556 url(../img/img17.png) no-repeat 190px 0;
-}
-
-.banner-our-production-menu2 h3 a{
-	background: #f09556 url(../img/img18.png) no-repeat 190px 0;
-}
-
-.banner-our-production-menu3 h3 a{
-	background: #f09556 url(../img/img19.png) no-repeat 190px 0;
 }
 
 .banner-our-production-content-wrapper h3 a:hover{
@@ -923,7 +937,7 @@ height: 100%;
 	color: #381d18;
 	padding: 10px 0 11px 25px;
 	border-bottom: 1px dashed #fb9532;
-	border-top: 1px dashed #f5c79c;
+	border-top: 1px dashed #fb9532;
 }
 
 .banner-our-production-menu .box .box1{
@@ -3726,8 +3740,12 @@ height: 100%;
 		height: auto;
 	}
 
+	.banner-our-production-content-wrapper:after{
+		content: "";
+	}
+
 	.banner-our-production-content{
-		
+		padding-bottom: 0;
 		width: 100%;
 		height: auto;
 	}
@@ -3764,18 +3782,6 @@ height: 100%;
 		width: 100%;
 		background: linear-gradient(to right, #f3bd8a, #f7d4b2);
 		display: none;
-	}
-
-	.banner-our-production-menu1 h3 a {
-	    background: #f09556 url(../img/img17.png) no-repeat 97% 0;
-	}
-
-	.banner-our-production-menu2 h3 a{
-		 background: #f09556 url(../img/img18.png) no-repeat 97% 0;
-	}
-
-	.banner-our-production-menu3 h3 a{
-		 background: #f09556 url(../img/img19.png) no-repeat 97% 0;
 	}
 
 	.banner-our-production-menu2 .box a img{
@@ -4335,10 +4341,6 @@ height: 100%;
 	.page3 .shipping-and-payment .el1 div{
 		float: right;
 		margin-right: 20px;
-	}
-
-	.page3 .shipping-and-payment{
-		margin: 0 10px 40px 10px;
 	}
 
 	.page3 .see-also .catalog-commodity .box{

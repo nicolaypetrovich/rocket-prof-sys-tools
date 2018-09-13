@@ -677,6 +677,15 @@ $(document).mouseup(function (e) {
 /* конец модальное окно попап просмотр заказа */
 
 
+// начало блока наша продукция добавление цифр
+if ($('.banner-our-production-menu').length > 0) {
+	 $(".banner-our-production-menu").append('<span class="number-h3"></span>');
+	 for (var i = 0; i < document.getElementsByClassName('number-h3').length; i++) {
+			document.getElementsByClassName('number-h3')[i].innerHTML = "0"+(i+1);
+			if (i==0) document.getElementsByClassName('number-h3')[i].innerHTML = "0"+1;
+	}
+}
+//блока наша продукция  добавление цифр
 
 
 
