@@ -883,8 +883,6 @@ height: 100%;
 	margin: 0;
 	line-height: 1;
 	background: linear-gradient(to right, #f09556, #f2a36f);
-	border-bottom: 1px solid #fb9532;
-	border-top: 1px solid #fb9532;
 }
 
 .banner-our-production-menu{
@@ -5415,7 +5413,7 @@ height: 100%;
   position: relative;
   z-index: 2;
   left: 95px;
-  top: -170px;
+  top: -150px;
   background: url(../img/img3.png);
   background-size: cover;
   background-position: center;
@@ -6375,59 +6373,6 @@ font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
 	background-color: rgba(255, 137, 0, 0.1);
 }
 
-.page-7 .woocommerce-billing-fields h3{
-    line-height: 1;
-    display: inline-block;
-    font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #7ba00c;
-    border-left: 2px solid #ffbf00;
-    padding-left: 20px;
-    float: left;
-}
-
-/*МОИ ПРАВКИ*/
-
-.page-7 .checkout{
-	display: flex;
-	justify-content: space-between;
-}
-
-.page-7 .woocommerce-Price-amount.amount{
-	color: #381d18;
-    font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
-    font-size: 16px;
-}
-
-.page-7 .box-your-order table .cart_item:nth-child(odd){
-	background-color: rgba(255, 137, 0, 0.1);
-}
-
-.page-7 .box-your-order table .cart_item:nth-child(even){
-	background: none;
-}
-
-.page-7 .box-your-order ul{
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-}
-
-.page-7 .box-your-order table tr{
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 0;
-}
-
-.page-7 .box-your-order table th{
-	padding-top: 10px;
-}
-
-
-
-
-/* КОНЦ МОИ ПРАВКИ*/
 
 
 @media only screen and (max-width:580px){
@@ -7472,6 +7417,149 @@ button[name="update_cart"] {
 
 
 
+/*МОИ ПРАВКИ*/
+
+.page-7 .woocommerce-billing-fields h3{
+    line-height: 1;
+    display: inline-block;
+    font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: #7ba00c;
+    border-left: 2px solid #ffbf00;
+    padding-left: 20px;
+    margin-top: 0;
+}
+
+.page-7 .woocommerce-Price-amount.amount,
+.page-7 .box-your-order table th {
+    color: #381d18;
+    font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.page-7 .box-your-order table tbody strong,
+.page-7 .box-your-order table tbody tr:last-child,
+.page-7 .box-your-order table tfoot  th {
+    font-weight: normal;
+}
+
+.page-7 .box-your-order table tfoot .order-total th{
+	font-weight: bold;
+}
+
+.page-7 .box-your-order table thead th{
+	font-size: 19px;
+}
+
+.page-7 .checkout{
+	display: flex;
+	justify-content: space-between;
+}
+
+.page-7 .box-your-order table {
+	table-layout: fixed;
+    width:100%;
+}
+
+.page-7 .box-your-order table .cart_item:nth-child(odd){
+	background-color: rgba(255, 137, 0, 0.1);
+}
+
+.page-7 .box-your-order table .cart_item:nth-child(even){
+	background: none;
+}
+
+.page-7 .box-your-order ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: none;
+}
+
+.page-7 .box-your-order table th{
+	padding: 10px;
+}
+
+.page-7 .box-your-order table tr{
+	margin-bottom: 0;
+}
+
+.page-7 .box-your-order table td{
+	word-wrap:break-word;
+}
+
+.page-7 .box-your-order table td:last-child,
+.page-7 .box-your-order table th:last-child{
+	width: 25%;
+}
+
+
+.page-7 .box-pay-details table thead,
+.page-7 .box-pay-details table tbody,
+.page-7 .box-pay-details table .cart-subtotal,
+.page-7 .box-pay-details table .order-total{
+	display: none;
+}
+
+.page-7 .box-pay-details  ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.page-7 .box-pay-details table .shipping th{
+	display: none;
+}
+
+.page-7 .box-pay-details table ul  label{
+	color: #381d18;
+    font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.page-7 .box-pay-details table ul .woocommerce-Price-amount.amount{
+	color: #7ba00c;
+    font-weight: 700;
+}
+
+.page-7 .box-pay-details .woocommerce-privacy-policy-text p{
+	margin: 0;
+}
+
+.page-7 #terms{
+	display: none;
+}
+
+.page-7 .box-pay-details  .woocommerce-form__label-for-checkbox {
+	display: none;
+}
+
+
+@media only screen and (max-width:950px){		
+	.page-7 .box-pay-details p{
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width:580px){		
+	.page-7 .checkout{
+		flex-direction: column-reverse;
+	}
+
+	.page-7  .button.alt{
+		margin: 0px auto;
+		margin-top: 30px;
+		display: block;
+	}
+}
+
+
+
+
+
+
+/* КОНЦ МОИ ПРАВКИ*/
 
 
 
