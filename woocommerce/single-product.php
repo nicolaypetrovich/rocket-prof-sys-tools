@@ -141,7 +141,8 @@ get_header( 'shop' ); global $product; ?>
 									<h4>Смотрите так же</h4>
 								</div>
 								<div class="catalog-commodity">
-									<?php foreach($related_products as $related_product) : $prod = wc_get_product($related_product); ?>
+									<?php foreach($related_products as $related_product) : $prod = wc_get_product($related_product); 
+										if(!empty($prod)):?>
 										<div class="box box1">
 											<div class="div1"><a href="<?php get_permalink($related_product);?>"><?php echo $prod->name;?></a></div>
 											<div class="div2"><a href="<?php get_permalink($related_product);?>">
@@ -151,13 +152,13 @@ get_header( 'shop' ); global $product; ?>
 											<div class="div3"><p><span><?php echo mb_substr(get_the_excerpt($related_product), 0, 60, 'utf-8');?></span></p></div>
 											<div class="div4">
 												<div class="wrapper-div4">
-													<div class="price"><span><?php echo $prod->get_regular_price(); ?></span></div>
+													<div class="price"><span><?php echo $prod->get_price_html(); ?></span></div>
 													<div class="button"><div onclick="openPopap(this)"><span class="custom-ajax-add-to-cart" data-id="<?php echo $related_product; ?>" data-value="<?php echo $related_product; ?>">купить</span></div></div>
 												</div>
 											</div>
 											<div class="popap"><span>Товар добавлен в корзину</span></div>	
 										</div>
-									<?php endforeach; ?>
+									<?php endif; endforeach; ?>
 								</div>
 								<div class="catalog-commodity catalog-commodity-slider">
 									<div class="owl-carousel owl-theme catalogCommodity-slider ">

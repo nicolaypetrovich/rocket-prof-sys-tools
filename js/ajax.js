@@ -26,6 +26,7 @@ $('.add-to-wishlist').on('click', function(e){
         success:function(r){
             btn.removeClass('add-to-wishlist');
             btn.text('Товар был добавлен в список желаний!');
+            console.log(r);
         }
     });
 })

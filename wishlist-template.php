@@ -84,7 +84,7 @@ the_post();
                                         <div class="my-wishes-item_popap"><span>Товар добавлен в корзину</span></div>	
                                     </div>
                                 <?php 
-                                } 
+                                }
                             }else{
                                 echo '<div class="my-wishes-item">В списке желаний нет товаров</div>';
                             } ?>                        

@@ -32,17 +32,16 @@ function ajax_add_to_wishlist(){
     if(is_user_logged_in()){
 
         $user_id = get_current_user_id();
-        $wishlist = get_user_meta( $user_id, 'wishlist' );
+        $wishlist = get_user_meta( $user_id, 'wishlist', true );
 
         $product_id = $_POST['prod_id'];
         $date = date("d.m.Y");
 
         $data = array($product_id => array('product_id' => $product_id, 'date' => $date));
 
-        if(empty($wishlist)){
+        if(empty($wishlist)||($wishlist === NULL)||($wishlist[0] === NULL)){
             update_user_meta($user_id, 'wishlist', $data);
         }else{
-            $wishlist = $wishlist[0];
             $wishlist = array_merge($wishlist, $data);
             update_user_meta($user_id, 'wishlist', $wishlist);
         }
