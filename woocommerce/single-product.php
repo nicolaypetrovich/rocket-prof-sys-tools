@@ -117,9 +117,9 @@ get_header( 'shop' ); global $product; ?>
 									<div class="text brekable">
 										<?php the_field('cash'); ?>
 										<span
-									class="button btn-form custom-ajax-add-to-cart"
-									data-id="<?php echo get_the_id(); ?>" data-product_sku="" aria-label="" 
-									rel="nofollow" onclick="openPopapPage3()">В корзину</a>
+											class="button btn-form custom-ajax-add-to-cart"
+											data-id="<?php echo get_the_id(); ?>" data-product_sku="" aria-label="" 
+											rel="nofollow" onclick="openPopapPage3()">В корзину</a>
 									</div>
 								</div>
 								
