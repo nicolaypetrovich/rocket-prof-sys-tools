@@ -7473,7 +7473,7 @@ button[name="update_cart"] {
     width:100%;
 }
 
-.page-7 .box-your-order table .cart_item:nth-child(odd){
+.page-7 .box-your-order table  .cart_item:nth-child(odd){
 	background-color: rgba(255, 137, 0, 0.1);
 }
 
@@ -7547,12 +7547,43 @@ button[name="update_cart"] {
 	display: none;
 }
 
+@media only screen and (max-width:1000px){		
+	.page-7 .box-your-order table td:last-child,
+	.page-7 .box-your-order table th:last-child{
+		width: 30%;
+	}
+}
+
 
 @media only screen and (max-width:950px){		
 	.page-7 .box-pay-details p{
 		padding: 0;
 	}
 }
+
+@media only screen and (max-width:850px){		
+	.page-7 .box-your-order table td:last-child,
+	.page-7 .box-your-order table th:last-child{
+		width: 35%;
+	}
+}
+
+
+@media only screen and (max-width:750px){		
+	.page-7 .box-your-order table td:last-child,
+	.page-7 .box-your-order table th:last-child{
+		width: 40%;
+	}
+}
+
+@media only screen and (max-width:650px){		
+	.page-7 .box-your-order table td:last-child,
+	.page-7 .box-your-order table th:last-child{
+		width: 45%;
+	}
+}
+
+
 
 @media only screen and (max-width:580px){		
 	.page-7 .checkout{
@@ -7563,6 +7594,39 @@ button[name="update_cart"] {
 		margin: 0px auto;
 		margin-top: 30px;
 		display: block;
+	}
+
+	.page-7 .box-your-order table td:last-child,
+	.page-7 .box-your-order table th:last-child{
+		width: 25%;
+	}
+}
+
+@media only screen and (max-width:500px){		
+	.page-7 .box-your-order table td:last-child,
+	.page-7 .box-your-order table th:last-child{
+		width: 30%;
+	}
+}
+
+@media only screen and (max-width:450px){		
+	.page-7 .box-your-order table td:last-child,
+	.page-7 .box-your-order table th:last-child{
+		width: 30%;
+	}
+}
+
+@media only screen and (max-width:400px){		
+	.page-7 .box-your-order table td:last-child,
+	.page-7 .box-your-order table th:last-child{
+		width: 35%;
+	}
+}
+
+@media only screen and (max-width:370px){		
+	.page-7 .box-your-order table td:last-child,
+	.page-7 .box-your-order table th:last-child{
+		width:40%;
 	}
 }
 
