@@ -940,9 +940,9 @@ height: 100%;
 
 .banner-our-production-menu .box .box1{
 	position: relative;
-	background-image: url(../img/img20.png);
+	/*background-image: url(../img/img20.png);
 	background-repeat: no-repeat;
-	background-position: 225px 14px;
+	background-position: 224px 13px;*/
 }
 .banner-our-production-menu .box .block-name{
 	position: relative;
@@ -953,14 +953,28 @@ height: 100%;
 }
 
 .banner-our-production-menu .box .block-name>span{
-	padding: 28px 38px 8px 38px;
+	padding: 27px 38px 7px 38px;
 	display: block;
 	overflow: hidden;
 	cursor: pointer;
 	position: absolute;
 	top: 0;
 	right: 0;
+	background-image: url(../img/img20.png);	
+	background-repeat: no-repeat;
+	background-position: 50% 13px;
 }
+
+.banner-our-production-menu .box .block-name>span:hover{
+	background: #ffa300;
+	border: 1px dashed #fff;
+	background-image: url(../img/img20.png);	
+	background-repeat: no-repeat;
+	background-position: 50% 13px;
+	cursor: default;
+}
+
+
 
 @media only screen and (max-width:950px){
 	.banner-our-production-menu .box .block-name>span{
@@ -996,12 +1010,12 @@ height: 100%;
 	border: 1px dashed #fff;
 }
 
-.banner-our-production-menu .box1:hover{
+.banner-our-production-menu .box1 a:hover{
 	background: #ffa300;
 	border: 1px dashed #fff;
-	background-image: url(../img/img20.png);	
+	/*background-image: url(../img/img20.png);	
 	background-repeat: no-repeat;
-	background-position: 224px 13px;
+	background-position: 224px 13px;*/
 }
 
 .banner-our-production-menu .box .box1 .box1-content a:hover{
