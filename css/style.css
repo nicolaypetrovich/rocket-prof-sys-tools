@@ -976,7 +976,7 @@ height: 100%;
 
 
 
-@media only screen and (max-width:950px){
+/*@media only screen and (max-width:950px){
 	.banner-our-production-menu .box .block-name>span{
 		padding: 28px 154px 8px 38px;
 		background-image: url(../img/img20.png);
@@ -1004,7 +1004,7 @@ height: 100%;
 		background-image: url(../img/img20.png);
 		background-position: 80% 50% ;
 	}
-}
+}*/
 .banner-our-production-menu .box > a:hover{
 	background: #ffa300;
 	border: 1px dashed #fff;
