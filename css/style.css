@@ -7481,12 +7481,47 @@ button[name="update_cart"] {
 	background: none;
 }
 
+
+
+
+
+
+
+
+
+
 .page-7 .box-your-order ul{
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-	display: none;
+	/*display: none;*/
+	/*временно*/
 }
+
+.page-7 .box-pay-details input[type="radio"] {
+   display: block;
+	/*временно*/
+}
+
+.page-7 .box-your-order table .shipping{
+	/*display: none;*/
+	/*временно*/
+}
+
+.page-7 #terms{
+	/*display: none;*/
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .page-7 .box-your-order table th{
 	padding: 10px;
@@ -7539,13 +7574,21 @@ button[name="update_cart"] {
 	margin: 0;
 }
 
-.page-7 #terms{
-	display: none;
+.page-7 .box-pay-details .validate-required label span {
+	color: #381d18;
+    font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
 }
 
-.page-7 .box-pay-details  .woocommerce-form__label-for-checkbox {
-	display: none;
+.page-7  .button.alt{
+	margin:0;
 }
+
+.page-7 .box-pay-details label{
+	cursor: pointer;
+}
+
 
 @media only screen and (max-width:1000px){		
 	.page-7 .box-your-order table td:last-child,
@@ -7592,7 +7635,6 @@ button[name="update_cart"] {
 
 	.page-7  .button.alt{
 		margin: 0px auto;
-		margin-top: 30px;
 		display: block;
 	}
 
