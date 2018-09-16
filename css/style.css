@@ -20,7 +20,7 @@ img{
 	border: none;
 }
 
-.min-heght{min-height: 200px;}
+.min-heght{min-height: 800px;}
 /*модальное окно попап вход в личный кабинет*/
 .modal-window{
 	position: fixed;
@@ -195,6 +195,7 @@ body{
 	background: url(../img/bg-main.jpg);
 	background-repeat: repeat;
 	position: relative;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
 }
 .body:after, 
 .body:before {
@@ -2359,7 +2360,6 @@ width: 347px;
 }
 /*.......................................СТРАНИЦА 2...................*/
 .page2{
-	min-height: 800px;
 	padding-bottom: 100px;
 }
 
@@ -7589,6 +7589,13 @@ button[name="update_cart"] {
 	cursor: pointer;
 }
 
+.woocommerce-info{
+	margin-left: 330px;
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #381d18;
+}
+
 
 @media only screen and (max-width:1000px){		
 	.page-7 .box-your-order table td:last-child,
@@ -7601,6 +7608,14 @@ button[name="update_cart"] {
 @media only screen and (max-width:950px){		
 	.page-7 .box-pay-details p{
 		padding: 0;
+	}
+
+	.woocommerce-info{
+		margin-left: 0px;
+	}
+
+	.min-heght {
+	     min-height: auto; 
 	}
 }
 
@@ -7623,6 +7638,26 @@ button[name="update_cart"] {
 	.page-7 .box-your-order table td:last-child,
 	.page-7 .box-your-order table th:last-child{
 		width: 45%;
+	}
+}
+
+@media only screen and (max-width:630px){		
+	.page2 .filter{
+		padding: 0;
+	}
+
+	.page2 .button-filter-320{
+		margin-left: 10px;
+	}
+
+	.page2 .filter-wrapper{
+		padding: 10px 0;
+		top: 0px;
+		z-index: 1;
+	}
+
+	.border-top-main{
+		z-index: 0;
 	}
 }
 
