@@ -4892,7 +4892,8 @@ width: 347px;
 	}
 
 	.logo {
-	    top: 30px;
+	    top: 100px;
+	    z-index: 2;
 	}
 
 	.modal-window .content{
@@ -4994,7 +4995,7 @@ width: 347px;
 	    right: auto;
 	    left: -115px;
 	    width: 220px;
-	    top: 66px;
+	    top: 0px;
 	}
 
 	.banner-our-production-content-wrapper h1{
@@ -5247,7 +5248,6 @@ width: 347px;
 	    position: relative;
 	    left: auto;
 	    width: 190px;
-	    top: 75px;
 	}
 
 	.header .el2 div {
