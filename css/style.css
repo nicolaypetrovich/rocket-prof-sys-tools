@@ -7600,6 +7600,25 @@ button[name="update_cart"] {
 	background-image: url(../img/radio-bg-checked.png);
 }
 
+.page-7 #payment .checkbox:before{
+	background: none;
+}
+
+.page-7 #payment .checkbox{
+	  background: url(../img/radio-bg.png) no-repeat 0px 0px;
+}
+
+.page-7 #payment .checkbox-active{
+	background: url(../img/radio-bg-checked.png) no-repeat 0px 0px;
+}
+
+
+.page-7 #payment .checkbox-none{
+	 background: url(../img/radio-bg.png) no-repeat 0px 0px;
+}
+
+
+
 .page-7 #payment input[type="submit"] {
 	margin-bottom: 30px;
 }

@@ -741,3 +741,17 @@ if ($('.banner-our-production-menu').length > 0) {
 //блока наша продукция  добавление цифр
 
 
+
+
+
+setTimeout(function(){
+
+	$(document).ready(function(){
+	   	$(".checkbox").click (function (){
+			  $(".checkbox").addClass("checkbox-active");
+			});
+
+		
+	});
+
+},2000)
