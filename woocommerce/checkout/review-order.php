@@ -112,3 +112,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</tfoot>
 </table>
 </div>
+</div>
