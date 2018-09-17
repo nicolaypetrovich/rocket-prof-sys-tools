@@ -166,3 +166,19 @@ function change_currency_symbol( $symbols, $currency ) {
 	}
     return $symbols;
 }
+
+
+add_action('woocommerce_checkout_before_order_review', 'checkout_wrap', 1);
+add_action('woocommerce_checkout_before_order_review', 'checkout_title', 5);
+// add_action('woocommerce_checkout_order_review', 'checkout_wrap_end', 50);
+function checkout_wrap(){
+    echo '<div class="checkout_table_wrapper">';
+}
+function checkout_title(){
+    echo '<div class="name-container">
+		<h4>Ваш заказ</h4>
+	</div>';
+}
+function checkout_wrap_end(){
+    echo '</div>';
+}

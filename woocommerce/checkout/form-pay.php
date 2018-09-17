@@ -95,4 +95,5 @@ $totals = $order->get_order_item_totals();
 			<?php wp_nonce_field( 'woocommerce-pay', 'woocommerce-pay-nonce' ); ?>
 		</div>
 	</div>
+
 </form>
