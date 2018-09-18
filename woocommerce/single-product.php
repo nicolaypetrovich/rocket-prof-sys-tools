@@ -116,16 +116,13 @@ get_header( 'shop' ); global $product; ?>
 									</div>
 									<div class="text brekable">
 										<?php the_field('cash'); ?>
+										<span
+											class="button btn-form custom-ajax-add-to-cart"
+											data-id="<?php echo get_the_id(); ?>" data-product_sku="" aria-label="" 
+											rel="nofollow" onclick="openPopapPage3()">В корзину</a>
 									</div>
 								</div>
-								<div class="container-box">
-
-									<span
-									class="button btn-form custom-ajax-add-to-cart"
-									data-id="<?php echo get_the_id(); ?>" data-product_sku="" aria-label="" 
-									rel="nofollow" onclick="openPopapPage3()">В корзину</a>
-									
-								</div>
+								
 								<div class="popap" id="popap1"><span>Товар добавлен в корзину</span></div>	
 					
 							</div>
