@@ -7567,6 +7567,7 @@ button[name="update_cart"] {
 .page-7 #shipping_method label{
 	margin-bottom: 0px;
 	font-weight: bold;
+	cursor: pointer;
 }
 
 .page-7 #shipping_method li{
