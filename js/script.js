@@ -746,12 +746,23 @@ if ($('.banner-our-production-menu').length > 0) {
 
 setTimeout(function(){
 
-	$(document).ready(function(){
-	   	$(".checkbox").click (function (){
-			  $(".checkbox").addClass("checkbox-active");
-			});
+	$(".woocommerce-form__label-for-checkbox").attr('id', 'checkbox-page-7');
 
-		
+
+
+	$(document).ready(function(){
+	   	$("#checkbox-page-7").click (function (){
+	   		if (document.getElementById('checkbox-page-7').classList.contains('checkbox-active')) {
+	   			$("#checkbox-page-7").removeClass("checkbox-active");
+	   		}
+	   		else {
+	   			$("#checkbox-page-7").addClass("checkbox-active");
+	   		}
+	   			
+
+	   			console.dir(document.getElementById('checkbox-page-7'));
+
+		});
 	});
 
 },2000)
