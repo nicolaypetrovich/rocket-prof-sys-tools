@@ -7503,7 +7503,7 @@ button[name="update_cart"] {
 }
 
 .page-7 .shop_table .shipping th{
-	display: none;	
+	/* display: none;	 */
 }		
 
 .page-7 .shop_table tbody tr:nth-child(odd),
