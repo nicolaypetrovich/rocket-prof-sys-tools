@@ -740,29 +740,23 @@ if ($('.banner-our-production-menu').length > 0) {
 }
 //блока наша продукция  добавление цифр
 
+// Страница 7 радиокнопка
+
+ (function($){
+    $(function(){
+        $('div.woocommerce').on('click', '.validate-required', function () {
+	   		$(".woocommerce-form__label-for-checkbox").addClass("checkbox-active");
+        });
+        $('div.woocommerce').on('click', '.woocommerce-validated', function () {
+	   		$(".woocommerce-form__label-for-checkbox").removeClass("checkbox-active");
+        });
+    });
+})(jQuery);
+
+// конец страница 7 радиокнопка
 
 
 
 
-setTimeout(function(){
-
-	$(".woocommerce-form__label-for-checkbox").attr('id', 'checkbox-page-7');
 
 
-
-	$(document).ready(function(){
-	   	$("#checkbox-page-7").click (function (){
-	   		if (document.getElementById('checkbox-page-7').classList.contains('checkbox-active')) {
-	   			$("#checkbox-page-7").removeClass("checkbox-active");
-	   		}
-	   		else {
-	   			$("#checkbox-page-7").addClass("checkbox-active");
-	   		}
-	   			
-
-	   			console.dir(document.getElementById('checkbox-page-7'));
-
-		});
-	});
-
-},2000)

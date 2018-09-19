@@ -7467,10 +7467,6 @@ button[name="update_cart"] {
 	margin: 0;
 }
 
-.page-7 .wrapper input:not([type="submit"]){
-	height: auto;
-}
-
 .page-7 .shop_table{
 	border-collapse: collapse;
 }
@@ -7538,10 +7534,14 @@ button[name="update_cart"] {
 
 .page-7 #payment input {
 	outline: none;
-	display: none;
 }
 
 .page-7 #shipping_method input{
+	display: none;
+}
+
+.page-7 #payment input[type="radio"],
+.page-7 #payment input[type="checkbox"]{
 	display: none;
 }
 
@@ -7567,6 +7567,7 @@ button[name="update_cart"] {
 .page-7 #shipping_method label{
 	margin-bottom: 0px;
 	font-weight: bold;
+	cursor: pointer;
 }
 
 .page-7 #shipping_method li{
