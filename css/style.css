@@ -7688,6 +7688,34 @@ button[name="update_cart"] {
 	margin-top: 0;
 }
 
+.page-8 .woocommerce-pagination {
+	display: none;
+	
+}
+
+.page-8 .my-orders-table-wrap span.woocommerce-Price-amount.amount{
+	color: #381d18;
+    font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.page-8 .my-orders .my-orders-table-wrap table tr:nth-child(odd),
+.page-8 .my-orders .my-orders-table-wrap table tr:nth-child(even){
+	background: #fbf3e6;
+}
+
+
+@media only screen and (max-width:1100px){
+	.page-8 .my-profile{
+		margin-right: 220px;
+	}
+}
+
+@media only screen and (max-width:1000px){
+	.page-8 .my-profile{
+		margin-right: 100px;
+	}
+}
 
 @media only screen and (max-width:950px){	
 
@@ -7710,6 +7738,18 @@ button[name="update_cart"] {
 	.our-novelties .text-wrap h6,
 	.our-novelties .text-wrap p{
 		padding: 0 10px;
+	}
+
+	.page-8 .my-profile{
+		margin: 0 auto;
+	}
+
+	.page-8 .my-profile p{
+		padding: 0;
+	}
+
+	.page-6 .cart-item-box .cart-item-box_descr p{
+		padding: 0;
 	}
 }
 
@@ -7751,8 +7791,23 @@ button[name="update_cart"] {
 		margin: 0px auto;
 		display: block;
 	}
+}
 
 
+@media only screen and (max-width:555px){	
+	.page-6 .cart-item-box{
+		display: flex;
+		justify-content: center;
+	}
+
+	.page-6 .shop_table  .cart-item-box_price{
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width:350px){
+	.wrap-error h5 {
+    font-size: 50px;
 }
 
 /* КОНЦ МОИ ПРАВКИ*/
