@@ -7503,7 +7503,7 @@ button[name="update_cart"] {
 }
 
 .page-7 .shop_table .shipping th{
-	display: none;	
+	/* display: none;	 */
 }		
 
 .page-7 .shop_table tbody tr:nth-child(odd),
@@ -7703,6 +7703,15 @@ button[name="update_cart"] {
 
 	.page-7 .box-pay-details p{
 		padding: 0;
+	}
+
+	.our-novelties .text-wrap h2,
+	.our-novelties .text-wrap h3,
+	.our-novelties .text-wrap h4,
+	.our-novelties .text-wrap h5,
+	.our-novelties .text-wrap h6,
+	.our-novelties .text-wrap p{
+		padding: 0 10px;
 	}
 }
 
