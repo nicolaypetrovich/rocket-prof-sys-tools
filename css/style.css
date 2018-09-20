@@ -20,7 +20,7 @@ img{
 	border: none;
 }
 
-/*.min-heght{min-height: 800px;}*/
+.min-heght{min-height: 600px;}
 /*модальное окно попап вход в личный кабинет*/
 .modal-window{
 	position: fixed;
@@ -2239,6 +2239,10 @@ width: 347px;
 	background-position: center;
 }
 
+.footer .border-top-main{
+	z-index: 0;
+}
+
 .footer .content{
 	display: flex;
 	justify-content: flex-start;
@@ -2809,9 +2813,9 @@ width: 347px;
 .page3 .button{
 	cursor: pointer;
 	position: relative;
-	top: -22px;
 	padding: 10px 15px 10px 60px;
 	height: auto;
+	margin-top: 0;
 }
 
 .page3 .card-product .container-right .top-box .button div{
@@ -4635,11 +4639,8 @@ width: 347px;
 	}
 
 	.page3 .card-product .container-right .top-box .button{
-		display: flex;
-		justify-content: center;
 		margin-top: 40px;
-		left: 50%;
-		margin-left: -80px;
+		
 	}
 
 	.page3 .card-product .container-right .table{
@@ -5203,10 +5204,6 @@ width: 347px;
 	    -webkit-column-count: 1;
 	    -moz-column-count: 1;
 	    column-count: 1;
-	}
-
-	.shipping-and-payment .button{
-		left: 27%;
 	}
 
 	.container .text ul li {

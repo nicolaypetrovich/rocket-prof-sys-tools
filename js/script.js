@@ -505,12 +505,13 @@ window.onresize = function(){
 		}else  document.getElementById('main-menu-320').style.display = "none";
 	}
 
-	if (document.documentElement.clientWidth  > 950) {
-		 if ($('.banner-our-production').length > 0) {
-		 	 document.getElementById('banner-our-production-content-320').style.display = "block";
-		 }
-	}else{
-		 if ($('.banner-our-production').length > 0) {
+	 if ($('.banner-our-production').length > 0) {
+		if (document.documentElement.clientWidth  > 950){
+			
+			document.getElementById('banner-our-production-content-320').style.display = "block";
+		}
+		else{
+			
 			if (document.getElementById('banner-our-production-content-320').classList.contains('test')) 
 				 document.getElementById('banner-our-production-content-320').style.display = "block";
 			else  document.getElementById('banner-our-production-content-320').style.display = "none";
@@ -527,15 +528,15 @@ window.onresize = function(){
 				document.getElementsByClassName("footer-menu")[i].style.display = "block";
 			else document.getElementsByClassName("footer-menu")[i].style.display = "none";
 		}
-		}
+	}
 
 
 	if (document.documentElement.clientWidth  > 630) {
-		 if ($('.page2').length > 0) {
+		 if ($('.filter').length > 0) {
 		 	 document.getElementById('filter-wrapper').style.display = "block";
 		 }
 	}else{
-		 if ($('.page2').length > 0) {
+		 if ($('.filter').length > 0) {
 			if (document.getElementById('filter-wrapper').classList.contains('test')) 
 				 document.getElementById('filter-wrapper').style.display = "block";
 			else  document.getElementById('filter-wrapper').style.display = "none";
