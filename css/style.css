@@ -1551,6 +1551,7 @@ height: 100%;
 }
 .page2 .catalog-commodity .price{
 	position: relative;
+	display: block;
 }
 
 .catalog-commodity .wrapper-div4 del{
@@ -5325,7 +5326,7 @@ width: 347px;
 @media only screen and (max-width:400px){
 	
 	.page2 .catalog-commodity .box {
-	    width: 140px;
+	    width: 135px;
 	}
 
 	.page2 .catalog-commodity .div4 .button{
@@ -6524,6 +6525,11 @@ form .invalid{
   font-size: 16px;
 }
 
+.my-profile .woocommerce-form-row {
+	padding: 0;
+	margin: 0;
+}
+
 .input-my-profile{
   padding: 0 10px;
   background-color: white;
@@ -6537,7 +6543,7 @@ form .invalid{
   outline: none;
 }
 .my-profile .btn-form{
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .my-profile .wrap-profile-form{
@@ -7716,7 +7722,7 @@ button[name="update_cart"] {
 
 @media only screen and (max-width:1000px){
 	.page-8 .my-profile{
-		margin-right: 100px;
+		margin-right: 0px;
 	}
 }
 
