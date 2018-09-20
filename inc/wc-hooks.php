@@ -112,7 +112,7 @@ add_action('woocommerce_after_edit_account_form', 'account_forms_wrap_end', 5);
 function account_form(){
     echo '<div class="my-profile">
             <div class="name-container">
-                <h4>Личный кабинет</h4>
+                <h4>Мой профиль</h4>
                 </div>';
 }
 function account_form_end(){

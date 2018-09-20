@@ -33,24 +33,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php endif; ?>
 
-		<div class="authorization">
-			<form method="post" data-action="login">
-				<p>Авторизация</p>
-				<input placeholder="E-mail" type="text" class="formEmail" name="login_name" autocomplete="username">
-				<input placeholder="Пароль" class="form_password" type="password" name="login_password" autocomplete="current-password">
+	<div class="authorization">
+		<form method="post" data-action="login">
+			<p>Авторизация</p>
+			<input placeholder="E-mail" type="text" class="formEmail" name="login_name" autocomplete="username">
+			<input placeholder="Пароль" class="form_password" type="password" name="login_password" autocomplete="current-password">
 
-				<div id="login_error"></div>
+			<div id="login_error"></div>
 
-				<div class="button">
-					<div>
-						<span>войти</span>
-						<button type="submit" class="button" name="login" value="Войти">Войти</button>
-					</div>
+			<div class="button">
+				<div>
+					<span>войти</span>
+					<button type="submit" class="button" name="login" value="Войти">Войти</button>
 				</div>
+			</div>
 
-				<a href="/registratsiya/">Регистрация</a>
-			</form>
-		</div>
+			<a href="/registratsiya/">Регистрация</a>
+		</form>
+	</div>
 
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
 
