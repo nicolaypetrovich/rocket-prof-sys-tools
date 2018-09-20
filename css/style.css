@@ -5367,7 +5367,6 @@ width: 347px;
 .page .wrapper input:not([type="submit"]){
 	width: 100%;
 	height: 45px;
-	line-height: 45px;
 }
 .page textarea{
 	-webkit-box-sizing: border-box;
@@ -5489,6 +5488,9 @@ width: 347px;
   font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
   font-size: 18px;
   color: #381d18;
+}
+.contacts-item .contact-info b{
+	font-weight: normal;
 }
 
 .wrap-map {
@@ -6672,25 +6674,25 @@ form .invalid{
   z-index: 10;
   justify-content: center;
   align-items: center;
+  overflow: auto;
+  min-width: 320px;
 }
 
 .my-orders_popup .my-orders_popup-content_item{
-	margin-top: 15px;
-	margin-bottom: 15px;
 	margin: 15px auto;
 	overflow: hidden;
+	padding: 0 20px;
 }
 .my-orders_popup .my-orders_popup-content{
 	position: relative;
-	width: 55vw;
+	width: 55%;
 	background-color: #fff;
-	padding: 20px;
+	padding: 20px 0px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	top: 150px;
-	left: 50%;
-	margin-left: -27.5vw;
+	margin: 0 auto;
+	margin-top: 100px;
 }
 .my-orders_popup .my-orders_popup-content .btn-close_view{
 	position: absolute;
@@ -6705,11 +6707,12 @@ form .invalid{
 	font-size: 0;
 	width: 100px;
 	height: 100px;
+	margin-right: 10px;
 }
 .my-orders_popup .my-orders_popup-content_item div{
-	float: left;
+	/*float: left;*/
 	margin-left: 10px;
-	width: 60%;
+	/*width: 60%;*/
 }
 .my-orders_popup .my-orders_popup-content .my-orders_popup_title{
 	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
@@ -6730,12 +6733,12 @@ form .invalid{
 
 @media only screen and (max-width:790px){
 	.my-orders_popup .my-orders_popup-content{
-		width: 80vw;
+		width: 70%;
 	}
 }
 @media only screen and (max-width:540px){
 	.my-orders_popup .my-orders_popup-content{
-		
+		width: 90%;
 	}
 
 	.my-orders_popup .my-orders_popup-content .my-orders_popup_img{
@@ -6743,10 +6746,10 @@ form .invalid{
 	}
 }
 @media only screen and (max-width:393px){
-	.my-orders_popup .my-orders_popup-content_item div{
+	/*.my-orders_popup .my-orders_popup-content_item div{
 		margin-left: 10px;
 		width: 40%;
-	}
+	}*/
 }
 
 /* конец модальное окно попап просмотр заказа */
@@ -7749,6 +7752,10 @@ button[name="update_cart"] {
 	}
 
 	.page-6 .cart-item-box .cart-item-box_descr p{
+		padding: 0;
+	}
+
+	.my-orders_popup .my-orders_popup-content p{
 		padding: 0;
 	}
 }
