@@ -6773,19 +6773,19 @@ form .invalid{
 	.my-orders .my-orders-table-wrap{
 		width: 100%;
 		margin: 0;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		justify-content: center;
+		display: block;
 		}
+	.my-orders .my-orders-table-wrap table{
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width:555px){
-	.my-orders .my-orders-table-wrap{
+	.my-orders .my-orders-table-wrap table{
 		display: none;
 	}
+
+
 	.my-orders .my-orders-table-wrap-on-mobile{
 		display: block;
 	}
