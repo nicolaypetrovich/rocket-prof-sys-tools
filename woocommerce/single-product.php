@@ -119,7 +119,7 @@ get_header( 'shop' ); global $product; ?>
 										<span
 											class="button btn-form custom-ajax-add-to-cart"
 											data-id="<?php echo get_the_id(); ?>" data-product_sku="" aria-label="" 
-											rel="nofollow" onclick="openPopapPage3()">В корзину</a>
+											rel="nofollow" onclick="openPopapPage3()">Купить</a>
 									</div>
 								</div>
 								
