@@ -27,6 +27,6 @@ echo wc_get_stock_html( $product ); // WPCS: XSS ok.
 
 if ( $product->is_in_stock() ) : ?>
 
-<button onclick="openPopapPage2()" type="submit" name="add-to-cart" data-id="<?php echo esc_attr( $product->get_id() ); ?>" value="<?php echo esc_attr( $product->get_id() ); ?>" class="button btn-form custom-ajax-add-to-cart"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+<button onclick="openPopapPage2()" type="submit" name="add-to-cart" data-id="<?php echo esc_attr( $product->get_id() ); ?>" value="<?php echo esc_attr( $product->get_id() ); ?>" class="button btn-form custom-ajax-add-to-cart">Купить</button>
 
 <?php endif; ?>

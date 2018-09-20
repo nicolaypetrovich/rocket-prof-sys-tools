@@ -12,7 +12,12 @@ get_header(); ?>
 
 			<?php get_template_part('parts/category', 'list'); ?>
 
-            <?php woocommerce_breadcrumb(); ?>
+            <div class="main-navigation" itemprop="breadcrumb">
+                <div class="wrapper">
+                    <a href="http://prof-sys-tools.rocketcompany.website">Главная</a> / 
+                    Страница не найдена
+                </div>
+            </div>
 
             <div class="wrapper">
                 <div class="wrap-in wrap-in-margin-top">

@@ -25,6 +25,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 <div class="my-orders">
 	<div class="my-orders-table-wrap">
+	
+		<div class="name-container">
+			<h4>Мои заказы</h4>
+		</div>
+
 		<?php if ( $has_orders ) : ?>
 
 			<table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table">
