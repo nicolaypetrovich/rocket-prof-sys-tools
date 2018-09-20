@@ -20,7 +20,7 @@ img{
 	border: none;
 }
 
-.min-heght{min-height: 800px;}
+/*.min-heght{min-height: 800px;}*/
 /*модальное окно попап вход в личный кабинет*/
 .modal-window{
 	position: fixed;
@@ -3367,9 +3367,10 @@ width: 347px;
 	    margin-right: 84px;
 	}
 
-	.page3 .main-navigation{
+	.main-navigation{
 		margin-left: 0;
 		padding: 0 10px;
+		margin-top: 20px;
 	}
 
 	.page3 .card-product .name-container{
@@ -5404,9 +5405,9 @@ width: 347px;
 	margin: 30px auto 50px;
 	position: relative;
 }
-.wrap-in-margin-top {
+/*.wrap-in-margin-top {
 	margin-top: -20px;
-}
+}*/
 .wrap-in .el1{
 	position: absolute;
   top: 0;
@@ -5422,17 +5423,17 @@ width: 347px;
   position: relative;
   z-index: 2;
   left: 95px;
-  top: -150px;
+  top: -120px;
   background: url(../img/img3.png);
   background-size: cover;
   background-position: center;
 }
 
 @media only screen and (max-width:1210px){
-	.wrap-in{
+	/*.wrap-in{
 		max-width: 96%;
 		margin: 50px auto 30px;
-	}
+	}*/
 }
 @media only screen and (max-width:950px){
 .wrap-in .el1 div{
@@ -7138,10 +7139,9 @@ form .invalid{
 	}
 }
 .wrap-error {
-	width: 800px;
 	margin: 0 auto;
 	text-align: center;
-	padding: 50px 0 150px;
+	padding: 50px 0;
 }
 .wrap-error h5{
 	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
@@ -7277,17 +7277,16 @@ form .invalid{
 }
 @media only screen and (max-width:780px){	
 		.wrap-error {
-		width: 80%;
 		text-align: center;
-		padding: 50px 0 150px;
+		padding: 20px 0;
 	}
 }
 @media only screen and (max-width:611px){	
-		.wrap-error {
+/*		.wrap-error {
 		width: 100%;
 		text-align: center;
 		padding: 50px 0 150px;
-	}
+	}*/
 }
 @media only screen and (max-width:488px){		
 	.wrap-error h5{
