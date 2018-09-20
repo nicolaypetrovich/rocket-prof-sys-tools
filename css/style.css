@@ -188,6 +188,7 @@ body{
 	margin: 0;
 }
 
+
 .body{
 	min-width: 320px;
 	max-width: 1920px;
@@ -5404,6 +5405,7 @@ width: 347px;
 	max-width: 1170px;
 	margin: 30px auto 50px;
 	position: relative;
+	padding: 0 10px;
 }
 /*.wrap-in-margin-top {
 	margin-top: -20px;
@@ -5849,19 +5851,19 @@ width: 347px;
 	/* Конец форма отправить сообщение*/
 
 
-@media only screen and (max-width:1035px){
+/*@media only screen and (max-width:1035px){
 	.wrap-form-in .wrap-input{
 		width: 45%;
 	}
-}
-@media only screen and (max-width:680px){
+}*/
+/*@media only screen and (max-width:680px){
 	.wrap-form-in .wrap-input{
 		width: 43%;
 	}
 	.wrap-form-in textarea{
 		width: 43%;
 	}
-}
+}*/
 @media only screen and (max-width:480px){
 	.wrap-form-in{
 		-webkit-flex-wrap: wrap;
@@ -5870,12 +5872,14 @@ width: 347px;
 		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
 	}
-	.wrap-form-in .wrap-input{
+	.page4 .wrap-form-in .wrap-input{
 		width: 100%;
 	}
-	.wrap-form-in textarea{
-		width: 100%;
+	.page4 .wrap-form-in textarea{
+		width: 96.5%  !important;
 		min-height: 140px;
+		margin: 0 auto;
+		margin-bottom: 30px;
 	}
 }
 
@@ -7712,6 +7716,15 @@ button[name="update_cart"] {
 	background: #fbf3e6;
 }
 
+.page4 .wrapper input:not([type="submit"]){
+	width: 96.5%;
+	padding: 0 1.5%;
+}
+
+.page4 .form-send-messege textarea{
+	width: 43.5%;
+	padding: 15px 1.5%;
+}
 
 @media only screen and (max-width:1100px){
 	.page-8 .my-profile{
