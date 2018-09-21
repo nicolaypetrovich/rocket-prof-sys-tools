@@ -744,7 +744,7 @@ window.onresize = function(){
 	}
 
 	 if ($('.banner-our-production').length > 0) {
-		if (document.documentElement.clientWidth  > 950){
+		if (window.innerWidth  > 950){
 			document.getElementById('banner-our-production-content-320').style.display = "block";
 		}
 		else{
