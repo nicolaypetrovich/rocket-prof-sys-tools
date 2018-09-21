@@ -111,7 +111,7 @@ get_header( 'shop' ); ?>
 									</div>
 								</div>
 							</div>
-							<div class="filter-block">
+							<!-- <div class="filter-block">
 								<div class="filter-box"><span>Пункт фильтра</span></div>
 								<div class="filter-box">
 									<div onclick="filter_menu(this)"><span></span></div>
@@ -121,7 +121,7 @@ get_header( 'shop' ); ?>
 										<span onclick="giveText(this)">Пункт фильтра3</span>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 
