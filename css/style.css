@@ -1531,6 +1531,18 @@ height: 100%;
 	display: block;
 }
 
+.catalog-commodity .price>span:after{
+	content: "руб";
+	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: rgb(76, 76, 76);
+    margin-left: 3px;
+}
+
+.catalog-commodity .price .woocommerce-Price-currencySymbol{
+	display: none;
+}
+
 .catalog-commodity .wrapper-div4 .woocommerce-Price-currencySymbol{
 	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
     font-size: 13px;
