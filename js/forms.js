@@ -180,6 +180,7 @@ $(document).ready(function () {
                     if($(this).hasClass('woocommerce-cart-form')){return false;};
                     
                     $('#login_error').text('');
+                    var form_variable = $(this);
                     var form_data = $(this).serialize();
                     var data = new FormData;
                     data.append('action', $(this).data('action'));

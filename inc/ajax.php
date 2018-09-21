@@ -130,28 +130,32 @@ function registration(){
 
     if($data['password_1'] != $data['password_2']){
         echo 'pass_error';
-    }
-
-    $user_id = wp_create_user( $data['name'], $data['password_1'], $data['email'] );
-
-    if ( is_wp_error( $user_id ) ) {
+    }else if(email_exists($data['email'])){
         echo 'user_exists';
-    }
-    else {
+    } else {
+        $user_id = wp_create_user( $data['name'], $data['password_1'], $data['email'] );
+        $u = new WP_User( $user_id );
+        $u->set_role( 'customer' );
+        $creds = array();
+        $creds['user_login'] = $data['email'];
+        $creds['user_password'] = $data['password_1'];
+        $creds['remember'] = true;
+        $user = wp_signon($creds, false);
+
         echo 'user_ok';
+
+        update_user_meta( $user_id, 'first_name',           $data['name']       );
+
+        update_user_meta( $user_id, 'billing_first_name',   $data['name']       );
+        update_user_meta( $user_id, 'billing_country',      'RU'                );
+        update_user_meta( $user_id, 'billing_city',         $data['city']       );
+        update_user_meta( $user_id, 'billing_email',        $data['email']      );
+        update_user_meta( $user_id, 'billing_phone',        $data['phone']      );
+
+        update_user_meta( $user_id, 'shipping_first_name',  $data['name']       );
+        update_user_meta( $user_id, 'shipping_country',     'RU'                );
+        update_user_meta( $user_id, 'shipping_city',        $data['city']       );
     }
-
-    update_user_meta( $user_id, 'first_name',           $data['name']       );
-
-    update_user_meta( $user_id, 'billing_first_name',   $data['name']       );
-    update_user_meta( $user_id, 'billing_country',      'RU'                );
-    update_user_meta( $user_id, 'billing_city',         $data['city']       );
-    update_user_meta( $user_id, 'billing_email',        $data['email']      );
-    update_user_meta( $user_id, 'billing_phone',        $data['phone']      );
-
-    update_user_meta( $user_id, 'shipping_first_name',  $data['name']       );
-    update_user_meta( $user_id, 'shipping_country',     'RU'                );
-    update_user_meta( $user_id, 'shipping_city',        $data['city']       );
 
     wp_die();
 }
