@@ -198,8 +198,9 @@ get_header( 'shop' ); ?>
 				 * @hooked woocommerce_get_sidebar - 10
 				 */
 				do_action( 'woocommerce_sidebar' ); ?>
+			</div>
 		</div>
 	</div>
 </div>
-
+</div>
 <?php get_footer( 'shop' );
