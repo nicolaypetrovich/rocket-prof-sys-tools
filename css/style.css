@@ -20,7 +20,7 @@ img{
 	border: none;
 }
 
-/*.min-heght{min-height: 600px;}*/
+
 /*модальное окно попап вход в личный кабинет*/
 .modal-window{
 	position: fixed;
@@ -942,9 +942,6 @@ height: 100%;
 
 .banner-our-production-menu .box .box1{
 	position: relative;
-	/*background-image: url(../img/img20.png);
-	background-repeat: no-repeat;
-	background-position: 224px 13px;*/
 }
 .banner-our-production-menu .box .block-name{
 	position: relative;
@@ -972,36 +969,6 @@ height: 100%;
 }
 
 
-
-/*@media only screen and (max-width:950px){
-	.banner-our-production-menu .box .block-name>span{
-		padding: 28px 154px 8px 38px;
-		background-image: url(../img/img20.png);
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-
-	.banner-our-production-menu .box .box1{
-		background-image: none;
-	}
-
-	.banner-our-production-menu .box .box1:hover{
-		background-image: none;
-	}
-}
-@media only screen and (max-width:430px){
-	.banner-our-production-menu .box .block-name>span{
-		background-position: 80% 50% ;
-		padding: 28px 112px 8px 38px;
-	}
-}
-@media only screen and (max-width:370px){
-	.banner-our-production-menu .box .block-name>span{
-		padding: 28px 154px 8px 38px;		
-		background-image: url(../img/img20.png);
-		background-position: 80% 50% ;
-	}
-}*/
 .banner-our-production-menu .box > a:hover{
 	background: #ffa300;
 	border: 1px dashed #fff;
@@ -1010,9 +977,6 @@ height: 100%;
 .banner-our-production-menu .box1 a:hover{
 	background: #ffa300;
 	border: 1px dashed #fff;
-	/*background-image: url(../img/img20.png);	
-	background-repeat: no-repeat;
-	background-position: 224px 13px;*/
 }
 
 .banner-our-production-menu .box .box1 .box1-content a:hover{
@@ -2226,6 +2190,7 @@ width: 347px;
 	width: 100%;
 	text-align: center;
 	z-index: 1;
+	overflow: hidden;
 }
 
 .footer .el3 div{
@@ -3179,6 +3144,10 @@ width: 347px;
 
 .shipping-and-payment .container-box:first-child{
 		margin-right: 130px;
+}
+
+.shipping-and-payment .text .container-box:first-child{
+		margin-right: 0px;
 }
 
 .shipping-and-payment .container-box:nth-child(2) li{
@@ -5408,9 +5377,7 @@ width: 347px;
 	position: relative;
 	padding: 0 10px;
 }
-/*.wrap-in-margin-top {
-	margin-top: -20px;
-}*/
+
 .wrap-in .el1{
 	position: absolute;
   top: 0;
@@ -5432,12 +5399,7 @@ width: 347px;
   background-position: center;
 }
 
-@media only screen and (max-width:1210px){
-	/*.wrap-in{
-		max-width: 96%;
-		margin: 50px auto 30px;
-	}*/
-}
+
 @media only screen and (max-width:950px){
 .wrap-in .el1 div{
   z-index: 10;
@@ -5852,19 +5814,6 @@ width: 347px;
 	/* Конец форма отправить сообщение*/
 
 
-/*@media only screen and (max-width:1035px){
-	.wrap-form-in .wrap-input{
-		width: 45%;
-	}
-}*/
-/*@media only screen and (max-width:680px){
-	.wrap-form-in .wrap-input{
-		width: 43%;
-	}
-	.wrap-form-in textarea{
-		width: 43%;
-	}
-}*/
 @media only screen and (max-width:480px){
 	.wrap-form-in{
 		-webkit-flex-wrap: wrap;
@@ -6035,16 +5984,7 @@ font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
   font-size: 24px;
   color: #7ba00c;
 }
-/* .cart-footer .cart-footer_total .price{
-	font-family: PTSansBold, Geneva, Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  color: #ff7f00;
-}
-.cart-footer .cart-footer_total .curr{
-	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif!important;
-  font-size: 16px!important;
-  color: #4c4c4c!important;
-} */
+
 
 .cart-footer .cart-footer_links a{
 	display: inline-block;
@@ -6757,12 +6697,7 @@ form .invalid{
 		
 	}
 }
-@media only screen and (max-width:393px){
-	/*.my-orders_popup .my-orders_popup-content_item div{
-		margin-left: 10px;
-		width: 40%;
-	}*/
-}
+
 
 /* конец модальное окно попап просмотр заказа */
 
@@ -7075,59 +7010,7 @@ form .invalid{
 
 
 /* Start Text*/
-/*
-.page12 .name-container h4 {
-    text-transform: uppercase;
-}
-.wrap-content .wrap-in{
-	width: 70%;
-	font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
-  font-size: 16px;
-	color: #4c4c4c;
-	margin-top: 40px;
-}
 
-.page12 .banner-our-production {
-	display: block;
-	position: inherit;
-	float: left;
-	margin-top: 0;
-	width: 350px;
-	margin-left: 280px;
-}
-
-@media only screen and (max-width:950px){	
-	.page .banner-our-production {
-		display: block;
-    width: 100%;
-    margin-top: -70px;
-	}
-	.page12 .banner-our-production {
-		display: block;
-    width: 100%;
-    margin-top: -120px;
-	}
-	.wrap-content .wrapper .wrap-in {
-		padding-top: 70px;
-		font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
-	  font-size: 16px;
-		color: #4c4c4c;	
-	}
-	.wrap-content .name-container{
-		margin-left: 0;
-	}
-	.wrap-content .el1 div{
-		top: -120px;
-		left: 459px;
-	}
-}
-@media only screen and (max-width:630px){	
-	
-	.wrap-content .wrap-in{
-		width: 90%;
-	}
-}
-*/
 
 .text-wrap {
 	margin-left: 340px;
@@ -7286,13 +7169,7 @@ form .invalid{
 		padding: 20px 0;
 	}
 }
-@media only screen and (max-width:611px){	
-/*		.wrap-error {
-		width: 100%;
-		text-align: center;
-		padding: 50px 0 150px;
-	}*/
-}
+
 @media only screen and (max-width:488px){		
 	.wrap-error h5{
 	  font-size: 70px;
@@ -7339,9 +7216,7 @@ button[name="update_cart"] {
 	margin: 5px 15px;
 }
 
-/* .cart .quantity {
-	display: none;
-} */
+
 
 #login_error {
 	margin-bottom: 5px;

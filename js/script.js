@@ -488,6 +488,7 @@ function openBigPhoto(argument) {
 				 for (var i = 0; i < document.getElementsByClassName("footer-menu").length; i++) {
 					document.getElementsByClassName("footer-menu")[i].style.display = "none";
 					document.getElementsByClassName("footer-menu")[i].parentNode.children[0].classList.remove("bg");
+					document.getElementsByClassName("footer-menu")[i].parentNode.children[1].classList.remove("test");
 				}
 				argument.parentNode.children[1].style.display="block";
 				argument.parentNode.children[1].classList.add("test");
@@ -744,11 +745,9 @@ window.onresize = function(){
 
 	 if ($('.banner-our-production').length > 0) {
 		if (document.documentElement.clientWidth  > 950){
-			
 			document.getElementById('banner-our-production-content-320').style.display = "block";
 		}
 		else{
-			
 			if (document.getElementById('banner-our-production-content-320').classList.contains('test')) 
 				 document.getElementById('banner-our-production-content-320').style.display = "block";
 			else  document.getElementById('banner-our-production-content-320').style.display = "none";
@@ -767,13 +766,10 @@ window.onresize = function(){
 		}
 	}
 
-
-	if (document.documentElement.clientWidth  > 630) {
-		 if ($('.filter').length > 0) {
-		 	 document.getElementById('filter-wrapper').style.display = "block";
-		 }
-	}else{
-		 if ($('.filter').length > 0) {
+	 if ($('.filter').length > 0) {
+		if (document.documentElement.clientWidth  > 630) {
+			 document.getElementById('filter-wrapper').style.display = "block";
+		}else{
 			if (document.getElementById('filter-wrapper').classList.contains('test')) 
 				 document.getElementById('filter-wrapper').style.display = "block";
 			else  document.getElementById('filter-wrapper').style.display = "none";
