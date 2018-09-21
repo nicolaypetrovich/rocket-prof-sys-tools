@@ -91,7 +91,7 @@ global $stock;
 					<div class="wrapper">
 						<div class="name-container">
 							<?php $term = get_term_by('name', 'Новости', 'category'); ?>
-							<h4><?php the_field('prod_block_title', $front_page); ?><span><?php the_field('news_block_desc', $front_page); ?></span></h4>
+							<h4><?php the_field('news_block_title', $front_page); ?><span><?php the_field('news_block_desc', $front_page); ?></span></h4>
 							<div class="button"><div><a href="<?php echo get_term_link($term->term_id); ?>"><?php the_field('news_block_link', $front_page); ?></a></div></div>
 						</div>
 						<div class="product">
