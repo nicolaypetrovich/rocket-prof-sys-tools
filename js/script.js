@@ -16,8 +16,15 @@ a.fn.owlCarousel.Constructor.Plugins.Animate=e}(window.Zepto||window.jQuery,wind
 
 // задаем мин высоту
 if ($('.banner-our-production').length > 0) {
-	 for (var i = 0; i < document.getElementsByClassName("min-heght").length; i++) {
-			document.getElementsByClassName("min-heght")[i].style.minHeight = document.getElementsByClassName("banner-our-production")[i].clientHeight + 100 + "px";			
+	if (document.documentElement.clientWidth  > 950) {
+
+		 for (var i = 0; i < document.getElementsByClassName("min-heght").length; i++) {
+				document.getElementsByClassName("min-heght")[i].style.minHeight = document.getElementsByClassName("banner-our-production")[i].clientHeight + 100 + "px";			
+		}
+	}else{
+		 for (var i = 0; i < document.getElementsByClassName("min-heght").length; i++) {
+				document.getElementsByClassName("min-heght")[i].style.minHeight = "auto";			
+		}
 	}
 }
 
@@ -505,55 +512,7 @@ function openFilter320(argument) {
 
 
 
-window.onresize = function(){ 
-	
-	if (document.documentElement.clientWidth  > 800) {
-		 document.getElementById('main-menu-320').style.display = "none"; 
-	}else{
-		if (document.getElementById('main-menu-320').classList.contains('test')){
-			 document.getElementById('main-menu-320').style.display = "block";
-		}else  document.getElementById('main-menu-320').style.display = "none";
-	}
 
-	 if ($('.banner-our-production').length > 0) {
-		if (document.documentElement.clientWidth  > 950){
-			
-			document.getElementById('banner-our-production-content-320').style.display = "block";
-		}
-		else{
-			
-			if (document.getElementById('banner-our-production-content-320').classList.contains('test')) 
-				 document.getElementById('banner-our-production-content-320').style.display = "block";
-			else  document.getElementById('banner-our-production-content-320').style.display = "none";
-		}
-	}
-
-	if (document.documentElement.clientWidth  > 720) {
-		 for (var i = 0; i < document.getElementsByClassName("footer-menu").length; i++) {
-			document.getElementsByClassName("footer-menu")[i].style.display = "block";
-		}
-	}else{
-		 for (var i = 0; i < document.getElementsByClassName("footer-menu").length; i++) {
-		 	if (document.getElementsByClassName('footer-menu')[i].classList.contains('test')) 
-				document.getElementsByClassName("footer-menu")[i].style.display = "block";
-			else document.getElementsByClassName("footer-menu")[i].style.display = "none";
-		}
-	}
-
-
-	if (document.documentElement.clientWidth  > 630) {
-		 if ($('.filter').length > 0) {
-		 	 document.getElementById('filter-wrapper').style.display = "block";
-		 }
-	}else{
-		 if ($('.filter').length > 0) {
-			if (document.getElementById('filter-wrapper').classList.contains('test')) 
-				 document.getElementById('filter-wrapper').style.display = "block";
-			else  document.getElementById('filter-wrapper').style.display = "none";
-		}
-	}
-
-}
 
 /* Карта на странице контактов */
 
@@ -770,4 +729,69 @@ if ($('.banner-our-production-menu').length > 0) {
 
 
 
+
+
+
+window.onresize = function(){ 
+	
+	if (document.documentElement.clientWidth  > 800) {
+		 document.getElementById('main-menu-320').style.display = "none"; 
+	}else{
+		if (document.getElementById('main-menu-320').classList.contains('test')){
+			 document.getElementById('main-menu-320').style.display = "block";
+		}else  document.getElementById('main-menu-320').style.display = "none";
+	}
+
+	 if ($('.banner-our-production').length > 0) {
+		if (document.documentElement.clientWidth  > 950){
+			
+			document.getElementById('banner-our-production-content-320').style.display = "block";
+		}
+		else{
+			
+			if (document.getElementById('banner-our-production-content-320').classList.contains('test')) 
+				 document.getElementById('banner-our-production-content-320').style.display = "block";
+			else  document.getElementById('banner-our-production-content-320').style.display = "none";
+		}
+	}
+
+	if (document.documentElement.clientWidth  > 720) {
+		 for (var i = 0; i < document.getElementsByClassName("footer-menu").length; i++) {
+			document.getElementsByClassName("footer-menu")[i].style.display = "block";
+		}
+	}else{
+		 for (var i = 0; i < document.getElementsByClassName("footer-menu").length; i++) {
+		 	if (document.getElementsByClassName('footer-menu')[i].classList.contains('test')) 
+				document.getElementsByClassName("footer-menu")[i].style.display = "block";
+			else document.getElementsByClassName("footer-menu")[i].style.display = "none";
+		}
+	}
+
+
+	if (document.documentElement.clientWidth  > 630) {
+		 if ($('.filter').length > 0) {
+		 	 document.getElementById('filter-wrapper').style.display = "block";
+		 }
+	}else{
+		 if ($('.filter').length > 0) {
+			if (document.getElementById('filter-wrapper').classList.contains('test')) 
+				 document.getElementById('filter-wrapper').style.display = "block";
+			else  document.getElementById('filter-wrapper').style.display = "none";
+		}
+	}
+
+	if ($('.banner-our-production').length > 0) {
+		if (document.documentElement.clientWidth  > 950) {
+
+			 for (var i = 0; i < document.getElementsByClassName("min-heght").length; i++) {
+					document.getElementsByClassName("min-heght")[i].style.minHeight = document.getElementsByClassName("banner-our-production")[i].clientHeight + 100 + "px";			
+			}
+		}else{
+			 for (var i = 0; i < document.getElementsByClassName("min-heght").length; i++) {
+					document.getElementsByClassName("min-heght")[i].style.minHeight = "auto";			
+			}
+		}
+	}
+
+}
 
