@@ -754,7 +754,7 @@ window.onresize = function(){
 		}
 	}
 
-	if (document.documentElement.clientWidth  > 720) {
+	if (window.innerWidth  > 720) {
 		 for (var i = 0; i < document.getElementsByClassName("footer-menu").length; i++) {
 			document.getElementsByClassName("footer-menu")[i].style.display = "block";
 		}
@@ -767,7 +767,7 @@ window.onresize = function(){
 	}
 
 	 if ($('.filter').length > 0) {
-		if (document.documentElement.clientWidth  > 630) {
+		if (window.innerWidth  > 630) {
 			 document.getElementById('filter-wrapper').style.display = "block";
 		}else{
 			if (document.getElementById('filter-wrapper').classList.contains('test')) 
@@ -777,7 +777,7 @@ window.onresize = function(){
 	}
 
 	if ($('.banner-our-production').length > 0) {
-		if (document.documentElement.clientWidth  > 950) {
+		if (window.innerWidth > 950) {
 
 			 for (var i = 0; i < document.getElementsByClassName("min-heght").length; i++) {
 					document.getElementsByClassName("min-heght")[i].style.minHeight = document.getElementsByClassName("banner-our-production")[i].clientHeight + 100 + "px";			
