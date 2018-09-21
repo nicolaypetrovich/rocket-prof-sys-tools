@@ -2239,6 +2239,10 @@ width: 347px;
 	background-position: center;
 }
 
+.footer p{
+	padding: 0;
+}
+
 .footer .border-top-main{
 	z-index: 0;
 }
@@ -2247,6 +2251,7 @@ width: 347px;
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
+	padding: 0 10px;
 }
 
 .footer-block-left{
@@ -3524,7 +3529,6 @@ width: 347px;
 	}
 
 	.footer .content{
-		padding: 0 10px;
 		justify-content: center;
 	}
 
@@ -7722,6 +7726,22 @@ button[name="update_cart"] {
 	width: 43.5%;
 	padding: 15px 1.5%;
 }
+
+
+@media only screen and (max-width:1580px){
+	.footer .el2{
+		overflow: hidden;
+	}
+
+	.footer{
+		position: relative;
+	}
+
+	.footer .wrapper{
+		position: static;
+	}
+}
+
 
 @media only screen and (max-width:1100px){
 	.page-8 .my-profile{
