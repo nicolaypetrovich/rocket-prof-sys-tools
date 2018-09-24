@@ -703,7 +703,7 @@ else
 
  // начало блока наша продукция добавление цифр
 if ($('.banner-our-production-menu').length > 0) {
-	 $(".banner-our-production-menu").append('<span class="number-h3"></span>');
+	 $(".banner-our-production-menu h3").append('<span class="number-h3"></span>');
 	 for (var i = 0; i < document.getElementsByClassName('number-h3').length; i++) {
 			document.getElementsByClassName('number-h3')[i].innerHTML = "0"+(i+1);
 			if (i==0) document.getElementsByClassName('number-h3')[i].innerHTML = "0"+1;
@@ -754,7 +754,7 @@ window.onresize = function(){
 		}
 	}
 
-	if (document.documentElement.clientWidth  > 720) {
+	if (window.innerWidth  > 720) {
 		 for (var i = 0; i < document.getElementsByClassName("footer-menu").length; i++) {
 			document.getElementsByClassName("footer-menu")[i].style.display = "block";
 		}
@@ -767,7 +767,7 @@ window.onresize = function(){
 	}
 
 	 if ($('.filter').length > 0) {
-		if (document.documentElement.clientWidth  > 630) {
+		if (window.innerWidth  > 630) {
 			 document.getElementById('filter-wrapper').style.display = "block";
 		}else{
 			if (document.getElementById('filter-wrapper').classList.contains('test')) 
@@ -777,7 +777,7 @@ window.onresize = function(){
 	}
 
 	if ($('.banner-our-production').length > 0) {
-		if (document.documentElement.clientWidth  > 950) {
+		if (window.innerWidth > 950) {
 
 			 for (var i = 0; i < document.getElementsByClassName("min-heght").length; i++) {
 					document.getElementsByClassName("min-heght")[i].style.minHeight = document.getElementsByClassName("banner-our-production")[i].clientHeight + 100 + "px";			
