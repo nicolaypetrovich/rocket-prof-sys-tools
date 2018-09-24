@@ -70,7 +70,7 @@ global $stock;
 									<div class="div3"><p><span><?php echo mb_substr(get_the_excerpt(), 0, 70, 'utf-8');?></span></p></div>
 									<div class="div4">
 										<div class="wrapper-div4">
-											<div class="price"><span><?php echo $product->get_regular_price();?></span></div>
+											<div class="price"><span><?php echo $product->get_price_html(); ?></span></div>
 											<div class="button"><div onclick="openPopap(this)"<span class="custom-ajax-add-to-cart" data-id="<?php echo get_the_ID(); ?>">купить</span></div></div>
 										</div>
 									</div>
