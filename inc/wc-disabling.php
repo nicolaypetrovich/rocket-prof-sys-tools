@@ -4,6 +4,8 @@
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 //remove hooks from shop page
+
+remove_action('woocommerce_before_shop_loop', 'wc_print_notices', 10);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
 
