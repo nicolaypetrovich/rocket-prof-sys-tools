@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_edit_account_form' ); ?>
 <div class="wrap-profile-form">
-	<form class="woocommerce-EditAccountForm edit-account" action="" method="post">
+	<form class="woocommerce-EditAccountForm edit-account cart" action="" method="post">
 
 		<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
 

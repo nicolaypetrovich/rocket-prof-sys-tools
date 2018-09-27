@@ -7745,10 +7745,10 @@ button[name="update_cart"] {
 
 /* КОНЦ МОИ ПРАВКИ*/
 
-
-
-
-
+.text-wrap.news-img img{
+	width: 100%!important;
+	margin-bottom: 15px!important;
+}
 
 
 

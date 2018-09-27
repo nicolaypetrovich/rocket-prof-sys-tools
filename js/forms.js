@@ -185,7 +185,7 @@ $(document).ready(function () {
                     var data = new FormData;
                     data.append('action', $(this).data('action'));
                     data.append('data', form_data);
-                    if(!$(this).hasClass('cart')){
+                    if (!$(this).hasClass('cart')){
                         $.ajax({
                             method:'POST',
                             url:ajax,

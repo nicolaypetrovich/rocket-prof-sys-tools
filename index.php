@@ -16,10 +16,25 @@
 			<div class="our-novelties">
 				<div  class="el1"><div></div></div>
 				<div  class="el2"><div></div></div>
+				
 				<div class="wrapper">
+					<div class="text-wrap" itemprop="breadcrumb">
+						<div class="main-navigation" itemprop="breadcrumb">
+							<a href="http://prof-sys-tools.rocketcompany.website">Главная</a> / 
+							<a href="http://prof-sys-tools.rocketcompany.website/category/novosti/">Новости</a> / 
+							<?php the_title(); ?>
+						</div>
+					</div>
+
+					<?php if(has_post_thumbnail( get_the_id() )){ ?>
+						<div class="text-wrap news-img">
+							<img src="<?=the_post_thumbnail_url('single_news')?>" style="width:100%; margin-bottom:15px;">
+						</div>
+					<?php } ?>
 					<div class="name-container">
 						<h4><?php the_title(); the_post(); ?></h4>
 					</div>
+						
 
 					<div class="text-wrap">
 						<?php the_content(); ?>
