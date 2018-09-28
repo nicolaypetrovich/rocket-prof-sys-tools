@@ -271,6 +271,8 @@ function save_account_details(){
 
                     wp_update_user( array( 'ID' => $user_id, 'user_email' => $data['billing_email'] ) );
 
+                    $result = 'data saved';
+
                 }else{
                     $result =  'pass no match';
                 }

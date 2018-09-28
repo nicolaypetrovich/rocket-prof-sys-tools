@@ -177,10 +177,7 @@ $(document).ready(function () {
                 }
 
                 if ( submit ) {
-                    if ($(this).hasClass('woocommerce-cart-form')){return false;};
-                    // console.log($(this).data('action'));
-                    // if ($(this).hasClass('woocommerce-EditAccountForm')){return false;};
-                    
+                    if ($(this).hasClass('woocommerce-cart-form')){return false;};                    
                     $('#login_error').text('');
                     var form_variable = $(this);
                     var form_data = $(this).serialize();
@@ -210,6 +207,7 @@ $(document).ready(function () {
                                     $('form input, form textarea').not(':button, :submit').val('');
                                 }
                                 if(r == 'mess_error'){ $('#mess_error').text('Ошибка во время отправки уведомления'); }
+                                if (r == 'data saved') { window.location.reload(true); }
                             }
                         });
                         return false;
