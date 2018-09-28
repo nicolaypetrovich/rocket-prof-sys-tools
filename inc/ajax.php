@@ -245,3 +245,56 @@ function order_details(){
 
     wp_die();
 }
+
+add_action('wp_ajax_nopriv_save_account_details', 'save_account_details');
+add_action('wp_ajax_save_account_details', 'save_account_details');
+function save_account_details(){
+
+    parse_str($_POST['data'], $data);
+
+    $user_id = get_current_user_id();
+
+    if(!empty($data['password_current']) && !empty($data['password_1']) && !empty($data['password_2']))
+    {
+        $user = get_userdata( $user_id );
+        if( $user ){
+            $password = $data['password_current'];
+            $hash     = $user->data->user_pass;
+            if ( wp_check_password( $password, $hash ) ) {
+                if($data['password_1']==$data['password_2']){
+                    wp_set_password( $data['password_1'], $user_id );
+
+                    update_user_meta( $user_id, 'billing_first_name', $data['billing_first_name']  );
+                    update_user_meta( $user_id, 'billing_email',      $data['billing_email']       );
+                    update_user_meta( $user_id, 'billing_phone',      $data['billing_phone']       );
+                    update_user_meta( $user_id, 'billing_address_1',  $data['billing_address_1']   );
+
+                    wp_update_user( array( 'ID' => $user_id, 'user_email' => $data['billing_email'] ) );
+
+                }else{
+                    $result =  'pass no match';
+                }
+            } else {
+                $result = "pass wrong";
+            }
+        }else{
+            $result = 'user not found';
+        }
+    }else{
+        update_user_meta( $user_id, 'billing_first_name', $data['billing_first_name']  );
+        update_user_meta( $user_id, 'billing_email',      $data['billing_email']       );
+        update_user_meta( $user_id, 'billing_phone',      $data['billing_phone']       );
+        update_user_meta( $user_id, 'billing_address_1',  $data['billing_address_1']   );
+
+        wp_update_user( array( 'ID' => $user_id, 'user_email' => $data['billing_email'] ) );
+        
+        $result = 'data saved';
+    }
+
+    
+
+    echo $result;
+
+    wp_die();
+
+}

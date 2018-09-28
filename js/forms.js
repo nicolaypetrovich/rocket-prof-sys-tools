@@ -177,7 +177,9 @@ $(document).ready(function () {
                 }
 
                 if ( submit ) {
-                    if($(this).hasClass('woocommerce-cart-form')){return false;};
+                    if ($(this).hasClass('woocommerce-cart-form')){return false;};
+                    // console.log($(this).data('action'));
+                    // if ($(this).hasClass('woocommerce-EditAccountForm')){return false;};
                     
                     $('#login_error').text('');
                     var form_variable = $(this);
@@ -196,7 +198,7 @@ $(document).ready(function () {
                             success:function(r){
                                 console.dir(r);
                                 //login
-                                if((r == 'ok') || (r == 'user_ok')){ window.location.href = "http://prof-sys-tools.rocketcompany.website/my-account/"; }
+                                if((r == 'ok') || (r == 'user_ok')){ window.location.href = "/my-account/"; }
                                 if(r == 'error'){ $('#login_error').text('Логин или пароль введены не верно!'); }
                                 //registration
                                 if(r == 'pass_error'){ $('#reg_error').text('Пароли не совпадают!'); }
