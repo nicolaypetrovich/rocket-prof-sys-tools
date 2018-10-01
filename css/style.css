@@ -7765,9 +7765,21 @@ button[name="update_cart"] {
 	margin: 0 13px;
 }
 
+.page2 .catalog-commodity .price del::after {
+	content: "руб";
+    font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: rgb(76, 76, 76);
+    margin-left: 3px;
+}
 
-
-
+.catalog-commodity .wrapper-div4 ins::after {
+	content: "руб";
+    font-family: PTSansRegular, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: rgb(76, 76, 76);
+    margin-left: 3px;
+}
 
 
 
