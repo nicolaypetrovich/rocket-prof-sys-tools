@@ -791,3 +791,14 @@ window.onresize = function(){
 
 }
 
+$(document).ready(function(){
+	$('.copy-share').on('click',function(e){
+
+		e.preventDefault();
+		var $temp = $("<input>");
+  	$("body").append($temp);
+  	$temp.val(window.location.href).select();
+  	document.execCommand("copy");
+  	$temp.remove();
+	})
+});

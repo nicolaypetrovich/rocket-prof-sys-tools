@@ -119,6 +119,7 @@ if ( post_password_required() ) {
 				<li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()?>/img/facebook (1).png" alt="img"></a></li>
 				<li><a href="https://connect.ok.ru/offer?url=<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()?>/img/odnoklassniki-logo (4).png" alt="img"></a></li>
 				<li><a href="http://vkontakte.ru/share.php?url=<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()?>/img/vk (5).png" alt="img"></a></li>
+				<li><a href="#"><img src="<?php echo get_template_directory_uri()?>/img/whatsapp.png" alt="img"></a></li>
 			</ul>
 			<a href="#" class="btn-close_view"><img src="<?php echo get_template_directory_uri()?>/img/img89.png" alt="X"></a>
 			<button class="copy-share btn-form" data-clipboard-text="http://prof-sys-tools.rocketcompany.website/page3-inner.html">Скопировать ссылку</button>
