@@ -7781,5 +7781,17 @@ button[name="update_cart"] {
     margin-left: 3px;
 }
 
+.button__pay{
+	margin-top: 10px;
+	margin-right: 25px;
+}
+.button__return {
+    color: #7ba00c;
+}
+
+.button__return:hover {
+	text-decoration: none;
+}
+
 
 
