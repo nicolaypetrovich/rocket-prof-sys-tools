@@ -7796,3 +7796,6 @@ button[name="update_cart"] {
 
 
 
+.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details li {
+	    margin: 15px 0;
+}
