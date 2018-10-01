@@ -7784,6 +7784,7 @@ button[name="update_cart"] {
 .button__pay{
 	margin-top: 10px;
 	margin-right: 25px;
+	text-decoration: none;
 }
 .button__return {
     color: #7ba00c;
