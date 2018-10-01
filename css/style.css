@@ -7750,12 +7750,20 @@ button[name="update_cart"] {
 	margin-bottom: 15px!important;
 }
 
+}
 
 
 
 
 
+/* fixes */
+.page2 .catalog-commodity {
+	justify-content: flex-start;
+}
 
+.page2 .catalog-commodity .box {
+	margin: 0 13px;
+}
 
 
 
