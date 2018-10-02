@@ -223,3 +223,18 @@ $stock_args = array(
 	'meta_value'     => true,
 );
 $stock = new WP_Query($stock_args);
+
+add_action( 'woocommerce_add_to_cart_fragments', 'iconic_cart_count_fragments', 20, 1 );
+function iconic_cart_count_fragments( $fragments ){
+
+    $amount = WC()->cart->get_cart_contents_count();
+    $total = WC()->cart->get_cart_contents_total();
+    
+    $fragments['div.box-wrapper.cart-ajax-update'] = '<div class="box-wrapper cart-ajax-update"><a href="http://prof-sys-tools.rocketcompany.website/cart/"></a>
+            <span>Товаров '.$amount.' <br>
+                на '.$total.' руб.<br>	
+                <a href="http://prof-sys-tools.rocketcompany.website/checkout/">ОФОРМИТЬ</a></span>
+            </div>';
+
+    return $fragments;
+} 
