@@ -7802,8 +7802,39 @@ button[name="update_cart"] {
 
 @media (max-width: 721px) {
 	.page2 .catalog-commodity {
-		justify-content: center;
+	    max-width: 492px !important;
+	    width: 100% !important;
+    	margin: auto !important;
 	}
+}
+
+@media (min-width: 500px) and (max-width: 512px) {
+.page2 .catalog-commodity .box {
+	width: 213px;
+}
+}
+
+@media (max-width: 500px) {
+
+.page2 .catalog-commodity {
+	max-width: 416px !important;
+	width: 100% !important;
+}
+
+}
+
+@media (min-width: 400px) and (max-width: 431px) {
+
+.page2 .catalog-commodity .box {
+	width: 170px;
+	margin: 0 10px;
+}
+.page2 .catalog-commodity {
+	max-width: 383px !important;
+	width: 100% !important;
+}
+
+
 }
 
 @media (max-width: 345px) {
@@ -7814,4 +7845,12 @@ button[name="update_cart"] {
 
 .shipping-and-payment .button {
 	display: inline-block;
+}
+
+@media (min-width: 722px) and (max-width: 758px) {
+
+.page2 .catalog-commodity {
+	justify-content: center;
+}
+
 }
