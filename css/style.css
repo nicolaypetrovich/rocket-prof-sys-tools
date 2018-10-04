@@ -7854,3 +7854,10 @@ button[name="update_cart"] {
 }
 
 }
+
+@media (max-width: 775px) {
+	.page2 .catalog-commodity {
+		max-width: 500px;
+		margin: auto;
+	}
+}

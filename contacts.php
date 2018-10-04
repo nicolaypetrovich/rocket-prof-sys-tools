@@ -15,7 +15,18 @@ get_header();
 
             <?php get_template_part('parts/category', 'list'); ?>
 
-            <?php woocommerce_breadcrumb(); ?>
+            <?php 
+            
+            $args = array(
+                'delimiter'   => ' &#47; ',
+                'wrap_before' => '<div class="main-navigation"><div class="wrapper">',
+                'wrap_after'  => '</div></div>',
+                'before'      => '',
+                'after'       => '',
+                'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+            );
+            
+            woocommerce_breadcrumb($args); ?>
 
             <!-- начало блока Контакты -->
             <div class="wrapper">
@@ -120,6 +131,7 @@ get_header();
             <div class="contacts-pen contacts-img-bg"><img src="<?php echo get_template_directory_uri()?>/img/contacts-pen.png" alt="img"></div>
         </div>
     </div>
+</div>
 
 
 <?php get_footer(); ?>

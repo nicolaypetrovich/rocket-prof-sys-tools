@@ -39,7 +39,7 @@ get_header( 'shop' ); global $product; ?>
 			
 			$args = array(
 				'delimiter'   => ' &#47; ',
-				'wrap_before' => '<div class="main-navigation" itemprop="breadcrumb"><div class="wrapper">',
+				'wrap_before' => '<div class="main-navigation"><div class="wrapper">',
 				'wrap_after'  => '</div></div>',
 				'before'      => '',
 				'after'       => '',

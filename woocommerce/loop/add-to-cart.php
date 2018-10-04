@@ -24,9 +24,9 @@ global $product; ?>
 <div class="button">
 	<div onclick="openPopap(this)">
 		<span
-			name="add-to-cart" 
+			 
 			data-id="<?php echo esc_attr( $product->get_id() ); ?>" 
-			value="<?php echo esc_attr( $product->get_id() ); ?>" 
+			data-value="<?php echo esc_attr( $product->get_id() ); ?>" 
 			class="custom-ajax-add-to-cart">купить
 		</span>
 	</div>

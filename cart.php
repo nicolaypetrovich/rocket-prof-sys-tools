@@ -15,7 +15,18 @@ get_header(); the_post(); ?>
 
         <?php get_template_part('parts/category', 'list'); ?>
 
-        <?php woocommerce_breadcrumb(); ?>
+        <?php 
+        
+        $args = array(
+                'delimiter'   => ' &#47; ',
+                'wrap_before' => '<div class="main-navigation"><div class="wrapper">',
+                'wrap_after'  => '</div></div>',
+                'before'      => '',
+                'after'       => '',
+                'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+            );
+            
+            woocommerce_breadcrumb($args); ?>
 
             <div class="wrapper">
                 <div class="wrap-in wrap-in-margin-top wrap-in-margin-bottom">
