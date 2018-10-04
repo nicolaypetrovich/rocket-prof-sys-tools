@@ -185,7 +185,7 @@ global $stock;
 					<?php $link = get_field('about_block_link', $front_page); ?>
 					<div class="container">
 						<div class="text">
-							<p><?php echo apply_filters('the_excerpt', mb_substr(get_post_field('post_content', $about_id), 0, 390, 'utf-8' )); ?></p>
+							<?php echo apply_filters('the_excerpt', mb_substr(get_post_field('post_content', $about_id), 0, 390, 'utf-8' )); ?>
 							<div class="name-container"><div class="button"><div><a href="<?php echo $link['url']; ?>"><?php echo $link['title']; ?></a></div></div></div>
 						</div>
 						<div class="img">
