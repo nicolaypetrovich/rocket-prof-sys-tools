@@ -141,8 +141,8 @@ get_header( 'shop' ); global $product; ?>
 									<?php foreach($related_products as $related_product) : $prod = wc_get_product($related_product); 
 										if(!empty($prod)):?>
 										<div class="box box1">
-											<div class="div1"><a href="<?php get_permalink($related_product);?>"><?php echo $prod->name;?></a></div>
-											<div class="div2"><a href="<?php get_permalink($related_product);?>">
+											<div class="div1"><a href="<?php echo get_permalink($related_product);?>"><?php echo $prod->name;?></a></div>
+											<div class="div2"><a href="<?php echo get_permalink($related_product);?>">
 											<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $related_product ), 'related_prods' );?>
 												<img src="<?php echo $image[0]; ?>">
 											</a></div>
@@ -161,8 +161,8 @@ get_header( 'shop' ); global $product; ?>
 									<div class="owl-carousel owl-theme catalogCommodity-slider ">
 									<?php foreach($related_products as $related_product) : $prod = wc_get_product($related_product); ?>
 										<div class="box box1">
-											<div class="div1"><a href="<?php get_permalink($related_product);?>"><?php echo $prod->name;?></a></div>
-											<div class="div2"><a href="<?php get_permalink($related_product);?>">
+											<div class="div1"><a href="<?php echo get_permalink($related_product);?>"><?php echo $prod->name;?></a></div>
+											<div class="div2"><a href="<?php echo get_permalink($related_product);?>">
 											<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $related_product ), 'related_prods' );?>
 												<img src="<?php echo $image[0]; ?>">
 											</a></div>
