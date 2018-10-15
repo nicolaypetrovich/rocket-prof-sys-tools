@@ -155,6 +155,8 @@ function registration(){
         update_user_meta( $user_id, 'shipping_first_name',  $data['name']       );
         update_user_meta( $user_id, 'shipping_country',     'RU'                );
         update_user_meta( $user_id, 'shipping_city',        $data['city']       );
+        update_user_meta( $user_id, 'billing_address_1',    $data['city']       );
+
     }
 
     wp_die();
