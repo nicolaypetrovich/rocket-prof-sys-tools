@@ -40,6 +40,9 @@ $(document).ready(function () {
          */
 
         for ( var i = 0; i < form.length; i++ ) {
+            if ($(form[i]).hasClass('lost_reset_password')) {
+                break;
+            }
             form[i].addEventListener('submit', function (e) {
                 e.preventDefault();
                 var submit = true;
