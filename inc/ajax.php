@@ -133,7 +133,7 @@ function registration(){
     }else if(email_exists($data['email'])){
         echo 'user_exists';
     } else {
-        $user_id = wp_create_user( $data['name'], $data['password_1'], $data['email'] );
+        $user_id = wp_create_user( $data['email'], $data['password_1'], $data['email'] );
         $u = new WP_User( $user_id );
         $u->set_role( 'customer' );
         $creds = array();
