@@ -70,16 +70,9 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 										?>
 
 									<?php elseif ( 'order-actions' === $column_id ) : ?>
-										<?php
-										$actions = wc_get_account_orders_actions( $order );
 
-										if ( ! empty( $actions ) ) {
-											foreach ( $actions as $key => $action ) { ?>
-												<input type="submit" class="btn-form btn-view" data-order-id="<?php echo $order->get_order_number(); ?>" value="Просмотр">
-												<?php //echo '<a href="' . esc_url( $action['url'] ) . '" class="woocommerce-button button btn-form btn-view ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
-											}
-										}
-										?>
+										<input type="submit" class="btn-form btn-view" data-order-id="<?php echo $order->get_order_number(); ?>" value="Просмотр">
+
 									<?php endif; ?>
 								</td>
 							<?php endforeach; ?>

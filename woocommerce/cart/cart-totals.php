@@ -104,7 +104,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<!-- </div> -->
 	<div class="cart-footer_links">								
 		<a href="<?php echo WC()->cart->get_checkout_url(); ?>" class="btn-issue">Оформить</a><br>
-		<a href="#" class="btn-continue-shopping"><div>Продолжить покупки</div></a>
+		<a href="<?=get_permalink( woocommerce_get_page_id( 'shop' ) );?>" class="btn-continue-shopping"><div>Продолжить покупки</div></a>
 	</div>
 
 	<?php do_action( 'woocommerce_after_cart_totals' ); ?>

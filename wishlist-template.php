@@ -65,7 +65,7 @@ the_post();
                                                     <p class="my-wishes-item_price_dashed"><b><?php echo $product->get_regular_price(); ?></b></p>
                                                 <?php } else {?>
                                                     <div class="price">
-                                                    <p class="my-wishes-item_price_dashed"><b><?php echo $product->get_regular_price(); ?></b></p>
+                                                    <p class="my-wishes-item_price"><b><?php echo $product->get_regular_price(); ?></b></p>
                                                     </div>
                                                 <?php } ?>
         

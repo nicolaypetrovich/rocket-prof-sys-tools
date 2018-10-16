@@ -134,8 +134,8 @@ add_action('woocommerce_edit_account_form_end', 'account_form_end', 5);
     add_action('woocommerce_before_shop_loop_item_title', 'shop_loop_product_title', 6);
     add_action('woocommerce_before_shop_loop_item_title', 'shop_loop_item_open_wrap_end', 7);
     //styling image
-    function shop_loop_item_image_wrap(){echo '<div class="div2">';}
-    function shop_loop_item_image_wrap_end(){echo '</div>';}
+    function shop_loop_item_image_wrap(){echo '<div class="div2"><a href="'.get_the_permalink().'">';}
+    function shop_loop_item_image_wrap_end(){echo '</a></div>';}
     add_action('woocommerce_before_shop_loop_item_title', 'shop_loop_item_image_wrap', 8);
     add_action('woocommerce_before_shop_loop_item_title', 'shop_loop_item_image_wrap_end', 12);
     //short description

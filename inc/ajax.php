@@ -39,7 +39,7 @@ function ajax_add_to_wishlist(){
 
         $data = array($product_id => array('product_id' => $product_id, 'date' => $date));
 
-        if(empty($wishlist)||($wishlist === NULL)||($wishlist[0] === NULL)){
+        if(empty($wishlist)){
             update_user_meta($user_id, 'wishlist', $data);
         }else{
             $wishlist = array_merge($wishlist, $data);
@@ -229,12 +229,13 @@ function order_details(){
         $product_id = $item_data['product_id'];
         $prod_link = get_the_permalink($product_id);
         $prod_img = wp_get_attachment_image_src( get_post_thumbnail_id($product_id), 'cart_popup' )[0];
+        $description = get_the_excerpt($product_id);
         
         $result .= "<div class='my-orders_popup-content_item'>
         <a href='{$prod_link}' class='my-orders_popup_img'><img src='{$prod_img}' alt='img'></a>
         <div>
             <a href='{$prod_link}' class='my-orders_popup_title'>{$product_name}</a>
-            <p>Это пример текста, создан для описания товара в три строки</p>
+            <p>{$description}</p>
         </div>
         <div class='clear'></div>
     </div>";
