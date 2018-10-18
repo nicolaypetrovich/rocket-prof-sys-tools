@@ -5938,7 +5938,8 @@ width: 347px;
 	cursor: pointer;
 	display: block;
 	text-align: center;
-	width: 40px;
+	flex-shrink: 0;
+	width: 21px;
 	height: 21px;
 	border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -7860,4 +7861,142 @@ button[name="update_cart"] {
 		max-width: 500px;
 		margin: auto;
 	}
+}
+
+.min-heght {
+	min-height: auto !important;
+}
+
+.woocommerce-cart-form__cart-item.cart_item.cart-item-box {
+	max-width: 1170px;
+}
+
+
+.cart-item-box .cart-item-box_switch input {
+	width: 90px !important;
+}
+
+@media (max-width: 950px) {
+	.product {
+	    justify-content: center;
+	    margin-left: 0;
+	}
+}
+
+.wrap-in .el1 div {
+	top: -90px;
+}
+
+
+@media only screen and (max-width: 630px) {
+
+.page2 .filter-block {
+	max-width: 300px;
+	margin: auto;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.page2 .filter-block:last-child {
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+}
+
+@media (max-width: 345px) {
+	.page2 .filter-block {
+		justify-content: center;
+    	align-items: center;
+    	flex-direction: column;
+    	margin-bottom: 5px
+
+	} 
+	.page2 .filterWrapper {
+		margin-top: -10px;
+	}
+}
+
+@media (max-width: 630px) {
+
+.my-orders_popup .my-orders_popup-content_item {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.my-orders_popup .my-orders_popup-content .my-orders_popup_img img{
+	max-width: 100%;
+	height: auto;
+	width: auto;
+}
+.my-orders_popup .my-orders_popup-content .my-orders_popup_img {
+	height: auto;
+	padding: 15px 0;
+}
+}
+@media only screen and (max-width: 800px) {
+.main-menu-320 li {
+    margin-bottom: 25px;
+}
+
+}
+
+.main__menu-vertical {
+	max-height: 290px;
+    overflow-y: scroll;
+}
+
+.woocommerce-invalid input{
+	border: 1px solid red !important;
+}
+
+p label span.required {
+	display: none;
+}
+p.validate-required {
+	position: relative;
+}
+p.validate-required:before{
+	content: "*";
+	display: block;
+	color: red;
+    font-weight: 700;
+    border: 0!important;
+    text-decoration: none;
+    font-size: 22px;
+    position: absolute;
+    left: -20px;
+    top: 0;
+}
+
+/* .woocommerce-invalid label:before{
+	border: 1px solid red !important;
+	margin-top: -4px;
+}
+.page-7 #payment label::before, .page-7 #shipping_method label:before {
+	content: '';
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    left: 0;
+    top: 4px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-image: url(../img/radio-bg.png);
+} */
+
+.woocommerce tbody {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 100%;
+}
+
+.woocommerce table {
+	display: block;
 }

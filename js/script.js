@@ -792,6 +792,17 @@ window.onresize = function(){
 }
 
 $(document).ready(function(){
+
+	$(window).on("resize load", function() {
+      if($(window).height() <= 360) {
+        $(".main-menu-320 ul").addClass("main__menu-vertical");
+      }
+       else if ($(window).height() >= 400) {
+        $(".main-menu-320 ul").removeClass("main__menu-vertical");
+      }
+   });
+
+
 	$('.copy-share').on('click',function(e){
 
 		e.preventDefault();
@@ -801,4 +812,29 @@ $(document).ready(function(){
   	document.execCommand("copy");
   	$temp.remove();
 	})
+
+	// checkbox validation
+
+	$(".woocommerce").on("click", "input.shipping_method", function () {
+		if($(this).attr("id") == "shipping_method_0_free_shipping-6") {
+			$("#billing_address_1_field").removeClass("validate-required");
+			console.log("remove");
+		}
+		else {
+			$("#billing_address_1_field").addClass("validate-required");
+			console.log("add");
+		}
+	});
+
+	$(window).on("load", function() {
+		if($("#shipping_method_0_free_shipping-6").is(":checked")) {
+			$("#billing_address_1_field").removeClass("validate-required");
+			console.log("remove2");
+		} else {
+			$("#billing_address_1_field").addClass("validate-required");
+			console.log("add2");
+		}
+	});
+
 });
+
