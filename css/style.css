@@ -8000,3 +8000,7 @@ p.validate-required:before{
 .woocommerce table {
 	display: block;
 }
+
+.woocommerce-billing-fields__field-wrapper label{
+	display: none;
+}
