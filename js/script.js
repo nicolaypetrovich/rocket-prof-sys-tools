@@ -836,5 +836,13 @@ $(document).ready(function(){
 		}
 	});
 
+	$('div.woocommerce').on('click', 'input[name=terms]', function(){
+		if($(this).is(':ckeched')){
+			closest('label').addClass('checkbox-active');
+		}else{
+			closest('label').removeClass('checkbox-active');
+		}
+	})
+
 });
 
