@@ -7989,11 +7989,7 @@ p.validate-required:before{
 } */
 
 .woocommerce tbody {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
+	display: block;
 	width: 100%;
 }
 
@@ -8003,4 +7999,13 @@ p.validate-required:before{
 
 .woocommerce-billing-fields__field-wrapper label{
 	display: none;
+}
+
+.woocommerce .woocommerce-MyAccount-content.my-orders-table-wrap thead {
+	display: table;
+	width: 100%;
+}
+
+.woocommerce .woocommerce-MyAccount-content.my-orders-table-wrap tbody {
+	display: table;
 }
