@@ -48,7 +48,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 			</div>
 
-			<a href="/registratsiya/">Регистрация</a>
+			<div style="display:block;">
+				<a href="/registratsiya/">Регистрация</a>
+			</div>
+			<div style="display:block;">
+				<a href="/my-account/lost-password/">Забыли пароль?</a>
+			</div>
 		</form>
 	</div>
 
