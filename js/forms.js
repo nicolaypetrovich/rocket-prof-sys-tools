@@ -228,6 +228,6 @@ $(document).ready(function () {
 
 $('#searchsubmit').on('click', function(e){
     e.preventDefault();
-    let search = $(this).closest('form').find('input[name=s]').val();
+    var search = $(this).closest('form').find('input[name=s]').val();
     window.location.href = '/?s='+search;
 })
