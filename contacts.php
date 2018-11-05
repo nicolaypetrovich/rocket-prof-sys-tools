@@ -110,11 +110,11 @@ get_header();
                             <form  action="#" class="form-send-messege" data-action="message">
                                 <div class="wrap-form-in">
                                     <div class="wrap-input">
-                                        <input class="form-input-item  required" type="text" name="message_name" placeholder="Ваше имя" />
-                                        <input class="form-input-item phone required" type="tel" name="message_phone" placeholder="Номер телефона" />
-                                        <input class="form-input-item required" type="email" name="message_email" placeholder="Ваш e-mail" />
+                                        <input class="form-input-item  required"  required="required" type="text" name="message_name" placeholder="Ваше имя" />
+                                        <input class="form-input-item phone required" required="required" type="tel" name="message_phone" placeholder="Номер телефона" />
+                                        <input class="form-input-item required email"required="required"  type="email" name="message_email" placeholder="Ваш e-mail" />
                                     </div>
-                                    <textarea placeholder="Сообщение" class="required" name="message_message"></textarea>
+                                    <textarea placeholder="Сообщение" required="required" class="required" name="message_message"></textarea>
                                 </div>
                                 <div id="mess_error"></div>
                                 <span>Заполняя форму, Вы даете согласие на обработку своих <a href="<?php the_field('prof')?>">персональных данных</a></span><br>
