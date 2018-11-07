@@ -1,6 +1,5 @@
 'use strict';
 
-$(document).ready(function () {
 
     function validateForm( ) {
         var form = document.querySelectorAll('form');
@@ -43,6 +42,7 @@ $(document).ready(function () {
             if ($(form[i]).hasClass('lost_reset_password')) {
                 break;
             }
+
             form[i].addEventListener('submit', function (e) {
                 e.preventDefault();
                 var submit = true;
@@ -220,11 +220,9 @@ $(document).ready(function () {
         }
     }
 
-    window.addEventListener('load', function () {
-        validateForm()
-    })
-
-});
+window.onload = function() {
+    validateForm()
+};
 
 $('#searchsubmit').on('click', function(e){
     e.preventDefault();
