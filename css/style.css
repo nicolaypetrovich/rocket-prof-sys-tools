@@ -7302,6 +7302,8 @@ button[name="update_cart"] {
 .filter-menu a {
 	text-decoration: none;
 	color: black;
+	display: inline-block;
+	width: 100%;
 }
 
 .filter-menu a:hover{
@@ -7857,10 +7859,10 @@ button[name="update_cart"] {
 	}
 }
 
-.min-heght {
+/* .min-heght {
 	min-height: auto !important;
 }
-
+ */
 .woocommerce-cart-form__cart-item.cart_item.cart-item-box {
 	max-width: 1170px;
 }
@@ -8035,4 +8037,48 @@ p.validate-required:before{
     font-size: 13px;
     color: rgb(76, 76, 76);
     margin-left: 3px;
+}
+
+/* top arrow */
+
+.toTop {
+	text-decoration: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    overflow: hidden;
+    opacity: 0;
+    width: 51px;
+    height: 51px;
+    border: none;
+    text-indent: 100%;
+    background: url(../img/up-chevron-button.png) no-repeat center center;
+    z-index: 99;
+    border-radius: 100%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.toTop-active {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 1 !important;
+}
+#toTopHover {
+	background: url(../img/up-chevron-button.png) no-repeat center center;
+    width: 51px;
+    height: 51px;
+    display: none;
+    overflow: hidden;
+    opacity: 0;
+}
+
+/* top arrow */
+
+.catalog-commodity img {
+	transition: all 0.3s;
+}
+
+.catalog-commodity img:hover {
+	transition: all 0.3s;
+	transform: translateY(-5%);
 }

@@ -30,6 +30,27 @@ if ($('.banner-our-production').length > 0) {
 
 
 
+$(document).ready(function() {
+	$(window).scroll(function() {
+      var top = $(this).scrollTop();
+      if ( top >= 200) {
+          $(".toTop").addClass("toTop-active");
+      }
+      if ( top < 200) {
+          $(".toTop").removeClass("toTop-active");
+      }
+    });
+
+    $(".toTop").click(function() {
+      var elementClick = $(this).attr("href")
+      var destination = $(elementClick).offset().top;
+      jQuery("html:not(:animated),body:not(:animated)").animate({
+        scrollTop: destination
+      }, 800);
+      return false;
+    });
+});
+
 // открытие и закрытие главного меню 320
 
 
@@ -273,6 +294,8 @@ if ($('.small-picturesSlider').length > 0) {
 	    }
 	})
 }
+
+
 
 // открытие и закрытие блок-банер наши акции и наши бренды
 

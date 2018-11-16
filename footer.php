@@ -128,5 +128,10 @@
 			});
 		</script>
     <?php } ?>
+
+	<a href="#body" class="toTop">
+    	<span id="toTopHover"></span>
+	</a>
+
 </body>
 </html>
