@@ -2435,8 +2435,7 @@ width: 347px;
 	position: absolute;
 	left: 0;
 	top: 100%;
-	width: 155px;
-	padding: 0 15px;
+	width: 185px;
 	background: #fff;
 	border: 1px solid #cfaf82;
 	z-index: 2;
@@ -2445,7 +2444,7 @@ width: 347px;
 
 .filter-box:nth-child(2) div:nth-child(2) span{
 	display: block;
-	padding: 5px 0;
+	/* padding: 5px 0; */
 	border-bottom: 1px dashed  #cfaf82;
 }
 
@@ -7303,11 +7302,15 @@ button[name="update_cart"] {
 	text-decoration: none;
 	color: black;
 	display: inline-block;
-	width: 100%;
+	width: calc(100% - 30px);
+	border: 1px dashed transparent;
+	padding: 5px 14px;
 }
 
 .filter-menu a:hover{
-	color: #ffa300;
+	background: #ffa300;
+	color: #fff;
+	border: 1px dashed #fff;
 }
 
 .single-product-quantity .quantity {
@@ -8082,3 +8085,4 @@ p.validate-required:before{
 	transition: all 0.3s;
 	transform: translateY(-5%);
 }
+
