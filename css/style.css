@@ -8092,6 +8092,7 @@ p.validate-required:before{
 
 .catalog-commodity img:hover {
 	transition: all 0.3s;
-	transform: translateY(-5%);
+	box-shadow: 0px 1px 9px 2px #dedede;
+	
 }
 
