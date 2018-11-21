@@ -4,3 +4,20 @@ Theme URI:
 Author: RocketCompany
 Author URI: 
 */
+
+img.alignright {
+	display: block;
+	margin: auto;
+	margin-right: 0;
+}
+
+img.alignleft {
+	display: block;
+	margin: auto;
+	margin-left: 0;
+}
+
+img.aligncenter {
+	display: block;
+	margin: auto;
+}
