@@ -25,12 +25,7 @@
 							<?php the_title(); ?>
 						</div>
 					</div>
-
-					<?php if(has_post_thumbnail( get_the_id() )){ ?>
-						<div class="text-wrap news-img">
-							<img src="<?=the_post_thumbnail_url('single_news')?>" style="width:100%; margin-bottom:15px;">
-						</div>
-					<?php } ?>
+					
 					<div class="name-container">
 						<h4><?php the_title(); the_post(); ?></h4>
 					</div>
