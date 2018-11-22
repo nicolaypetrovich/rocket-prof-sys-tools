@@ -18,10 +18,16 @@
                     <a href="tel:<?php echo $phone; ?>"><span><?php echo get_theme_mod('phone_little'); ?></span> <?php echo get_theme_mod('phone_big'); ?></a>
                     <?php if(is_user_logged_in()){ ?>
                         <a href="<?php echo get_permalink(wc_get_page_id( 'myaccount' ));?>" class="user__logIn-cabinet"><span>Username</span></a>
+
+                        <a href="<?php echo get_permalink(wc_get_page_id( 'myaccount' ));?>" class="user__logOut-cabinet-bg user__logOut-cabinet-800"></a>
+
                         <a href="<?php echo get_permalink(wc_get_page_id( 'myaccount' ));?>" class="user__logIn-goOut">Выйти</a>
                     <?php }else{ ?>
                         <!-- <a href="#" onclick="open_modal_window_PA()"><span>ЛИЧНЫЙ КАБИНЕТ</span></a> -->
                          <a href="<?php echo get_permalink(wc_get_page_id( 'myaccount' ));?>" class="user__logOut-cabinet"><span>ЛИЧНЫЙ КАБИНЕТ</span></a>
+
+                         <a href="<?php echo get_permalink(wc_get_page_id( 'myaccount' ));?>" class="user__logOut-cabinet-bg user__logOut-cabinet-800"></a>
+
                         <a href="<?php echo get_permalink(wc_get_page_id( 'myaccount' ));?>" class="user__logOut-registration"><span>Зарегистрироваться</span></a>
                     <?php }; ?>
                 </div>
