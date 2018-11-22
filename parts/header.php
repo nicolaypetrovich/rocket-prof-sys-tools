@@ -17,9 +17,12 @@
                     <?php $phone = get_theme_mod('phone_little') . get_theme_mod('phone_big'); $phone = preg_replace('/[^0-9]/', '', $phone); ?>
                     <a href="tel:<?php echo $phone; ?>"><span><?php echo get_theme_mod('phone_little'); ?></span> <?php echo get_theme_mod('phone_big'); ?></a>
                     <?php if(is_user_logged_in()){ ?>
-                        <a href="<?php echo get_permalink(wc_get_page_id( 'myaccount' ));?>"><span>ЛИЧНЫЙ КАБИНЕТ</span></a>
+                        <a href="<?php echo get_permalink(wc_get_page_id( 'myaccount' ));?>" class="user__logIn-cabinet"><span>Username</span></a>
+                        <a href="<?php echo get_permalink(wc_get_page_id( 'myaccount' ));?>" class="user__logIn-goOut">Выйти</a>
                     <?php }else{ ?>
-                        <a href="#" onclick="open_modal_window_PA()"><span>ЛИЧНЫЙ КАБИНЕТ</span></a>
+                        <!-- <a href="#" onclick="open_modal_window_PA()"><span>ЛИЧНЫЙ КАБИНЕТ</span></a> -->
+                         <a href="<?php echo get_permalink(wc_get_page_id( 'myaccount' ));?>" class="user__logOut-cabinet"><span>ЛИЧНЫЙ КАБИНЕТ</span></a>
+                        <a href="<?php echo get_permalink(wc_get_page_id( 'myaccount' ));?>" class="user__logOut-registration"><span>Зарегистрироваться</span></a>
                     <?php }; ?>
                 </div>
             </div>

@@ -605,7 +605,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f0e0', end
 	top: -8px;
 }
 
-.personal-area-header .box:first-child a:last-child{
+.personal-area-header .box:first-child a:nth-child(2){
 	display: block;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -617,11 +617,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f0e0', end
 	background-size: 13px 13px;
 }
 
-.personal-area-header .box:first-child a:last-child:hover{
+.personal-area-header .box:first-child a:nth-child(2):hover{
 	color: #fff;
 }
 
-.personal-area-header .box:first-child a:last-child span{
+.personal-area-header .box:first-child a:nth-child(2) span{
 	display: inline-block;
 	padding-bottom: 1px;
 	border-bottom: 1px dashed #ff7f00;
@@ -4443,14 +4443,14 @@ width: 347px;
 		z-index: 2;
 	}
 
-	.personal-area-header .box:first-child a:last-child{
+	.personal-area-header .box:first-child a:nth-child(2){
 		background: url(../img/img82.png) no-repeat 100% 0;
    		 background-size: 38px 39px;
    		 height: 39px;
    		 padding-left: 42px;
 	}
 
-	.personal-area-header .box:first-child a:last-child span{
+	.personal-area-header .box:first-child a:nth-child(2) span{
 		width: 60px;
 		border: none;
 		position: relative;
@@ -4888,11 +4888,11 @@ width: 347px;
 
 	.personal-area-header .box:last-child .box-wrapper> span:last-child,
 	.personal-area-header .box:first-child a:first-child,
-	.personal-area-header .box:first-child a:last-child span{
+	.personal-area-header .box:first-child a:nth-child(2) span{
 		display: none;
 	}
 
-	.personal-area-header .box:first-child a:last-child{
+	.personal-area-header .box:first-child a:nth-child(2){
 		display: block;
 		width: 38px;
 		height: 39px;
@@ -8095,4 +8095,45 @@ p.validate-required:before{
 	box-shadow: 0px 1px 9px 2px #dedede;
 	
 }
+.personal-area-header .box .box-wrapper .user__logOut-registration {
+	font-size: 13px;
+	display: block;
+	margin-top: 6px;
+	line-height: 1;
+    color: #fff;
+    padding-left: 25px;
+    /* text-transform: uppercase; */
+    margin-left: -10px;
+    text-decoration: none;
+}
+.personal-area-header .box .box-wrapper .user__logOut-registration span {
+	/* border-bottom: 1px dashed #fff; */
+}
+.personal-area-header .box .box-wrapper .user__logOut-registration:hover span {
+	border: none;
+	color: #ff7f00;
+}
 
+.personal-area-header .box .box-wrapper .user__logOut-cabinet {
+	margin-top: -17px !important;
+}
+
+.user__logIn-cabinet {
+	margin-top: -17px !important;
+}
+.user__logIn-goOut {
+	font-size: 13px;
+	display: block;
+	margin-top: 6px;
+	line-height: 1;
+    color: #fff;
+    padding-left: 11px;
+   text-transform: uppercase;
+    margin-left: 9px;
+    text-decoration: none;
+}
+
+.user__logIn-goOut:hover {
+	border: none;
+	color: #ff7f00;
+}
