@@ -8402,9 +8402,37 @@ p.validate-required:before{
 
 }
 
+.headerFixed__wrapper .openMenu-320 {
+	cursor: pointer;
+}
 
-@media (max-width: 480px) {
 
-	
+@media (max-width: 500px) {
+
+.headerFixed__number {
+	display: none;
+}
+.headerFixed__wrapper .openMenu-320 {
+	left: 10px;
+	right: auto;
+}
+.headerFixed__wrapper {
+	padding: 0 10px;
+	justify-content: flex-end;
+}
+.headerFixed__right {
+	padding-right: 0;
+}
+.headerFixed__wrapper .openMenu-320 {
+	top: 26px;
+	width: 30px;
+    height: 17px;
+    background: url(../img/img83.png);
+    background-size: cover;
+    background-position: center;
+}
+.headerFixed .user__logOut-cabinet-bg {
+	margin-right: 15px;
+}
 
 }

@@ -39,10 +39,20 @@ $(document).ready(function() {
       if ( top < 200) {
           $(".toTop").removeClass("toTop-active");
       }
-      if( top >= 400) {
-      	$(".headerFixed").addClass("headerFixed-active");
+      if($(window).width() >= 800 ) {
+      	if( top >= 400) {
+	      	$(".headerFixed").addClass("headerFixed-active");
+	      }
+	    else $(".headerFixed").removeClass("headerFixed-active");
+      } else {
+
+      	if( top >= 100) {
+	      	$(".headerFixed").addClass("headerFixed-active");
+	      }
+	    else $(".headerFixed").removeClass("headerFixed-active");
+
       }
-      else $(".headerFixed").removeClass("headerFixed-active");
+      
     });
 
     $(".toTop").click(function() {
