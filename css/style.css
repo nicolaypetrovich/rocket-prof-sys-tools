@@ -8236,7 +8236,7 @@ p.validate-required:before{
 .headerFixed-active {
 	opacity: 1;
 	transition: all 0.3s;
-	z-index: 999;
+	z-index: 99;
 }
 .headerFixed .container {
 	max-width: 1115px;
@@ -8341,6 +8341,8 @@ p.validate-required:before{
 }
 
 .headerFixed .user__logOut-cabinet-bg {
+	margin-top: 12px !important;
+    margin-bottom: 12px;
 	display: block;
     width: 43px;
     height: 42px;
@@ -8354,6 +8356,13 @@ p.validate-required:before{
 		opacity: 0.8;
 }
 
+.headerFixed__right {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
 
 @media (max-width: 1200px) {
 	.headerFixed .menu ul li {
@@ -8363,6 +8372,39 @@ p.validate-required:before{
 
 @media (max-width: 991px) {
 
+.headerFixed__wrapper .menu {
+	display: none;
+}
+.main-menu-320 img {
+	cursor: pointer;
+}
+.headerFixed__wrapper .openMenu-320 {
+	display: block;
+	width: 50px;
+    height: 47px;
+    background: url(../img/img83-1.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    z-index: 2;
+    left: auto;
+}
+.headerFixed__wrapper {
+	padding: 0 22px;
+	justify-content: space-between;
+}
+.headerFixed__right {
+	padding-right: 70px;
+}
+
+
+}
+
+
+@media (max-width: 480px) {
 
 	
+
 }

@@ -41,15 +41,17 @@
 	            <?php $phone = get_theme_mod('phone_little') . get_theme_mod('phone_big'); $phone = preg_replace('/[^0-9]/', '', $phone); ?>
                 <a class="headerFixed__number" href="tel:<?php echo $phone; ?>"><span><?php echo get_theme_mod('phone_little'); ?></span> <?php echo get_theme_mod('phone_big'); ?></a>
 
-                 <a href="<?php echo get_permalink(wc_get_page_id( 'myaccount' ));?>" class="user__logOut-cabinet-bg user__logOut-cabinet-800"></a>
+                 <div class="headerFixed__right">
+                 	<a href="<?php echo get_permalink(wc_get_page_id( 'myaccount' ));?>" class="user__logOut-cabinet-bg user__logOut-cabinet-800"></a>
 
-                 <div class="box-wrapper cart-ajax-update">
-                    <a  href="<?php echo WC()->cart->get_cart_url(); ?>"></a>
-                    <span>Товаров <?php echo WC()->cart->get_cart_contents_count(); ?> <br>
-                    на <?php echo WC()->cart->get_cart_contents_total(); ?> руб.<br>	
-                    <a href="<?php echo WC()->cart->get_checkout_url(); ?>">ОФОРМИТЬ</a></span>
-                </div>
-
+	                 <div class="box-wrapper cart-ajax-update">
+	                    <a  href="<?php echo WC()->cart->get_cart_url(); ?>"></a>
+	                    <span>Товаров <?php echo WC()->cart->get_cart_contents_count(); ?> <br>
+	                    на <?php echo WC()->cart->get_cart_contents_total(); ?> руб.<br>	
+	                    <a href="<?php echo WC()->cart->get_checkout_url(); ?>">ОФОРМИТЬ</a></span>
+	                </div>
+					<div onclick="openMainMenu320()" class="openMenu-320"></div>
+                 </div>	<!-- headerFixed__right -->
 			</div>
 		</div>
 	</div>
