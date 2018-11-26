@@ -11,4 +11,7 @@
 	</script>
 </head>
 <body>
+	<div class="headerFixed">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, porro.
+	</div>
     <div class="body body-page2" id="body">

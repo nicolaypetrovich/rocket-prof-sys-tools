@@ -8221,3 +8221,20 @@ p.validate-required:before{
 
 
 }
+
+/* fixed header */
+
+.headerFixed {
+	opacity: 0;
+	transition: all 0.3s;
+	height: 70px;
+	background-color: rgba(73,56,53, 0.8);
+	position: fixed;
+	color: #fff;
+    z-index: 999;
+    width: 100%;
+}
+.headerFixed-active {
+	opacity: 1;
+	transition: all 0.3s;
+}

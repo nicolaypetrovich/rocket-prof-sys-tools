@@ -39,6 +39,10 @@ $(document).ready(function() {
       if ( top < 200) {
           $(".toTop").removeClass("toTop-active");
       }
+      if( top >= 400) {
+      	$(".headerFixed").addClass("headerFixed-active");
+      }
+      else $(".headerFixed").removeClass("headerFixed-active");
     });
 
     $(".toTop").click(function() {
